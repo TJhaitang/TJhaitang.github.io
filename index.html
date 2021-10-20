@@ -125,7 +125,23 @@
 测试安装成功<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
-<h2 id="github-Pages配置"><a href="#github-Pages配置" class="headerlink" title="github Pages配置"></a>github Pages配置</h2>
+<h2 id="github-Pages配置"><a href="#github-Pages配置" class="headerlink" title="github Pages配置"></a>github Pages配置</h2><p>ssh连接github的教程有很多，这里就不赘余了</p>
+<ol>
+<li>在自己的github里创建名为**&lt;用户名&gt;.github.io**的仓库(可以使用其他名称如hello.io，但这样做的好处是可以直接使用https://&lt;用户名&gt;.github.io访问此网站)<br><img src="hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/screenshot.png" alt="截图"></li>
+</ol>
+<hr>
+<h2 id="配置hexo-config-yml"><a href="#配置hexo-config-yml" class="headerlink" title="配置hexo/_config.yml"></a>配置hexo/_config.yml</h2><ol>
+<li>站点信息设置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: TJhaitang&#x27;s Blog #站名</span><br><span class="line">subtitle: flame! #副标题</span><br><span class="line">description: #站描述</span><br><span class="line">author: #作者</span><br><span class="line">language: zh-CN #语言</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure></li>
+<li>配置url<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url: http://wakarimasita.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></li>
+<li>默认创建资源文件夹<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yaml post_asset_folder: true</span><br></pre></td></tr></table></figure></li>
+<li>资源仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:wakarimasta/wakarimasita.github.io.git #wakarimasita是你的用户名</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="Hexo基础命令"><a href="#Hexo基础命令" class="headerlink" title="Hexo基础命令"></a>Hexo基础命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章标题&quot; #会在 hexo/source/_post 下生成对应的.md文件</span><br><span class="line">hexo g #生成静态文件，即编译当前的网站</span><br><span class="line">hexo d #提交部署</span><br></pre></td></tr></table></figure>
+
+
+
+
       
     </div>
     <footer class="article-footer">
