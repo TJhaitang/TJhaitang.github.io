@@ -15,7 +15,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wakarimasita.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/screenshot.png">
 <meta property="article:published_time" content="2021-10-20T11:04:22.000Z">
-<meta property="article:modified_time" content="2021-10-20T12:09:01.305Z">
+<meta property="article:modified_time" content="2021-10-20T12:13:05.946Z">
 <meta property="article:author" content="TJhaitang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wakarimasita.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/screenshot.png">
@@ -118,13 +118,13 @@
 </ol>
 <hr>
 <h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>Ubuntu 20.04</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="一、安装npm"><a href="#一、安装npm" class="headerlink" title="一、安装npm"></a>一、安装npm</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="一、安装npm"><a href="#一、安装npm" class="headerlink" title="一、安装npm"></a>一、安装npm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
 <h3 id="二、安装Node-js"><a href="#二、安装Node-js" class="headerlink" title="二、安装Node.js"></a>二、安装Node.js</h3><ol>
-<li>添加最新版Node.js源<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br></pre></td></tr></table></figure></li>
-<li>安装Node.js<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure></li>
-<li>验证安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br></pre></td></tr></table></figure>
-如果直接使用apt-get install nodejs的话安装版本为10.16.0，在使用hexo时会出现方法不存在的问题。<h3 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#创建目录</span><br><span class="line">mkdir hexo</span><br><span class="line">#进入目录</span><br><span class="line">cd hexo</span><br><span class="line">#安装hexo</span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line">sudo npm install -g hexo-server</span><br></pre></td></tr></table></figure>
-测试安装成功<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+<li>添加最新版Node.js源<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br></pre></td></tr></table></figure></li>
+<li>安装Node.js<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure></li>
+<li>验证安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br></pre></td></tr></table></figure>
+如果直接使用apt-get install nodejs的话安装版本为10.16.0，在使用hexo时会出现方法不存在的问题。<h3 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建目录</span></span><br><span class="line">mkdir hexo</span><br><span class="line"><span class="comment">#进入目录</span></span><br><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line"><span class="comment">#安装hexo</span></span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line">sudo npm install -g hexo-server</span><br></pre></td></tr></table></figure>
+测试安装成功<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <h2 id="github-Pages配置"><a href="#github-Pages配置" class="headerlink" title="github Pages配置"></a>github Pages配置</h2><p>ssh连接github的教程有很多，这里就不赘余了</p>
@@ -139,7 +139,7 @@
 <li>资源仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:wakarimasta/wakarimasita.github.io.git #wakarimasita是你的用户名</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
-<h2 id="Hexo基础命令"><a href="#Hexo基础命令" class="headerlink" title="Hexo基础命令"></a>Hexo基础命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章标题&quot; #会在 hexo/source/_post 下生成对应的.md文件</span><br><span class="line">hexo g #生成静态文件，即编译当前的网站</span><br><span class="line">hexo d #提交部署</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo基础命令"><a href="#Hexo基础命令" class="headerlink" title="Hexo基础命令"></a>Hexo基础命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章标题&quot;</span> <span class="comment">#会在 hexo/source/_post 下生成对应的.md文件</span></span><br><span class="line">hexo g <span class="comment">#生成静态文件，即编译当前的网站</span></span><br><span class="line">hexo d <span class="comment">#提交部署</span></span><br></pre></td></tr></table></figure>
 
 
 
