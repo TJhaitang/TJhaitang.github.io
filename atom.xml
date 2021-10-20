@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-20T10:07:53.675Z</updated>
+  <updated>2021-10-20T10:56:15.429Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My-New-World</title>
+    <link href="http://example.com/2021/10/20/My-New-World/"/>
+    <id>http://example.com/2021/10/20/My-New-World/</id>
+    <published>2021-10-20T10:46:48.000Z</published>
+    <updated>2021-10-20T10:56:15.429Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="markdown学习"><a href="#markdown学习" class="headerlink" title="markdown学习"></a>markdown学习</h1><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><hr><p>这里是一段测试文字  </p><p>这里也是一段测试文字<br><em>斜体文本</em><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><del>删 除 线</del><br><u>下划线</u>  </p><p>创建脚注格式类似这样<a href="%E8%BF%99%E6%98%AF%E7%A4%BA%E4%BE%8B%E5%86%85%E9%83%A8%E5%86%85%E5%AE%B9">^t</a>  </p><ul><li>第一项<ol><li>列表嵌套</li><li>列表嵌套</li></ol></li><li>第二项<blockquote><p>区块<br>第二行<br>第三行  </p><ul><li>嵌套列表  </li></ul><ol start="3"><li>嵌套列表  </li></ol></blockquote></li></ul><hr><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p><code>printf()</code> 代码1<br>代码2</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>这是一个链接<a href="localhost:8888">链接</a><br><a href="https://www.bilibili.com/">https://www.bilibili.com</a>  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;markdown学习&quot;&gt;&lt;a href=&quot;#markdown学习&quot; class=&quot;headerlink&quot; title=&quot;markdown学习&quot;&gt;&lt;/a&gt;markdown学习&lt;/h1&gt;&lt;h2 id=&quot;文本&quot;&gt;&lt;a href=&quot;#文本&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
