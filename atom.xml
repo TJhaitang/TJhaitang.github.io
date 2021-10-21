@@ -6,7 +6,7 @@
   <link href="https://wakarimasita.github.io/atom.xml" rel="self"/>
   
   <link href="https://wakarimasita.github.io/"/>
-  <updated>2021-10-21T12:37:09.277Z</updated>
+  <updated>2021-10-21T13:55:54.888Z</updated>
   <id>https://wakarimasita.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reference</title>
+    <link href="https://wakarimasita.github.io/2021/10/21/Reference/"/>
+    <id>https://wakarimasita.github.io/2021/10/21/Reference/</id>
+    <published>2021-10-21T13:53:07.000Z</published>
+    <updated>2021-10-21T13:55:54.888Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="icarus美化"><a href="#icarus美化" class="headerlink" title="icarus美化"></a>icarus美化</h2><p><a href="https://heroicons.dev/">https://heroicons.dev/</a><br><a href="https://littlezero.top/20190811HexoIc/">https://littlezero.top/20190811HexoIc/</a>   </p><h2 id="rdClient"><a href="#rdClient" class="headerlink" title="rdClient"></a>rdClient</h2><p><a href="https://www.cnblogs.com/feiye512/p/12256247.html">https://www.cnblogs.com/feiye512/p/12256247.html</a>   </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;icarus美化&quot;&gt;&lt;a href=&quot;#icarus美化&quot; class=&quot;headerlink&quot; title=&quot;icarus美化&quot;&gt;&lt;/a&gt;icarus美化&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://heroicons.dev/&quot;&gt;https://heroi</summary>
+      
+    
+    
+    
+    
+    <category term="普罗米修斯" scheme="https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>在Windows电脑上运行安卓程序</title>
