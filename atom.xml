@@ -6,7 +6,7 @@
   <link href="https://wakarimasita.github.io/atom.xml" rel="self"/>
   
   <link href="https://wakarimasita.github.io/"/>
-  <updated>2021-10-21T06:56:00.435Z</updated>
+  <updated>2021-10-21T12:37:09.277Z</updated>
   <id>https://wakarimasita.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Windows电脑上运行安卓程序</title>
+    <link href="https://wakarimasita.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://wakarimasita.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/</id>
+    <published>2021-10-21T11:29:57.000Z</published>
+    <updated>2021-10-21T12:37:09.277Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间还打了把王者荣耀。<br>用了之后感觉还是香啊，如果国内安卓pad生态再发展发展就好了。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol><li><a href="https://www.cnblogs.com/taylorshi/p/15431615.html">乘风破浪，遇见最美Windows 11之新微软商店(Microsoft Store)生态 - 安卓(Android™)体验及开发兼容指南</a></li></ol><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>Windows 11 家庭版 22000.282测试版Beta<br>戴尔G5 5511</p><hr><blockquote><p>安装WSA可以搞windows测试版转美国地区然后在MS Store下载，<code>测试版</code> <code>转美国地区</code> <code>在MS Store下载</code>都有相关教程，我没有这么做。我选择的是将网友分享的WSA安装包直接安装。<br>这里我两个方向都会介绍。</p></blockquote><h2 id="你所必要的事情"><a href="#你所必要的事情" class="headerlink" title="你所必要的事情"></a>你所必要的事情</h2><ol><li>电脑操作系统为Windows11 22000及以上</li><li>电脑需要开启虚拟机平台<img src="/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/xnh.png" class="" title="虚拟化需要开启">如果未开启，需要找到 <code>设置</code>-&gt;<code>应用</code>-&gt;<code>可选功能</code>-&gt;<code>更多Windows功能</code> 勾选 <code>Hyper-V</code>和<code>虚拟机平台</code>。之后重启系统即可。</li></ol><h2 id="下载WSA安装包"><a href="#下载WSA安装包" class="headerlink" title="下载WSA安装包"></a>下载WSA安装包</h2><blockquote><p>你可以不选择这个方案，不过我选择的是这个<br><a href="https://pan.baidu.com/s/1CcC6W7jUjh-w9KTkqhv_NQ">百度网盘下载链接</a> 提取码：2sxh<br>下载后双击打开点击<code>Install</code>即可   </p></blockquote><h3 id="若提示无法安装"><a href="#若提示无法安装" class="headerlink" title="若提示无法安装"></a>若提示无法安装</h3><ul><li>右键点击开始菜单，选择Windows终端(管理员)</li><li>切换到安装包所在目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换盘符，例如切换到d盘</span></span><br><span class="line">d:</span><br><span class="line"><span class="comment"># 查看当前目录</span></span><br><span class="line">dir</span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;文件夹名&gt;</span><br></pre></td></tr></table></figure></li><li>执行命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-appxpackage <span class="string">&quot;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle&quot;</span></span><br></pre></td></tr></table></figure></li><li>待部署操作进程完毕后即可安装了</li></ul><h2 id="进入Windows内测版获取WSA"><a href="#进入Windows内测版获取WSA" class="headerlink" title="进入Windows内测版获取WSA"></a>进入Windows内测版获取WSA</h2><blockquote><p>若不喜欢上面的方法或上面未成功可使用此方法</p></blockquote><ul><li>获取Windows内测资格<br><code>设置</code>-&gt;<code>Windows更新</code>-&gt;<code>Windows预览体验计划</code><br>在选择内测渠道时选择Beta渠道即可</li><li>切换地区为美国<br><code>设置</code>-&gt;<code>时间和语言</code>-&gt;<code>区域和语言</code></li><li>重启电脑后，访问以下网站<br><a href="https://www.microsoft.com/store/productId/9P3395VX91NR">https://www.microsoft.com/store/productId/9P3395VX91NR</a><br>或也可以Win+r，输入<code>ms-windows-store://pdp/?productid=9P3395VX91NR</code>并运行</li><li>点击获取</li></ul><h2 id="开启WSA的adb旁加载功能"><a href="#开启WSA的adb旁加载功能" class="headerlink" title="开启WSA的adb旁加载功能"></a>开启WSA的adb旁加载功能</h2><blockquote><p>由于目前WSA下载应用需要使用亚马逊应用市场，然而一方面上面应用太少了，另一方面很多人会对注册亚马逊账号感到困扰，所以adb旁加载功能显得十分重要。<br>adb旁加载可以允许你安装你电脑上的.apk文件</p></blockquote><ul><li><p>查看adb版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb version</span><br></pre></td></tr></table></figure></li><li><p>若没有adb命令，则下载该压缩包，将解压后的东西全复制到<code>C://Windows</code>文件夹下就可以了<br><a href="https://pan.baidu.com/s/15eTHKtkPIhoHHbbHNa03Hg">下载链接</a>提取码：gr3g</p></li><li><p>在开始菜单打开WSA(一个绿色图标的应用)，进入设置页面</p><img src="/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/wsa.png" class="" title="设置页面"></li><li><p>打开开发人员模式</p></li><li><p>点击第一行文件右边的小箭头，启动Android子系统</p></li><li><p>打开Windows Terminal输入以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb connect 127.0.0.1:58526</span><br><span class="line"><span class="comment"># 如果失败，可以在WSA设置中选择关闭Android子系统后重启WSA</span></span><br><span class="line"><span class="comment"># 执行以下命令以安装.apk程序</span></span><br><span class="line"><span class="comment"># 首先需要切换到安装包所在文件夹下</span></span><br><span class="line">adb install .\name.apk <span class="comment"># name.apk为文件名</span></span><br></pre></td></tr></table></figure></li><li><p>之后就可以快乐的在你的电脑上使用安卓应用程序啦</p></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>虽然捣鼓流程不长，但最后的效果是很好的，体感上感觉程序的刷新率能达到90~120的水平。不过现在这个功能还比较新，问题还是很多的，比如肉眼可见的不稳定和部分窗口的适配糟糕。   </li><li>尝试了几个程序，目前没有真正的享受到这个工具带来的便利。一开始安装这个是为了在电脑上装一个微信读书，因为web端的微信读书我属实是不喜欢，想要一个类似iPad端的样式。但让我吃惊的是，微信读书居然没有安卓的pad版本。</li><li>可能这也是WSA的一个意义吧，突破Google Store的垄断，优化安卓平板生态。</li><li>但另一方面，在国内web环境日渐炸裂的当下，WSA的出现可能会为这一现象火上浇油</li><li>目前我还没有找到太多在电脑上好用的安卓应用，大家有什么想法可以卸载评论区里，虽然没有评论区。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间</summary>
+      
+    
+    
+    
+    
+    <category term="普罗米修斯" scheme="https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Sql-Server数据库学习</title>

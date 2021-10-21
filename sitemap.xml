@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wakarimasita.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/</loc>
+    
+    <lastmod>2021-10-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wakarimasita.github.io/2021/10/21/Sql-Server%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2021-10-21</lastmod>
@@ -40,6 +47,13 @@
   
   <url>
     <loc>https://wakarimasita.github.io/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/</loc>
+    <lastmod>2021-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/</loc>
     <lastmod>2021-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
