@@ -60,9 +60,9 @@
 <li>但另一方面，在国内web环境日渐炸裂的当下，WSA的出现可能会为这一现象火上浇油</li>
 <li>目前我还没有找到太多在电脑上好用的安卓应用，大家有什么想法可以卸载评论区里，虽然没有评论区。</li>
 </ul>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-21T02:36:00.000Z" title="10/21/2021, 10:36:00 AM">2021-10-21</time>发表</span><span class="level-item"><time dateTime="2021-10-21T06:56:00.435Z" title="10/21/2021, 2:56:00 PM">2021-10-21</time>更新</span><span class="level-item">5 分钟读完 (大约697个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/21/Sql-Server%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/">Sql-Server数据库学习</a></h1><div class="content"><p>这里用来记录数据库相关知识<br>课件文件夹在<br><a target="_blank" rel="noopener" href="http://10.43.12.25:81/ruc/%E6%95%B0%E6%8D%AE%E5%BA%93">这里</a>  <em>需要连接ruc校园网</em></p>
-<h2 id="暂留"><a href="#暂留" class="headerlink" title="暂留"></a>暂留</h2><hr>
-<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p><img src="/3-1ppt" alt="数据查询"> </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-21T02:36:00.000Z" title="10/21/2021, 10:36:00 AM">2021-10-21</time>发表</span><span class="level-item"><time dateTime="2021-10-22T09:13:22.024Z" title="10/22/2021, 5:13:22 PM">2021-10-22</time>更新</span><span class="level-item">7 分钟读完 (大约1090个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/21/Sql-Server%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/">Sql-Server数据库学习</a></h1><div class="content"><p>这里用来记录数据库相关知识<br>课件文件夹在<br><a target="_blank" rel="noopener" href="http://10.43.12.25:81/ruc/%E6%95%B0%E6%8D%AE%E5%BA%93">这里</a>  <em>需要连接ruc校园网</em></p>
+<hr>
+<h1 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h1><p><img src="/3-1ppt" alt="数据查询"> </p>
 <table>
 <thead>
 <tr>
@@ -99,10 +99,7 @@
 <td align="center">去掉表中重复的行</td>
 </tr>
 </tbody></table>
-<ol>
-<li>单表查询</li>
-</ol>
-<ul>
+<h2 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h2><ul>
 <li><p>选择表中的若干列</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询全体学生的学号与姓名</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Sname</span><br><span class="line"><span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- 选取所有属性列</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- 虚列，列别名</span></span><br><span class="line"><span class="keyword">SELECT</span> Sname NAME,<span class="string">&#x27;New row&#x27;</span>,<span class="number">2014</span><span class="operator">-</span>Sage,<span class="built_in">LOWER</span>(Sdept)</span><br><span class="line"><span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure></li>
 <li><p>选择表中的若干元组</p>
@@ -157,16 +154,16 @@
 <td align="center">统计元组个数</td>
 </tr>
 <tr>
-<td align="center">COUNT([DISTINCT</td>
-<td align="center">ALL]&lt;列名&gt;)</td>
+<td align="center">COUNT([DISTINCT &amp;#124 ALL]&lt;列名&gt;)</td>
+<td align="center">计算一列中不同值的个数</td>
 </tr>
 <tr>
-<td align="center">SUM([DISTINCT</td>
-<td align="center">ALL]&lt;列名&gt;)</td>
+<td align="center">SUM([DISTINCT &amp;#124 ALL]&lt;列名&gt;)</td>
+<td align="center">计算一列值的总和</td>
 </tr>
 <tr>
-<td align="center">AVG([DISTINCT</td>
-<td align="center">ALL]&lt;列名&gt;)</td>
+<td align="center">AVG([DISTINCT &amp;#124 ALL]&lt;列名&gt;)</td>
+<td align="center">计算一列值的平均值</td>
 </tr>
 <tr>
 <td align="center">MIN(&lt;列名&gt;)</td>
@@ -181,15 +178,68 @@
 <ul>
 <li>GROUP BY,HAVING子句</li>
 </ul>
-<p><strong>还没看懂</strong></p>
-<ol start="2">
-<li>连接查询<br>一般格式:<br><code>[&lt;表名1&gt;.]&lt;列名1&gt;&lt;比较运算符&gt;[&lt;表名2&gt;.]&lt;列名2&gt;</code></li>
-</ol>
+<p><strong>以后再写</strong></p>
+<h2 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h2><p>一般格式:<br><code>[&lt;表名1&gt;.]&lt;列名1&gt;&lt;比较运算符&gt;[&lt;表名2&gt;.]&lt;列名2&gt;</code></p>
 <ul>
 <li>广义笛卡尔积<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 不带连接谓词</span></span><br><span class="line"><span class="comment">-- 很少直接使用</span></span><br><span class="line"><span class="keyword">SELECT</span> Student.<span class="operator">*</span>,SC.<span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Student,SC</span><br></pre></td></tr></table></figure></li>
 <li>等值与非等值连接查询<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.<span class="operator">*</span>,Sc.<span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Student,SC</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno<span class="operator">=</span>SC.Sno</span><br><span class="line"><span class="comment">-- 等价写法</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span> Student <span class="keyword">inner</span> <span class="keyword">join</span> Sc </span><br><span class="line"><span class="keyword">on</span> Student.Sno<span class="operator">=</span>Sc.Sno</span><br><span class="line"><span class="comment">-- 自然连接：在select中去掉重复字段</span></span><br><span class="line"><span class="keyword">SELECT</span> Student.Sno Sno,Sname,Ssex,Sage,Sdept,Cno,Grade</span><br><span class="line"><span class="keyword">FROM</span> Student,SC</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno<span class="operator">=</span>SC.Sno <span class="keyword">AND</span> SC.Grade<span class="operator">&gt;</span><span class="number">90</span></span><br></pre></td></tr></table></figure></li>
-<li>自身连接</li>
+<li>自身连接<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 需要给表起名以示区别</span></span><br><span class="line"><span class="keyword">SELECT</span> A.Cno,B.Cpno</span><br><span class="line"><span class="keyword">FROM</span> Course A,Course B</span><br><span class="line"><span class="keyword">WHERE</span> A.Cpno<span class="operator">=</span>B.Cno</span><br></pre></td></tr></table></figure></li>
+<li>外连接<br>外连接与普通连接的区别<blockquote>
+<ul>
+<li>普通连接操作之输出满足连接条件的元组</li>
+<li>外连接操作以指定表为连接主题，将主题表中不满足连接条件的元组一并输出</li>
+<li>左外连接：列出左边关系中所有的元组</li>
+<li>右外连接：列出右边关系中所有的元组</li>
 </ul>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Student.Sno,Sname,Ssex,Sage,Sdept,Cno,Grade</span><br><span class="line"><span class="keyword">FROM</span> Student <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> SC <span class="keyword">ON</span></span><br><span class="line">    (Student.Sno<span class="operator">=</span>SC.Sno); <span class="comment">-- 左外连接</span></span><br><span class="line"><span class="comment">------</span></span><br><span class="line"><span class="keyword">SELECT</span> Student.Sno,Sname,Ssex,Sage,Sdept,Cno,Grade</span><br><span class="line"><span class="keyword">FROM</span> Student <span class="keyword">FULL</span> <span class="keyword">JOIN</span> SC <span class="keyword">ON</span></span><br><span class="line">    (Student.Sno<span class="operator">=</span>SC.Sno); <span class="comment">-- 外连接</span></span><br></pre></td></tr></table></figure>
+<img src="/2021/10/21/Sql-Server%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/%E5%B7%A6%E5%A4%96%E8%BF%9E%E6%8E%A5.png" class="" title="左外连接"></li>
+<li>多表连接<br>两个以上的表进行连接<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询每个学生的学号、姓名、选修的课程名及成绩</span></span><br><span class="line"><span class="keyword">SELECT</span> Student.Sno,Sname,Cname,Grade</span><br><span class="line"><span class="keyword">FROM</span> Student,SC,Course</span><br><span class="line"><span class="keyword">WHERE</span> Student.Sno<span class="operator">=</span>SC.Sno</span><br><span class="line">    <span class="keyword">AND</span> SC.Cno<span class="operator">=</span>Course.Cno;</span><br></pre></td></tr></table></figure>
+<h2 id="嵌套查询"><a href="#嵌套查询" class="headerlink" title="嵌套查询"></a>嵌套查询</h2><blockquote>
+<p>嵌套查询概述</p>
+<ul>
+<li>一个 <code>SELECT-FROM-WHERE</code>语句称为一个查询块</li>
+<li>将一个查询块嵌套在另一个查询块的<code>WHERE</code>子句或<code>HAVING</code>短语的条件中的查询称为<strong>嵌套查询</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>IN、比较运算符<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 不相关子查询</span></span><br><span class="line"><span class="comment">-- 由内向外</span></span><br><span class="line"><span class="keyword">SELECT</span> Sname</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sno <span class="keyword">IN</span></span><br><span class="line">        (<span class="keyword">SELECT</span> Sno</span><br><span class="line">        <span class="keyword">FROM</span> SC</span><br><span class="line">        <span class="keyword">WHERE</span> Cno<span class="operator">=</span><span class="string">&#x27;2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 相关子查询</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Cno</span><br><span class="line"><span class="keyword">FROM</span> SC x</span><br><span class="line"><span class="keyword">WHERE</span> Grade <span class="operator">&gt;=</span>(<span class="keyword">SELECT</span> <span class="built_in">AVG</span>(GRADE)</span><br><span class="line">                <span class="keyword">FROM</span> SC y</span><br><span class="line">                <span class="keyword">WHERE</span> y.Sno<span class="operator">=</span>x.Sno);</span><br></pre></td></tr></table></figure></li>
+<li>ANY、ALL  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&gt; ANY</td>
+<td align="center">&gt; ALL</td>
+<td align="center">&lt; ANY</td>
+<td align="center">&lt; ALL</td>
+</tr>
+<tr>
+<td align="center">&gt;= ANY</td>
+<td align="center">&gt;= ALL</td>
+<td align="center">&lt;= ANY</td>
+<td align="center">&lt;= ALL</td>
+</tr>
+<tr>
+<td align="center">= ANY</td>
+<td align="center">= ALL</td>
+<td align="center">&lt;&gt; ANY</td>
+<td align="center">!= ALL</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname,Sage</span><br><span class="line"><span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">WHERE</span> Sage<span class="operator">&lt;</span></span><br><span class="line">        (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(Sage)</span><br><span class="line">        <span class="keyword">FROM</span> Student</span><br><span class="line">        <span class="keyword">WHERE</span> Sdept<span class="operator">=</span><span class="string">&#x27;CS&#x27;</span>)</span><br><span class="line">        <span class="keyword">AND</span> Sdept <span class="operator">&lt;&gt;</span> <span class="string">&#x27;CS&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>EXISTS</li>
+</ul>
+<p><strong>以后再写</strong></p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-21T02:17:34.000Z" title="10/21/2021, 10:17:34 AM">2021-10-21</time>发表</span><span class="level-item"><time dateTime="2021-10-21T13:10:28.131Z" title="10/21/2021, 9:10:28 PM">2021-10-21</time>更新</span><span class="level-item">几秒读完 (大约0个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/21/Win%E5%AE%B6%E5%BA%AD%E7%89%88%E5%BC%80%E5%90%AFRemote-Desktop/">Win家庭版开启Remote Desktop</a></h1><div class="content"></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-20T11:04:22.000Z" title="10/20/2021, 7:04:22 PM">2021-10-20</time>发表</span><span class="level-item"><time dateTime="2021-10-21T13:10:14.422Z" title="10/21/2021, 9:10:14 PM">2021-10-21</time>更新</span><span class="level-item">7 分钟读完 (大约1035个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/">Hexo与Github Pages配置</a></h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天突然产生了极大的个人博客搭建的热情，查询了wordpress没弄明白后从网上的教程里找到了如今的配置，遂记录一波<br>早就听说了github page的方便之处，但当时在钻<a target="_blank" rel="noopener" href="http://60.205.226.43/">私人服务器</a>和<a target="_blank" rel="noopener" href="http://haitang.cafe/">私人域名</a>的牛角尖，内心里一直没有接受这个东西，但实际尝试之后发现还是香啊。</p>
 <hr>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
