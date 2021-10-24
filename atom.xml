@@ -6,7 +6,7 @@
   <link href="https://wakarimasita.github.io/atom.xml" rel="self"/>
   
   <link href="https://wakarimasita.github.io/"/>
-  <updated>2021-10-24T17:05:31.662Z</updated>
+  <updated>2021-10-24T17:21:27.587Z</updated>
   <id>https://wakarimasita.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wakarimasita.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/"/>
     <id>https://wakarimasita.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-10-24T16:35:19.000Z</published>
-    <updated>2021-10-24T17:05:31.662Z</updated>
+    <updated>2021-10-24T17:21:27.587Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期的数据库大作业是一个电商系统，老师发布的文档指出可以选择自己喜欢的编程语言写用户界面(C++，java，python，JavaScript等等)。本着想触及一些好奇但未知的领域(如上学期的Java课对面向接口、编程模式、git、网络、多线程等等了解了一点，这个学期也想有这样的体验)，同时想让自己的GitHub仓库里面多点语言(好看)而不是现在的Java、Java、Java，以及有点想装逼的念头，对开发方式探索来探索去。<br>道路漫长，本学期的回归分析、机器学习、数据库、人生哲学以及不知道有没有的抽样技术大作业让人担惊受怕，估计后半学期八成是以毁灭为主旋律了，所以我准备把这几个的摸索过程记录下来，不过不知道什么时候就鸽掉了。</p><h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>也就是前端和后端的开发方式选择，最近简单了解了一下php、Node.js(typeScript\javaScript)以及在研究Node.js的时候回忆起来的java，几个方式各有不同，但都没有实质上实现上面说的<strong>好奇且未知</strong>这件事。<br>前端目前准备用vue，但还没有开始了解，所以先简述一下后端的几个方式的区别<br>|开发方式|特点|<br>|:–:|:–:|</p>]]></content>
     
@@ -35,6 +35,8 @@
     
     
     <category term="普罗米修斯" scheme="https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    
+    <category term="作业的奴隶" scheme="https://wakarimasita.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
     
   </entry>
   
