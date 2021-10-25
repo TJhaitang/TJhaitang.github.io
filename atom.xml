@@ -6,7 +6,7 @@
   <link href="https://wakarimasita.github.io/atom.xml" rel="self"/>
   
   <link href="https://wakarimasita.github.io/"/>
-  <updated>2021-10-25T13:00:20.966Z</updated>
+  <updated>2021-10-25T16:37:53.362Z</updated>
   <id>https://wakarimasita.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据库大作业要求</title>
+    <link href="https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/"/>
+    <id>https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/</id>
+    <published>2021-10-25T16:37:53.000Z</published>
+    <updated>2021-10-25T16:37:53.362Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网上B2C购物系统"><a href="#网上B2C购物系统" class="headerlink" title="网上B2C购物系统"></a>网上B2C购物系统</h1><h2 id="大作业目标"><a href="#大作业目标" class="headerlink" title="大作业目标"></a>大作业目标</h2><p>该项目大作业的目标是通过实现一个现实中完整可用的数据库系统，理解和掌握有关数据库设计（包括概念设计和逻辑设计）、数据库实现、数据库维护以及数据库应用编写等方面的知识和技术。</p><h2 id="大作业内容"><a href="#大作业内容" class="headerlink" title="大作业内容"></a>大作业内容</h2><p>设计并实现一个网上B2C购物系统，类似京东、当当、亚马逊等。具体功能主要为：</p><ol><li>会员管理，新用户要先注册成为会员，系统记录会员的基本信息。</li><li>商家管理，系统维护商家的基本信息，每个商家售卖一些商品。</li><li>商品管理，系统维护所售卖商品的相关信息，如商品名称、编号、厂家、型号、图片、价格等等。用户可以在系统中查找满足一定条件的商品。</li><li>购物车管理，用户可以将某商品添加到购物车中，或者从购物车中删除等，还可以从购物车中选择一些商品生成订单。</li><li>订单管理，系统维护所有订单的信息，用户可以查询所有的订单。</li><li>评价管理，用户可以评价所购买的商品，系统可以对一个商品的评价做汇总统计。<br>该系统要求具有以上基本功能，但不限于这些功能，你可以任意添加或扩展上面的功能。具体任务要求如下：</li><li>概念设计<ol><li>使用ER模型进行数据库的概念设计，并绘制出ER图；</li><li>注意标清每个实体型的主码和联系的类型等。</li></ol></li><li>逻辑设计<ol><li>将你设计的ER模型映射成合适的关系模式；</li><li>在SQL Server中，创建该关系模式中的所有关系；</li><li>创建需要的索引、视图、完整性约束等等；</li></ol></li><li>填充数据<ol><li>生成一些适量的数据插入到数据库中已经建好的表中；</li><li>可以手动生成，也可以写程序自动生成，注意这些数据是用于测试你后面写的数据库查询的，所以生成的数据要能检测你的查询是否能给出正确答案。</li></ol></li><li>分析性查询<br> 在你的数据库上测试以下5个分析性查询，并展示查询结果：<ol><li>“显示每个商家最热卖的top 3个商品。”</li><li>“给定一个商品，显示售卖此商品价格最低的5个商家。”</li><li>“显示每个商家的年销售总额。”</li><li>“显示每个会员购买次数最多的商品。”</li><li>“显示每个省份会员的平均消费额、最大消费额和最小消费额，并按平均消费额降序排列。”<br>你可以提出更多的分析性查询，不限于以上5个。</li></ol></li><li>用户界面<ol><li>使用你喜欢的任一种编程语言（C、C++、Java、Python或JavaScript等等）或工具实现系统的用户界面；</li><li>不要求实现图形化用户界面，可以是简单的命令行界面，只要使系统管理员或用户能注册或登录进系统，并完成各种任务操作即可。</li></ol></li><li>并发性测试<ol><li>设计实验测试多个用户同时对系统进行查询及购买同一商品等操作，验证SQL Server能保证并发操作的正确性。<h2 id="大作业要求与评分"><a href="#大作业要求与评分" class="headerlink" title="大作业要求与评分"></a>大作业要求与评分</h2></li></ol></li><li>   分小组完成，1-5人一组。小组成员要有明确、均衡的分工和配合。</li><li>   最后一两周进行报告展示。</li><li>提交内容及评分项：    1.    项目分析设计文档和报告。（50%）包括：<pre><code> 1.    概念设计：ER图； 2.    逻辑设计：关系模式，以及实际在SQL Server中创建关系表及其他一些数据库对象的SQL语句； 3.    填充数据策略（具体的数据或者生成数据的程序不用写在报告里，程序可以放在源代码的压缩包里）； 4.    分析性查询及其测试结果； 5.    用户界面及整个系统结构的设计； 6.    运行测试和结果分析 7.    团队分工</code></pre> 注意：列出5个以上在项目开发过程中遇到的问题和解决方法；最后列出参考文献等。    2.    系统所有源程序的代码。（30%）    3.    项目口头报告和课堂演示。（20%）</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;网上B2C购物系统&quot;&gt;&lt;a href=&quot;#网上B2C购物系统&quot; class=&quot;headerlink&quot; title=&quot;网上B2C购物系统&quot;&gt;&lt;/a&gt;网上B2C购物系统&lt;/h1&gt;&lt;h2 id=&quot;大作业目标&quot;&gt;&lt;a href=&quot;#大作业目标&quot; class=&quot;header</summary>
+      
+    
+    
+    
+    <category term="数据库大作业" scheme="https://wakarimasita.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="作业的奴隶" scheme="https://wakarimasita.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据库大作业-数据表</title>
     <link href="https://wakarimasita.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/"/>
     <id>https://wakarimasita.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/</id>
     <published>2021-10-25T11:09:57.000Z</published>
-    <updated>2021-10-25T13:00:20.966Z</updated>
+    <updated>2021-10-25T16:28:31.928Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ER图"><a href="#ER图" class="headerlink" title="ER图"></a>ER图</h2><p>[以后再写]</p><h2 id="会员表"><a href="#会员表" class="headerlink" title="会员表"></a>会员表</h2><table><thead><tr><th align="center">会员ID(主码)</th><th align="center">会员名</th><th align="center">会员密码Hash</th></tr></thead><tbody><tr><td align="center">600601</td><td align="center">TJhat</td><td align="center">58Db624cC119fb38A</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table><h2 id="商家表"><a href="#商家表" class="headerlink" title="商家表"></a>商家表</h2><table><thead><tr><th align="center">商家ID(主码)</th><th align="center">商家名</th><th align="center">商家密码Hash</th></tr></thead><tbody><tr><td align="center">100128</td><td align="center">JYhat</td><td align="center">646cc4f6b8a821bd</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table><h2 id="商品表"><a href="#商品表" class="headerlink" title="商品表"></a>商品表</h2><ul><li>便于搜索，可否放置商品标签？</li><li>同一商品的不同分类在同一个标签页下该怎么设计？ </li><li>提高效率？  </li><li>设计生成方法使得不重复(时间戳+商户名?)</li></ul><table><thead><tr><th align="center">商品ID(主码)</th><th align="center">商品名</th><th align="center">商品图片</th><th align="center">商品厂家</th><th align="center">商品型号</th><th align="center">价格</th><th align="center">商家ID(外码)</th></tr></thead><tbody><tr><td align="center">21012501</td><td align="center">EA乖离剑</td><td align="center">c://fakepath/img1.jpg</td><td align="center">金皮卡物流集散中心</td><td align="center">1:1原型</td><td align="center">1.7 BTC</td><td align="center">100128</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table><h2 id="购物车表"><a href="#购物车表" class="headerlink" title="购物车表"></a>购物车表</h2><ul><li>如何尽可能高的提高效率？</li><li>加入时间？加入时价格？</li></ul><table><thead><tr><th align="center">商品ID</th><th align="center">会员ID</th></tr></thead><tbody><tr><td align="center">21102501</td><td align="center">600601</td></tr><tr><td align="center">…</td><td align="center">…</td></tr></tbody></table><h2 id="订单管理表"><a href="#订单管理表" class="headerlink" title="订单管理表"></a>订单管理表</h2><ul><li>提高效率、减少存储</li><li>如何生成订单号?(会员id+下单时间？)</li></ul><table><thead><tr><th align="center">订单号</th><th align="center">会员ID</th><th align="center">下单时间</th><th align="center">下单总价</th><th align="center">收货信息</th></tr></thead><tbody><tr><td align="center">21102501</td><td align="center">600601</td><td align="center">210125:18:25:33</td><td align="center">3.4 BTC</td><td align="center">(看情况)</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table><table><thead><tr><th align="center">订单号</th><th align="center">商品id</th><th align="center">商品数量</th><th align="center">商品总价</th></tr></thead><tbody><tr><td align="center">21102501</td><td align="center">21102501</td><td align="center">2</td><td align="center">3.4 BTC</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table><h2 id="评价表"><a href="#评价表" class="headerlink" title="评价表"></a>评价表</h2><ul><li>评价的评价？</li></ul><table><thead><tr><th align="center">会员ID</th><th align="center">订单号</th><th align="center">商品ID</th><th align="center">评价内容</th></tr></thead><tbody><tr><td align="center">600601</td><td align="center">21102501</td><td align="center">21102501</td><td align="center">很好用</td></tr><tr><td align="center">…</td><td align="center">…</td><td align="center">…</td><td align="center">…</td></tr></tbody></table>]]></content>
     
@@ -34,6 +58,8 @@
     
     
     
+    <category term="数据库大作业" scheme="https://wakarimasita.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
     
     <category term="作业的奴隶" scheme="https://wakarimasita.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
     
@@ -44,9 +70,9 @@
     <link href="https://wakarimasita.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/"/>
     <id>https://wakarimasita.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-10-24T16:35:19.000Z</published>
-    <updated>2021-10-25T16:27:59.146Z</updated>
+    <updated>2021-10-25T16:39:14.372Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期的数据库大作业是一个电商系统，老师发布的文档指出可以选择自己喜欢的编程语言写用户界面(C++，java，python，JavaScript等等)。本着想触及一些好奇但未知的领域(如上学期的Java课对面向接口、编程模式、git、网络、多线程等等了解了一点，这个学期也想有这样的体验)，同时想让自己的GitHub仓库里面多点语言(好看)而不是现在的Java、Java、Java，以及有点想装逼的念头，对开发方式探索来探索去。<br>道路漫长，本学期的回归分析、机器学习、数据库、人生哲学以及不知道有没有的抽样技术大作业让人担惊受怕，估计后半学期八成是以毁灭为主旋律了，所以我准备把这几个的摸索过程记录下来，不过不知道什么时候就鸽掉了。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.runoob.com/js/js-tutorial.html">菜鸟教程-JavaScript</a></li><li><a href="https://www.cnblogs.com/godlei/p/6445391.html">Apache+PHP环境搭建</a></li></ul><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li>[数据库作业要求]</li><li><a href="https://wakarimasita.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/">数据表</a></li></ul><h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>也就是前端和后端的开发方式选择，最近简单了解了一下php、Node.js(typeScript\javaScript)以及在研究Node.js的时候回忆起来的java，几个方式各有不同，但都没有实质上实现上面说的<strong>好奇且未知</strong>这件事。<br>前端目前准备用vue，但还没有开始了解，所以先简述一下后端的几个方式的区别   </p><table><thead><tr><th align="center">开发方式</th><th align="center">特点</th></tr></thead><tbody><tr><td align="center">php</td><td align="center">学习成本适中<br>可以嵌入到html文档中<br>可以前端后端放在不同服务上<br>apache后配置后即可自动运行<br>不酷</td></tr><tr><td align="center">JavaScript+Node.js</td><td align="center">学习成本较低<br>服务需要手动开启，但可以开一个screen跑<br>虽然如此，这样网站更改时需要重启服务<br>听名字一般酷</td></tr><tr><td align="center">TypeScript+Node.js</td><td align="center">学习成本较高<br>特征同上<br>名字比较酷(但需要翻译成JavaScript运行，其实一般酷)<br>学习内容多</td></tr><tr><td align="center">Java/Python</td><td align="center">学习成本很低<br>比较不酷<br>特征同上</td></tr><tr><td align="center">C/C++</td><td align="center">别闹</td></tr><tr><td align="center">其他</td><td align="center">还在想要不要继续看</td></tr></tbody></table><p>总结来说php似乎是最好的选择，相对于其他几个“发送请求-返回数据”的方式，php可以在环境配置之后一劳永逸，每次更新只需要刷新页面就可以查看效果。同时使用php可以选择将静态网站放置在Github Pages上面，将动态部分由服务器提供运算。其他几种应该也可以实现这样的功能但便捷性上要差一点。<br>但php最大的问题在于，真的不酷，不如TypeScript+Node.js酷<br>目前选择<code>Vue+JavaScript+php+SqlServer</code>作为数据库大作业的开发方式</p><h2 id="所需要的知识"><a href="#所需要的知识" class="headerlink" title="所需要的知识"></a>所需要的知识</h2><ul><li>Javascript、php在网页中的意义是什么</li><li>php如何连接到SqlServer</li><li>php程序如何嵌入到网站中</li><li>Vue的网站设计方式</li><li>各语言的基本语法   </li><li>想不到了</li></ul><h2 id="期待能学到的东西"><a href="#期待能学到的东西" class="headerlink" title="期待能学到的东西"></a>期待能学到的东西</h2><ul><li>不同编程语言之间的不同点是什么，为什么将他们分为不同的语言</li><li>一些html方面的知识</li><li>多人共同开发的经验以及自己如何立足其中的经验</li><li>一些功能的设计方式</li></ul><h2 id="卷法"><a href="#卷法" class="headerlink" title="卷法"></a>卷法</h2><ul><li>UI设计</li><li>推荐系统</li><li>卖一些抽象的东西，不局限于现实物品</li><li>积分</li><li>签到</li><li>折扣活动</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期的数据库大作业是一个电商系统，老师发布的文档指出可以选择自己喜欢的编程语言写用户界面(C++，java，python，JavaScript等等)。本着想触及一些好奇但未知的领域(如上学期的Java课对面向接口、编程模式、git、网络、多线程等等了解了一点，这个学期也想有这样的体验)，同时想让自己的GitHub仓库里面多点语言(好看)而不是现在的Java、Java、Java，以及有点想装逼的念头，对开发方式探索来探索去。<br>道路漫长，本学期的回归分析、机器学习、数据库、人生哲学以及不知道有没有的抽样技术大作业让人担惊受怕，估计后半学期八成是以毁灭为主旋律了，所以我准备把这几个的摸索过程记录下来，不过不知道什么时候就鸽掉了。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.runoob.com/js/js-tutorial.html">菜鸟教程-JavaScript</a></li><li><a href="https://www.cnblogs.com/godlei/p/6445391.html">Apache+PHP环境搭建</a></li></ul><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/">数据库作业要求</a></li><li><a href="https://wakarimasita.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/">数据表</a></li></ul><h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>也就是前端和后端的开发方式选择，最近简单了解了一下php、Node.js(typeScript\javaScript)以及在研究Node.js的时候回忆起来的java，几个方式各有不同，但都没有实质上实现上面说的<strong>好奇且未知</strong>这件事。<br>前端目前准备用vue，但还没有开始了解，所以先简述一下后端的几个方式的区别   </p><table><thead><tr><th align="center">开发方式</th><th align="center">特点</th></tr></thead><tbody><tr><td align="center">php</td><td align="center">学习成本适中<br>可以嵌入到html文档中<br>可以前端后端放在不同服务上<br>apache后配置后即可自动运行<br>不酷</td></tr><tr><td align="center">JavaScript+Node.js</td><td align="center">学习成本较低<br>服务需要手动开启，但可以开一个screen跑<br>虽然如此，这样网站更改时需要重启服务<br>听名字一般酷</td></tr><tr><td align="center">TypeScript+Node.js</td><td align="center">学习成本较高<br>特征同上<br>名字比较酷(但需要翻译成JavaScript运行，其实一般酷)<br>学习内容多</td></tr><tr><td align="center">Java/Python</td><td align="center">学习成本很低<br>比较不酷<br>特征同上</td></tr><tr><td align="center">C/C++</td><td align="center">别闹</td></tr><tr><td align="center">其他</td><td align="center">还在想要不要继续看</td></tr></tbody></table><p>总结来说php似乎是最好的选择，相对于其他几个“发送请求-返回数据”的方式，php可以在环境配置之后一劳永逸，每次更新只需要刷新页面就可以查看效果。同时使用php可以选择将静态网站放置在Github Pages上面，将动态部分由服务器提供运算。其他几种应该也可以实现这样的功能但便捷性上要差一点。<br>但php最大的问题在于，真的不酷，不如TypeScript+Node.js酷<br>目前选择<code>Vue+JavaScript+php+SqlServer</code>作为数据库大作业的开发方式</p><h2 id="所需要的知识"><a href="#所需要的知识" class="headerlink" title="所需要的知识"></a>所需要的知识</h2><ul><li>Javascript、php在网页中的意义是什么</li><li>php如何连接到SqlServer</li><li>php程序如何嵌入到网站中</li><li>Vue的网站设计方式</li><li>各语言的基本语法   </li><li>想不到了</li></ul><h2 id="期待能学到的东西"><a href="#期待能学到的东西" class="headerlink" title="期待能学到的东西"></a>期待能学到的东西</h2><ul><li>不同编程语言之间的不同点是什么，为什么将他们分为不同的语言</li><li>一些html方面的知识</li><li>多人共同开发的经验以及自己如何立足其中的经验</li><li>一些功能的设计方式</li></ul><h2 id="卷法"><a href="#卷法" class="headerlink" title="卷法"></a>卷法</h2><ul><li>UI设计</li><li>推荐系统</li><li>卖一些抽象的东西，不局限于现实物品</li><li>积分</li><li>签到</li><li>折扣活动</li></ul>]]></content>
     
     
       
@@ -125,21 +151,6 @@
       
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间</summary>
       
-    
-    
-    
-    
-    <category term="普罗米修斯" scheme="https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Win家庭版开启Remote Desktop</title>
-    <link href="https://wakarimasita.github.io/2021/10/21/Win%E5%AE%B6%E5%BA%AD%E7%89%88%E5%BC%80%E5%90%AFRemote-Desktop/"/>
-    <id>https://wakarimasita.github.io/2021/10/21/Win%E5%AE%B6%E5%BA%AD%E7%89%88%E5%BC%80%E5%90%AFRemote-Desktop/</id>
-    <published>2021-10-21T02:17:34.000Z</published>
-    <updated>2021-10-21T13:10:28.131Z</updated>
-    
     
     
     
