@@ -2,14 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/</loc>
+    <loc>https://wakarimasita.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     
   </url>
   
   <url>
     <loc>https://wakarimasita.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/</loc>
+    
+    <lastmod>2021-10-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wakarimasita.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2021-10-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/</loc>
     
     <lastmod>2021-10-25</lastmod>
     
@@ -60,7 +74,7 @@
 
   <url>
     <loc>https://wakarimasita.github.io/</loc>
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,21 +82,21 @@
   
   <url>
     <loc>https://wakarimasita.github.io/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/</loc>
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wakarimasita.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/</loc>
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wakarimasita.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/</loc>
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -91,7 +105,7 @@
   
   <url>
     <loc>https://wakarimasita.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/</loc>
-    <lastmod>2021-10-25</lastmod>
+    <lastmod>2021-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
