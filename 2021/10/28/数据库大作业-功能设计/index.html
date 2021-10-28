@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>数据库大作业-功能设计 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="目录          商家页面 会员界面 购物车界面 消息界面   主页 商品页 下单页     商家页面 登录页  商家id&amp;#x2F;密码&amp;#x2F;验证码   商家信息  头像&amp;#x2F;名字&amp;#x2F;个性签名&amp;#x2F;实名认证&amp;#x2F;金钱流水   商品管理  对商品的增删查改商品信息：照片&amp;#x2F;名字&amp;#x2F;价格&amp;#x2F;库存&amp;#x2F;参与活动&amp;#x2F;商品标签&amp;#x2F;编号(不可修改)&amp;#x2F;详细信息&amp;#x2F;商品的评论   店铺管理  店铺界面管理商品的分类店铺信息：店铺名&amp;#x2F;店铺标签&amp;#x2F;店铺评"><meta property="og:type" content="blog"><meta property="og:title" content="数据库大作业-功能设计"><meta property="og:url" content="https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="目录          商家页面 会员界面 购物车界面 消息界面   主页 商品页 下单页     商家页面 登录页  商家id&amp;#x2F;密码&amp;#x2F;验证码   商家信息  头像&amp;#x2F;名字&amp;#x2F;个性签名&amp;#x2F;实名认证&amp;#x2F;金钱流水   商品管理  对商品的增删查改商品信息：照片&amp;#x2F;名字&amp;#x2F;价格&amp;#x2F;库存&amp;#x2F;参与活动&amp;#x2F;商品标签&amp;#x2F;编号(不可修改)&amp;#x2F;详细信息&amp;#x2F;商品的评论   店铺管理  店铺界面管理商品的分类店铺信息：店铺名&amp;#x2F;店铺标签&amp;#x2F;店铺评"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/%E9%A1%B5%E9%9D%A2%E9%80%BB%E8%BE%91.jpg"><meta property="article:published_time" content="2021-10-28T02:39:58.000Z"><meta property="article:modified_time" content="2021-10-28T03:08:38.967Z"><meta property="article:author" content="TJhaitang"><meta property="article:tag" content="作业的奴隶"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/%E9%A1%B5%E9%9D%A2%E9%80%BB%E8%BE%91.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/"},"headline":"数据库大作业-功能设计","image":["https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/%E9%A1%B5%E9%9D%A2%E9%80%BB%E8%BE%91.jpg"],"datePublished":"2021-10-28T02:39:58.000Z","dateModified":"2021-10-28T03:08:38.967Z","author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://wakarimasita.github.io/img/iicon.png"}},"description":"目录          商家页面 会员界面 购物车界面 消息界面   主页 商品页 下单页     商家页面 登录页  商家id&#x2F;密码&#x2F;验证码   商家信息  头像&#x2F;名字&#x2F;个性签名&#x2F;实名认证&#x2F;金钱流水   商品管理  对商品的增删查改商品信息：照片&#x2F;名字&#x2F;价格&#x2F;库存&#x2F;参与活动&#x2F;商品标签&#x2F;编号(不可修改)&#x2F;详细信息&#x2F;商品的评论   店铺管理  店铺界面管理商品的分类店铺信息：店铺名&#x2F;店铺标签&#x2F;店铺评"}</script><link rel="canonical" href="https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/wakarimasita"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-28T02:39:58.000Z" title="10/28/2021, 10:39:58 AM">2021-10-28</time>发表</span><span class="level-item"><time dateTime="2021-10-28T03:08:38.967Z" title="10/28/2021, 11:08:38 AM">2021-10-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/">数据库大作业</a></span><span class="level-item">3 分钟读完 (大约459个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">数据库大作业-功能设计</h1><div class="content"><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="#%E5%95%86%E5%AE%B6%E9%A1%B5%E9%9D%A2">商家页面</a></td>
+<td align="center"><a href="#%E4%BC%9A%E5%91%98%E7%95%8C%E9%9D%A2">会员界面</a></td>
+<td align="center"><a href="#%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%95%8C%E9%9D%A2">购物车界面</a></td>
+<td align="center"><a href="#%E6%B6%88%E6%81%AF%E7%95%8C%E9%9D%A2">消息界面</a></td>
+</tr>
+<tr>
+<td align="center"><a href="#%E4%B8%BB%E9%A1%B5">主页</a></td>
+<td align="center"><a href="#%E5%95%86%E5%93%81%E9%A1%B5">商品页</a></td>
+<td align="center"><a href="#%E4%B8%8B%E5%8D%95%E9%A1%B5">下单页</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<img src="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/%E9%A1%B5%E9%9D%A2%E9%80%BB%E8%BE%91.jpg" class="" title="页面逻辑">
+<h2 id="商家页面"><a href="#商家页面" class="headerlink" title="商家页面"></a>商家页面</h2><ul>
+<li><p>登录页</p>
+<blockquote>
+<p>商家id/密码/验证码</p>
+</blockquote>
+</li>
+<li><p>商家信息</p>
+<blockquote>
+<p>头像/名字/个性签名/实名认证/金钱流水</p>
+</blockquote>
+</li>
+<li><p>商品管理</p>
+<blockquote>
+<p>对商品的增删查改<br>商品信息：照片/名字/价格/库存/参与活动/商品标签/编号(不可修改)/详细信息/商品的评论</p>
+</blockquote>
+</li>
+<li><p>店铺管理</p>
+<blockquote>
+<p>店铺界面管理<br>商品的分类<br>店铺信息：店铺名/店铺标签/店铺评价</p>
+</blockquote>
+</li>
+<li><p>消息管理</p>
+<blockquote>
+<p>自动回复/对话/发送广告</p>
+</blockquote>
+</li>
+<li><p>订单管理</p>
+<blockquote>
+<p>待支付/已支付/即将延迟发货/退款&amp;售后</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="会员界面"><a href="#会员界面" class="headerlink" title="会员界面"></a>会员界面</h2><ul>
+<li><p>个人信息</p>
+<blockquote>
+<p>头像/性别/省份/个性签名/ID/昵称/会员积分和等级</p>
+</blockquote>
+</li>
+<li><p>浏览记录</p>
+</li>
+<li><p>购物车</p>
+</li>
+<li><p>商品收藏</p>
+</li>
+<li><p>收获地址管理</p>
+</li>
+<li><p>好友管理</p>
+<blockquote>
+<p>加好友/删好友</p>
+</blockquote>
+</li>
+<li><p>卡包</p>
+</li>
+<li><p>订单管理</p>
+<blockquote>
+<p>待付款/待发货/待收货/待评价/售后/全部</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="购物车界面"><a href="#购物车界面" class="headerlink" title="购物车界面"></a>购物车界面</h2><ul>
+<li>商品选项卡-按店分类、按时间排序、活动信息展示</li>
+<li>计价-展示已参与的活动</li>
+<li>支付</li>
+</ul>
+<h2 id="消息界面"><a href="#消息界面" class="headerlink" title="消息界面"></a>消息界面</h2><ul>
+<li>好友消息</li>
+<li>店铺信息</li>
+<li>服务通知</li>
+<li>未读功能</li>
+</ul>
+<h2 id="主页"><a href="#主页" class="headerlink" title="主页"></a>主页</h2><ul>
+<li>商品推荐</li>
+<li>登录/注册<blockquote>
+<p>用户名/购物车/退出/签到</p>
+</blockquote>
+</li>
+<li>搜索</li>
+<li>热搜热卖</li>
+<li>折扣专区</li>
+<li>分类</li>
+</ul>
+<h2 id="商品页"><a href="#商品页" class="headerlink" title="商品页"></a>商品页</h2><ul>
+<li>商品信息<blockquote>
+<p>图片/名称/价格/库存/参与活动/详细信息/销量</p>
+</blockquote>
+</li>
+<li>购买<blockquote>
+<p>加入购物车/直接购买/选择商品的规格和数量</p>
+</blockquote>
+</li>
+<li>收藏商品</li>
+<li>商品评论区</li>
+<li>查看店铺</li>
+</ul>
+<h2 id="下单页"><a href="#下单页" class="headerlink" title="下单页"></a>下单页</h2><ul>
+<li>订单信息</li>
+<li>设置收货信息</li>
+<li>选择支付方式</li>
+<li>下单</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>数据库大作业-功能设计</p><p><a href="https://wakarimasita.github.io/2021/10/28/数据库大作业-功能设计/">https://wakarimasita.github.io/2021/10/28/数据库大作业-功能设计/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TJhaitang</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-10-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-10-28</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/">作业的奴隶</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://wakarimasita.github.io/" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/aliPay.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/WeChat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E8%BF%9B%E5%BA%A6%E5%AE%89%E6%8E%92/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">数据库大作业-进度安排</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/"><span class="level-item">php配置sqlserver驱动</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.css"><script src="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "885e87415cbf23f0ceaae67aa10587e9",
+            repo: "commentRepo",
+            owner: "wakarimasita",
+            clientID: "9ad06164ed4760ee8e74",
+            clientSecret: "3147382e8cff0ba9a952501e9124c9564c78f0a3",
+            admin: ["wakarimasita"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/HPic.png" alt="藤椒海棠"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">藤椒海棠</p><p class="is-size-6 is-block">一小步</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/wakarimasita" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/wakarimasita"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com/profile.php?id=100073476285499"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/TJhetan"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="http://haitang.cafe" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">haitang</span></span><span class="level-right"><span class="level-item tag">haitang.cafe</span></span></a></li><li><a class="level is-mobile" href="http://60.205.226.43" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">server</span></span><span class="level-right"><span class="level-item tag">60.205.226.43</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-28T02:40:13.000Z">2021-10-28</time></p><p class="title"><a href="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E8%BF%9B%E5%BA%A6%E5%AE%89%E6%8E%92/">数据库大作业-进度安排</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-28T02:39:58.000Z">2021-10-28</time></p><p class="title"><a href="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/">数据库大作业-功能设计</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/">数据库大作业</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-26T16:50:23.000Z">2021-10-27</time></p><p class="title"><a href="/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/">php配置sqlserver驱动</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/">数据库大作业</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-26T12:31:58.000Z">2021-10-26</time></p><p class="title"><a href="/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%88%86%E5%B7%A5/">数据库大作业-分工</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/">数据库大作业</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-26T09:58:59.000Z">2021-10-26</time></p><p class="title"><a href="/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/">数据库大作业</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"><span class="level-start"><span class="level-item">数据库大作业</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"><span class="tag">作业的奴隶</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"><span class="tag">普罗米修斯</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"><span class="tag">课堂大师</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a><p class="is-size-7"><span>&copy; 2021 TJhaitang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

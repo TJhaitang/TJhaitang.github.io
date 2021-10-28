@@ -6,7 +6,7 @@
   <link href="https://wakarimasita.github.io/atom.xml" rel="self"/>
   
   <link href="https://wakarimasita.github.io/"/>
-  <updated>2021-10-26T17:30:21.606Z</updated>
+  <updated>2021-10-28T02:40:13.421Z</updated>
   <id>https://wakarimasita.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库大作业-进度安排</title>
+    <link href="https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E8%BF%9B%E5%BA%A6%E5%AE%89%E6%8E%92/"/>
+    <id>https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E8%BF%9B%E5%BA%A6%E5%AE%89%E6%8E%92/</id>
+    <published>2021-10-28T02:40:13.000Z</published>
+    <updated>2021-10-28T02:40:13.421Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库大作业-功能设计</title>
+    <link href="https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://wakarimasita.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/</id>
+    <published>2021-10-28T02:39:58.000Z</published>
+    <updated>2021-10-28T03:08:38.967Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><table><thead><tr><th align="center"></th><th align="center"></th><th align="center"></th><th align="center"></th></tr></thead><tbody><tr><td align="center"><a href="#%E5%95%86%E5%AE%B6%E9%A1%B5%E9%9D%A2">商家页面</a></td><td align="center"><a href="#%E4%BC%9A%E5%91%98%E7%95%8C%E9%9D%A2">会员界面</a></td><td align="center"><a href="#%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%95%8C%E9%9D%A2">购物车界面</a></td><td align="center"><a href="#%E6%B6%88%E6%81%AF%E7%95%8C%E9%9D%A2">消息界面</a></td></tr><tr><td align="center"><a href="#%E4%B8%BB%E9%A1%B5">主页</a></td><td align="center"><a href="#%E5%95%86%E5%93%81%E9%A1%B5">商品页</a></td><td align="center"><a href="#%E4%B8%8B%E5%8D%95%E9%A1%B5">下单页</a></td><td align="center"></td></tr></tbody></table><img src="/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1/%E9%A1%B5%E9%9D%A2%E9%80%BB%E8%BE%91.jpg" class="" title="页面逻辑"><h2 id="商家页面"><a href="#商家页面" class="headerlink" title="商家页面"></a>商家页面</h2><ul><li><p>登录页</p><blockquote><p>商家id/密码/验证码</p></blockquote></li><li><p>商家信息</p><blockquote><p>头像/名字/个性签名/实名认证/金钱流水</p></blockquote></li><li><p>商品管理</p><blockquote><p>对商品的增删查改<br>商品信息：照片/名字/价格/库存/参与活动/商品标签/编号(不可修改)/详细信息/商品的评论</p></blockquote></li><li><p>店铺管理</p><blockquote><p>店铺界面管理<br>商品的分类<br>店铺信息：店铺名/店铺标签/店铺评价</p></blockquote></li><li><p>消息管理</p><blockquote><p>自动回复/对话/发送广告</p></blockquote></li><li><p>订单管理</p><blockquote><p>待支付/已支付/即将延迟发货/退款&amp;售后</p></blockquote></li></ul><h2 id="会员界面"><a href="#会员界面" class="headerlink" title="会员界面"></a>会员界面</h2><ul><li><p>个人信息</p><blockquote><p>头像/性别/省份/个性签名/ID/昵称/会员积分和等级</p></blockquote></li><li><p>浏览记录</p></li><li><p>购物车</p></li><li><p>商品收藏</p></li><li><p>收获地址管理</p></li><li><p>好友管理</p><blockquote><p>加好友/删好友</p></blockquote></li><li><p>卡包</p></li><li><p>订单管理</p><blockquote><p>待付款/待发货/待收货/待评价/售后/全部</p></blockquote></li></ul><h2 id="购物车界面"><a href="#购物车界面" class="headerlink" title="购物车界面"></a>购物车界面</h2><ul><li>商品选项卡-按店分类、按时间排序、活动信息展示</li><li>计价-展示已参与的活动</li><li>支付</li></ul><h2 id="消息界面"><a href="#消息界面" class="headerlink" title="消息界面"></a>消息界面</h2><ul><li>好友消息</li><li>店铺信息</li><li>服务通知</li><li>未读功能</li></ul><h2 id="主页"><a href="#主页" class="headerlink" title="主页"></a>主页</h2><ul><li>商品推荐</li><li>登录/注册<blockquote><p>用户名/购物车/退出/签到</p></blockquote></li><li>搜索</li><li>热搜热卖</li><li>折扣专区</li><li>分类</li></ul><h2 id="商品页"><a href="#商品页" class="headerlink" title="商品页"></a>商品页</h2><ul><li>商品信息<blockquote><p>图片/名称/价格/库存/参与活动/详细信息/销量</p></blockquote></li><li>购买<blockquote><p>加入购物车/直接购买/选择商品的规格和数量</p></blockquote></li><li>收藏商品</li><li>商品评论区</li><li>查看店铺</li></ul><h2 id="下单页"><a href="#下单页" class="headerlink" title="下单页"></a>下单页</h2><ul><li>订单信息</li><li>设置收货信息</li><li>选择支付方式</li><li>下单</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;t</summary>
+      
+    
+    
+    
+    <category term="数据库大作业" scheme="https://wakarimasita.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    
+    
+    <category term="作业的奴隶" scheme="https://wakarimasita.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>php配置sqlserver驱动</title>
@@ -45,14 +87,18 @@
     <link href="https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%88%86%E5%B7%A5/"/>
     <id>https://wakarimasita.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%88%86%E5%B7%A5/</id>
     <published>2021-10-26T12:31:58.000Z</published>
-    <updated>2021-10-26T15:39:26.119Z</updated>
+    <updated>2021-10-28T02:38:59.067Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="页面-2人"><a href="#页面-2人" class="headerlink" title="页面(2人)"></a>页面(2人)</h2><h3 id="负责内容"><a href="#负责内容" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>各页面的整体设计：页面内容、页面关系、系统结构等</li><li>提供功能要求</li><li>提供美术要求</li><li>统筹美术与后端   </li></ul><h3 id="需要了解的事情"><a href="#需要了解的事情" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：HTML、Vue3.0</li><li>了解：JavaScript、SqlServer</li><li>粗略了解：css、php   </li></ul><hr><h2 id="后端-1人"><a href="#后端-1人" class="headerlink" title="后端(1人)"></a>后端(1人)</h2><h3 id="负责内容-1"><a href="#负责内容-1" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>各功能的逻辑实现：登录逻辑、购买逻辑、推荐逻辑等</li><li>提供功能接口与接口文档</li><li>提供数据库搜索要求</li><li>提供数据库搭建建议   </li></ul><h3 id="需要了解的事情-1"><a href="#需要了解的事情-1" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：php、SqlServer</li><li>了解：HTML、JavaScript</li><li>粗略了解：Vue3.0</li></ul><hr><h2 id="美术-1人"><a href="#美术-1人" class="headerlink" title="美术(1人)"></a>美术(1人)</h2><h3 id="负责内容-2"><a href="#负责内容-2" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>提供各元素的美术模板:自行设计\从模板库中选择</li><li>提供页面搭建建议</li></ul><h3 id="需要了解的事情-2"><a href="#需要了解的事情-2" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：css</li><li>了解：HTML、Vue3.0、SqlServer</li><li>粗略了解：JavaScript</li></ul><hr><h2 id="数据库-1主要负责人"><a href="#数据库-1主要负责人" class="headerlink" title="数据库(1主要负责人)"></a>数据库(1主要负责人)</h2><h3 id="负责内容-3"><a href="#负责内容-3" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>设计并建立数据表</li><li>对查询需求提供查询语句</li></ul><h3 id="需要了解的事情-3"><a href="#需要了解的事情-3" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：SqlServer</li></ul><hr><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="页面-2人"><a href="#页面-2人" class="headerlink" title="页面(2人)"></a>页面(2人)</h2><ul><li>王思然</li><li>范碧珂   </li></ul><h3 id="负责内容"><a href="#负责内容" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>各页面的整体设计：页面内容、页面关系、系统结构等</li><li>提供功能要求</li><li>提供美术要求</li><li>统筹美术与后端   </li></ul><h3 id="需要了解的事情"><a href="#需要了解的事情" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：HTML、Vue3.0</li><li>了解：JavaScript、SqlServer</li><li>粗略了解：css、php   </li></ul><hr><h2 id="后端-1人"><a href="#后端-1人" class="headerlink" title="后端(1人)"></a>后端(1人)</h2><ul><li>徐京洲   </li></ul><h3 id="负责内容-1"><a href="#负责内容-1" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>各功能的逻辑实现：登录逻辑、购买逻辑、推荐逻辑等</li><li>提供功能接口与接口文档</li><li>提供数据库搜索要求</li><li>提供数据库搭建建议   </li></ul><h3 id="需要了解的事情-1"><a href="#需要了解的事情-1" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：php、SqlServer</li><li>了解：HTML、JavaScript</li><li>粗略了解：Vue3.0</li></ul><hr><h2 id="美术-1人"><a href="#美术-1人" class="headerlink" title="美术(1人)"></a>美术(1人)</h2><ul><li>张琪   </li></ul><h3 id="负责内容-2"><a href="#负责内容-2" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>提供各元素的美术模板:自行设计\从模板库中选择</li><li>提供页面搭建建议</li></ul><h3 id="需要了解的事情-2"><a href="#需要了解的事情-2" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：css</li><li>了解：HTML、Vue3.0、SqlServer</li><li>粗略了解：JavaScript</li></ul><hr><h2 id="数据库-1主要负责人"><a href="#数据库-1主要负责人" class="headerlink" title="数据库(1主要负责人)"></a>数据库(1主要负责人)</h2><ul><li>陈诺   </li></ul><h3 id="负责内容-3"><a href="#负责内容-3" class="headerlink" title="负责内容"></a>负责内容</h3><ul><li>设计并建立数据表</li><li>对查询需求提供查询语句</li></ul><h3 id="需要了解的事情-3"><a href="#需要了解的事情-3" class="headerlink" title="需要了解的事情"></a>需要了解的事情</h3><ul><li>深入：SqlServer</li></ul><hr><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;页面-2人&quot;&gt;&lt;a href=&quot;#页面-2人&quot; class=&quot;headerlink&quot; title=&quot;页面(2人)&quot;&gt;&lt;/a&gt;页面(2人)&lt;/h2&gt;&lt;h3 id=&quot;负责内容&quot;&gt;&lt;a href=&quot;#负责内容&quot; class=&quot;headerlink&quot; title=&quot;负责内</summary>
+    <summary type="html">&lt;h2 id=&quot;页面-2人&quot;&gt;&lt;a href=&quot;#页面-2人&quot; class=&quot;headerlink&quot; title=&quot;页面(2人)&quot;&gt;&lt;/a&gt;页面(2人)&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;王思然&lt;/li&gt;
+&lt;li&gt;范碧珂   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;负责内容&quot;&gt;&lt;a hr</summary>
       
     
     
