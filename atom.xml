@@ -3,11 +3,11 @@
   <title>藤椒海棠</title>
   
   <subtitle>一小步！</subtitle>
-  <link href="https://TJhaitang.github.io/atom.xml" rel="self"/>
+  <link href="https://tjhaitang.github.io/atom.xml" rel="self"/>
   
-  <link href="https://TJhaitang.github.io/"/>
-  <updated>2021-10-26T17:30:21.606Z</updated>
-  <id>https://TJhaitang.github.io/</id>
+  <link href="https://tjhaitang.github.io/"/>
+  <updated>2022-01-10T17:52:14.316Z</updated>
+  <id>https://tjhaitang.github.io/</id>
   
   <author>
     <name>TJhaitang</name>
@@ -17,9 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>unity学习1</title>
+    <link href="https://tjhaitang.github.io/2022/01/11/unity%E5%AD%A6%E4%B9%A01/"/>
+    <id>https://tjhaitang.github.io/2022/01/11/unity%E5%AD%A6%E4%B9%A01/</id>
+    <published>2022-01-10T16:53:33.000Z</published>
+    <updated>2022-01-10T17:52:14.316Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么突然要学unity呢？这要追溯到很久很久以前，那是一个温暖的早晨，我在立德楼里面通宵准备期末考试。凌晨五点半的天还是黑的，眼前的书也看不明白了，只有七点的油条和八点的随机过程鼓动着我让我远离梦境的诱惑。百无聊赖之际，一些尘封的热情翻涌了起来，我就去发了一个学习做游戏招队友的帖子。<br>最终我双开了两个小队，两个小队殊途同归到了unity上。与我原先的虚幻四+某2d引擎不同，unity有优势也有劣势。然而结果在此，寒假的unity学习也只能轰轰烈烈的展开了。<br>这里记录我的学习收获叭。   </p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>1.<a href="https://www.w3cschool.cn/unity3d_jc/unity3d_jc-9dvl37yg.html">unity3D中文教程</a>   </p><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>win11家庭版<br>Redmibook15 pro增强版i5-11320H无独显</p><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="unity安装"><a href="#unity安装" class="headerlink" title="unity安装"></a>unity安装</h3><p>搜索引擎unity，在unity官网里选择喜欢的版本安装即可   </p><h3 id="unity激活"><a href="#unity激活" class="headerlink" title="unity激活"></a>unity激活</h3><p>在unity官网下载unityhub，注册登陆后选择激活许可证，创建免费的个人许可证即可使用unity   </p><h3 id="C-编辑器"><a href="#C-编辑器" class="headerlink" title="C#编辑器"></a>C#编辑器</h3><p>这里我目前选择的是vscode作为c#的编辑器，下载了visual studio但还没有开始使用，待unity学到一定程度再开始研究   </p><h2 id="一些了解"><a href="#一些了解" class="headerlink" title="一些了解"></a>一些了解</h2><ol><li><p>unity3d引擎是什么？</p><blockquote><p>unity3d引擎提供了预置的物体、属性、光照、摄像机等概念的界定，提供了C#方法库与项目代码的可视化界面。用户可以通过可视化界面进行项目的预览、调整甚至构建。   </p></blockquote></li><li><p>一些尝试</p><blockquote><p>尝试了创建物体，调整物体性质<br>尝试了为摄像机绑定c#脚本<br>尝试了为物体绑定脚本，创建了按钮</p></blockquote></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;为什么突然要学unity呢？这要追溯到很久很久以前，那是一个温暖的早晨，我在立德楼里面通宵准备期末考试。凌晨五点半的天还是黑的，眼前的书也看</summary>
+      
+    
+    
+    
+    
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>php配置sqlserver驱动</title>
-    <link href="https://TJhaitang.github.io/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/"/>
-    <id>https://TJhaitang.github.io/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/</id>
+    <link href="https://tjhaitang.github.io/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/"/>
+    <id>https://tjhaitang.github.io/2021/10/27/php%E9%85%8D%E7%BD%AEsqlserver%E9%A9%B1%E5%8A%A8/</id>
     <published>2021-10-26T16:50:23.000Z</published>
     <updated>2021-10-26T17:30:21.606Z</updated>
     
@@ -33,17 +55,17 @@
     
     
     
-    <category term="数据库大作业" scheme="https://TJhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    <category term="数据库大作业" scheme="https://tjhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>Vue学习笔记</title>
-    <link href="https://TJhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://TJhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://tjhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://tjhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-10-26T09:58:59.000Z</published>
     <updated>2021-10-26T10:50:07.277Z</updated>
     
@@ -58,38 +80,38 @@
     
     
     
-    <category term="数据库大作业" scheme="https://TJhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    <category term="数据库大作业" scheme="https://tjhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript学习笔记</title>
-    <link href="https://TJhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://TJhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://tjhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://tjhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-10-26T09:57:44.000Z</published>
     <updated>2021-10-26T09:58:41.527Z</updated>
     
     
     
     
-    <category term="数据库大作业" scheme="https://TJhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    <category term="数据库大作业" scheme="https://tjhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>web开发学习——基于一个电商平台系统</title>
-    <link href="https://TJhaitang.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://TJhaitang.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/</id>
+    <link href="https://tjhaitang.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://tjhaitang.github.io/2021/10/25/web%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E4%B8%80%E4%B8%AA%E7%94%B5%E5%95%86%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-10-24T16:35:19.000Z</published>
-    <updated>2021-10-28T03:28:09.114Z</updated>
+    <updated>2022-01-10T16:52:03.998Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期的数据库大作业是一个电商系统，老师发布的文档指出可以选择自己喜欢的编程语言写用户界面(C++，java，python，JavaScript等等)。本着想触及一些好奇但未知的领域(如上学期的Java课对面向接口、编程模式、git、网络、多线程等等了解了一点，这个学期也想有这样的体验)，同时想让自己的GitHub仓库里面多点语言(好看)而不是现在的Java、Java、Java，以及有点想装逼的念头，对开发方式探索来探索去。<br>道路漫长，本学期的回归分析、机器学习、数据库、人生哲学以及不知道有没有的抽样技术大作业让人担惊受怕，估计后半学期八成是以毁灭为主旋律了，所以我准备把这几个的摸索过程记录下来，不过不知道什么时候就鸽掉了。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.runoob.com/js/js-tutorial.html">菜鸟教程-JavaScript</a></li><li><a href="https://www.cnblogs.com/godlei/p/6445391.html">Apache+PHP环境搭建</a></li></ul><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="https://TJhaitang.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/">数据库作业要求</a></li><li><a href="https://TJhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">JavaScript学习笔记</a></li><li><a href="https://TJhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">Vue学习笔记</a></li><li><a href="https://TJhaitang.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/">数据表</a></li><li><a href="https://TJhaitang.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%88%86%E5%B7%A5">分工</a></li><li><a href="https://TJhaitang.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1">功能设计</a></li><li><a href="https://TJhaitang.github.io/Shopping-System">平台本体</a></li></ul><h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>也就是前端和后端的开发方式选择，最近简单了解了一下php、Node.js(typeScript\javaScript)以及在研究Node.js的时候回忆起来的java，几个方式各有不同，但都没有实质上实现上面说的<strong>好奇且未知</strong>这件事。<br>前端目前准备用vue，但还没有开始了解，所以先简述一下后端的几个方式的区别   </p><table><thead><tr><th align="center">开发方式</th><th align="center">特点</th></tr></thead><tbody><tr><td align="center">php</td><td align="center">学习成本适中<br>可以嵌入到html文档中<br>可以前端后端放在不同服务上<br>apache后配置后即可自动运行<br>不酷</td></tr><tr><td align="center">JavaScript+Node.js</td><td align="center">学习成本较低<br>服务需要手动开启，但可以开一个screen跑<br>虽然如此，这样网站更改时需要重启服务<br>听名字一般酷</td></tr><tr><td align="center">TypeScript+Node.js</td><td align="center">学习成本较高<br>特征同上<br>名字比较酷(但需要翻译成JavaScript运行，其实一般酷)<br>学习内容多</td></tr><tr><td align="center">Java/Python</td><td align="center">学习成本很低<br>比较不酷<br>特征同上</td></tr><tr><td align="center">C/C++</td><td align="center">别闹</td></tr><tr><td align="center">其他</td><td align="center">还在想要不要继续看</td></tr></tbody></table><p>总结来说php似乎是最好的选择，相对于其他几个“发送请求-返回数据”的方式，php可以在环境配置之后一劳永逸，每次更新只需要刷新页面就可以查看效果。同时使用php可以选择将静态网站放置在Github Pages上面，将动态部分由服务器提供运算。其他几种应该也可以实现这样的功能但便捷性上要差一点。<br>但php最大的问题在于，真的不酷，不如TypeScript+Node.js酷<br>目前选择<code>Vue+JavaScript+php+SqlServer</code>作为数据库大作业的开发方式</p><h2 id="所需要的知识"><a href="#所需要的知识" class="headerlink" title="所需要的知识"></a>所需要的知识</h2><ul><li>Javascript、php在网页中的意义是什么</li><li>php如何连接到SqlServer</li><li>php程序如何嵌入到网站中</li><li>Vue的网站设计方式</li><li>各语言的基本语法   </li><li>想不到了</li></ul><h2 id="期待能学到的东西"><a href="#期待能学到的东西" class="headerlink" title="期待能学到的东西"></a>期待能学到的东西</h2><ul><li>不同编程语言之间的不同点是什么，为什么将他们分为不同的语言</li><li>一些html方面的知识</li><li>多人共同开发的经验以及自己如何立足其中的经验</li><li>一些功能的设计方式</li></ul><h2 id="卷法"><a href="#卷法" class="headerlink" title="卷法"></a>卷法</h2><ul><li>UI设计</li><li>推荐系统</li><li>积分</li><li>签到</li><li>折扣活动</li><li>防sql注入</li><li>高并发安全性</li><li>信息系统</li><li>……</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期的数据库大作业是一个电商系统，老师发布的文档指出可以选择自己喜欢的编程语言写用户界面(C++，java，python，JavaScript等等)。本着想触及一些好奇但未知的领域(如上学期的Java课对面向接口、编程模式、git、网络、多线程等等了解了一点，这个学期也想有这样的体验)，同时想让自己的GitHub仓库里面多点语言(好看)而不是现在的Java、Java、Java，以及有点想装逼的念头，对开发方式探索来探索去。<br>道路漫长，本学期的回归分析、机器学习、数据库、人生哲学以及不知道有没有的抽样技术大作业让人担惊受怕，估计后半学期八成是以毁灭为主旋律了，所以我准备把这几个的摸索过程记录下来，不过不知道什么时候就鸽掉了。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li><a href="https://www.runoob.com/js/js-tutorial.html">菜鸟教程-JavaScript</a></li><li><a href="https://www.cnblogs.com/godlei/p/6445391.html">Apache+PHP环境搭建</a></li></ul><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="https://tjhaitang.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A%E8%A6%81%E6%B1%82/">数据库作业要求</a></li><li><a href="https://tjhaitang.github.io/2021/10/26/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">JavaScript学习笔记</a></li><li><a href="https://tjhaitang.github.io/2021/10/26/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">Vue学习笔记</a></li><li><a href="https://tjhaitang.github.io/2021/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E6%95%B0%E6%8D%AE%E8%A1%A8/">数据表</a></li><li><a href="https://tjhaitang.github.io/2021/10/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%88%86%E5%B7%A5">分工</a></li><li><a href="https://tjhaitang.github.io/2021/10/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A-%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1">功能设计</a></li><li><a href="https://tjhaitang.github.io/Shopping-System">平台本体</a></li></ul><h2 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h2><p>也就是前端和后端的开发方式选择，最近简单了解了一下php、Node.js(typeScript\javaScript)以及在研究Node.js的时候回忆起来的java，几个方式各有不同，但都没有实质上实现上面说的<strong>好奇且未知</strong>这件事。<br>前端目前准备用vue，但还没有开始了解，所以先简述一下后端的几个方式的区别   </p><table><thead><tr><th align="center">开发方式</th><th align="center">特点</th></tr></thead><tbody><tr><td align="center">php</td><td align="center">学习成本适中<br>可以嵌入到html文档中<br>可以前端后端放在不同服务上<br>apache后配置后即可自动运行<br>不酷</td></tr><tr><td align="center">JavaScript+Node.js</td><td align="center">学习成本较低<br>服务需要手动开启，但可以开一个screen跑<br>虽然如此，这样网站更改时需要重启服务<br>听名字一般酷</td></tr><tr><td align="center">TypeScript+Node.js</td><td align="center">学习成本较高<br>特征同上<br>名字比较酷(但需要翻译成JavaScript运行，其实一般酷)<br>学习内容多</td></tr><tr><td align="center">Java/Python</td><td align="center">学习成本很低<br>比较不酷<br>特征同上</td></tr><tr><td align="center">C/C++</td><td align="center">别闹</td></tr><tr><td align="center">其他</td><td align="center">还在想要不要继续看</td></tr></tbody></table><p>总结来说php似乎是最好的选择，相对于其他几个“发送请求-返回数据”的方式，php可以在环境配置之后一劳永逸，每次更新只需要刷新页面就可以查看效果。同时使用php可以选择将静态网站放置在Github Pages上面，将动态部分由服务器提供运算。其他几种应该也可以实现这样的功能但便捷性上要差一点。<br>但php最大的问题在于，真的不酷，不如TypeScript+Node.js酷<br>目前选择<code>Vue+JavaScript+php+SqlServer</code>作为数据库大作业的开发方式</p><h2 id="所需要的知识"><a href="#所需要的知识" class="headerlink" title="所需要的知识"></a>所需要的知识</h2><ul><li>Javascript、php在网页中的意义是什么</li><li>php如何连接到SqlServer</li><li>php程序如何嵌入到网站中</li><li>Vue的网站设计方式</li><li>各语言的基本语法   </li><li>想不到了</li></ul><h2 id="期待能学到的东西"><a href="#期待能学到的东西" class="headerlink" title="期待能学到的东西"></a>期待能学到的东西</h2><ul><li>不同编程语言之间的不同点是什么，为什么将他们分为不同的语言</li><li>一些html方面的知识</li><li>多人共同开发的经验以及自己如何立足其中的经验</li><li>一些功能的设计方式</li></ul><h2 id="卷法"><a href="#卷法" class="headerlink" title="卷法"></a>卷法</h2><ul><li>UI设计</li><li>推荐系统</li><li>积分</li><li>签到</li><li>折扣活动</li><li>防sql注入</li><li>高并发安全性</li><li>信息系统</li><li>……</li></ul>]]></content>
     
     
       
@@ -99,19 +121,19 @@
     
     
     
-    <category term="数据库大作业" scheme="https://TJhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
+    <category term="数据库大作业" scheme="https://tjhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"/>
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
-    <category term="作业的奴隶" scheme="https://TJhaitang.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
+    <category term="作业的奴隶" scheme="https://tjhaitang.github.io/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"/>
     
   </entry>
   
   <entry>
     <title>查询-SqlServer学习</title>
-    <link href="https://TJhaitang.github.io/2021/10/22/%E6%9F%A5%E8%AF%A2-SqlServer%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://TJhaitang.github.io/2021/10/22/%E6%9F%A5%E8%AF%A2-SqlServer%E5%AD%A6%E4%B9%A0/</id>
+    <link href="https://tjhaitang.github.io/2021/10/22/%E6%9F%A5%E8%AF%A2-SqlServer%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://tjhaitang.github.io/2021/10/22/%E6%9F%A5%E8%AF%A2-SqlServer%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-10-22T09:20:49.000Z</published>
     <updated>2021-10-22T09:22:18.159Z</updated>
     
@@ -128,14 +150,14 @@
     
     
     
-    <category term="课堂大师" scheme="https://TJhaitang.github.io/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"/>
+    <category term="课堂大师" scheme="https://tjhaitang.github.io/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"/>
     
   </entry>
   
   <entry>
     <title>Reference</title>
-    <link href="https://TJhaitang.github.io/2021/10/21/Reference/"/>
-    <id>https://TJhaitang.github.io/2021/10/21/Reference/</id>
+    <link href="https://tjhaitang.github.io/2021/10/21/Reference/"/>
+    <id>https://tjhaitang.github.io/2021/10/21/Reference/</id>
     <published>2021-10-21T13:53:07.000Z</published>
     <updated>2021-10-21T13:55:54.888Z</updated>
     
@@ -150,14 +172,14 @@
     
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>在Windows电脑上运行安卓程序</title>
-    <link href="https://TJhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"/>
-    <id>https://TJhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/</id>
+    <link href="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/</id>
     <published>2021-10-21T11:29:57.000Z</published>
     <updated>2021-10-21T12:37:09.277Z</updated>
     
@@ -172,16 +194,16 @@
     
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>Hexo与Github Pages配置</title>
-    <link href="https://TJhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/"/>
-    <id>https://TJhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://tjhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/"/>
+    <id>https://tjhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/</id>
     <published>2021-10-20T11:04:22.000Z</published>
-    <updated>2021-10-21T13:10:14.422Z</updated>
+    <updated>2022-01-10T16:52:03.998Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天突然产生了极大的个人博客搭建的热情，查询了wordpress没弄明白后从网上的教程里找到了如今的配置，遂记录一波<br>早就听说了github page的方便之处，但当时在钻<a href="http://60.205.226.43/">私人服务器</a>和<a href="http://haitang.cafe/">私人域名</a>的牛角尖，内心里一直没有接受这个东西，但实际尝试之后发现还是香啊。</p><hr><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul><li>为什么用Reference不用参考文献呢？因为感觉参考文献这个词好奇怪啊   </li><li>为什么要把Reference写在最前面呢，因为这个页面应该只有我自己看，而自己看的目的基本也就是找当时在哪里找的教程，遂如此</li></ul><ol><li><a href="https://www.jianshu.com/p/9b2f2de68838">ubuntu下搭建Hexo+GitHub博客</a></li><li><a href="https://www.yisu.com/zixun/556831.html">怎么在Ubuntu服务器上部署Hexo博客</a></li><li><a href="https://www.cnblogs.com/feiquan/p/11223487.html#:~:text=Ubuntu%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88nodejs.%20%E8%BD%AC%E8%87%AA%EF%BC%9Aubuntu%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88nodejs%EF%BC%8C%E5%8F%AA%E9%9C%802%E6%AD%A5.%20%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8C%E5%8E%BB%20nodejs%20%E5%AE%98%E7%BD%91%20https%3A%2F%2Fnodejs.org%20%E7%9C%8B%E6%9C%80%E6%96%B0%E7%9A%84%E7%89%88%E6%9C%AC%E5%8F%B7%EF%BC%9B.,%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E4%B8%8D%E8%BF%87%E4%BD%A0%E6%B1%82%E7%A8%B3%E7%9A%84%E8%AF%9D%E5%BB%BA%E8%AE%AE%E9%80%89%2010.16.0%20%E7%9A%84LTS%E7%89%88%E3%80%82.%20%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%8C%E6%B7%BB%E5%8A%A0%E6%BA%90%E5%90%8E%E5%AE%89%E8%A3%85.%20%E9%87%8D%E7%82%B9%E6%9D%A5%E4%BA%86%EF%BC%8Cnodejs%20%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%A4%A7%E7%89%88%E6%9C%AC%E5%8F%B7%E9%83%BD%E6%9C%89%E7%9B%B8%E5%AF%B9%E5%BA%94%E7%9A%84%E6%BA%90%EF%BC%8C%E6%AF%94%E5%A6%82%E8%BF%99%E9%87%8C%E7%9A%84%2010.x.x%E7%89%88%E6%9C%AC%E7%9A%84%E6%BA%90%E6%98%AFhttps%3A%2F%2Fdeb.nodesource.com%2Fsetup_10.x%E3%80%82.%20%E6%89%80%E4%BB%A5%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8C%EF%BC%9A.">Ubuntu 安装最新版nodejs</a></li><li><a href="https://hexo.io/zh-cn/docs/commands">指令|Hexo</a></li><li><a href="https://blog.csdn.net/weixin_39636333/article/details/110638794">hexo 本地编辑md文件_使用hexo新建、编辑并预览文章</a></li><li><a href="https://github.com/ppoffice/hexo-theme-icarus">hexo模板-icarus</a></li><li><a href="http://ppoffice.github.io/hexo-theme-icarus/uncategorized/icarus%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">Icarus快速上手</a></li><li><a href="https://blog.csdn.net/baidu_20313315/article/details/118384409">hexo g报错,line.mathALL is not funciton问题解决</a> <em>这个是痛苦报错的雪中炭</em></li><li><a href="https://blog.csdn.net/m0_46256147/article/details/104725439">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</a> <em>这个也是，但没有用到</em></li></ol><hr><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>Ubuntu 20.04</p><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="一、安装npm"><a href="#一、安装npm" class="headerlink" title="一、安装npm"></a>一、安装npm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure><h3 id="二、安装Node-js"><a href="#二、安装Node-js" class="headerlink" title="二、安装Node.js"></a>二、安装Node.js</h3><ol><li>添加最新版Node.js源<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br></pre></td></tr></table></figure></li><li>安装Node.js<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure></li><li>验证安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br></pre></td></tr></table></figure>如果直接使用 <code>apt-get install nodejs</code>的话安装版本为10.16.0，在使用hexo时会出现方法不存在的问题。<h3 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建目录</span></span><br><span class="line">mkdir hexo</span><br><span class="line"><span class="comment">#进入目录</span></span><br><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line"><span class="comment">#安装hexo</span></span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line">sudo npm install -g hexo-server</span><br><span class="line"><span class="comment">#初始化仓库</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>测试安装成功<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="github-Pages配置"><a href="#github-Pages配置" class="headerlink" title="github Pages配置"></a>github Pages配置</h2><p>ssh连接github的教程有很多，这里就不赘余了</p><ol><li>在自己的github里创建名为 <strong>&lt;用户名&gt;.github.io</strong>的仓库(可以使用其他名称如hello.io，但这样做的好处是可以直接使用https://&lt;用户名&gt;.github.io访问此网站)   <img src="/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/screenshot.png" class="" title="仓库实例"></li></ol><hr><h2 id="配置hexo-config-yml"><a href="#配置hexo-config-yml" class="headerlink" title="配置hexo/_config.yml"></a>配置hexo/_config.yml</h2><ol><li>站点信息设置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: TJhaitang&#x27;s Blog #站名</span><br><span class="line">subtitle: flame! #副标题</span><br><span class="line">description: #站描述</span><br><span class="line">author: #作者</span><br><span class="line">language: zh-CN #语言</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure></li><li>配置url<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url: http://TJhaitang.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></li><li>默认创建资源文件夹<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yaml post_asset_folder: true</span><br></pre></td></tr></table></figure></li><li>资源仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:wakarimasta/TJhaitang.github.io.git #TJhaitang是你的用户名</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="Hexo基础命令"><a href="#Hexo基础命令" class="headerlink" title="Hexo基础命令"></a>Hexo基础命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;文章标题&quot;</span> <span class="comment">#会在 hexo/source/_post 下生成对应的.md文件</span></span><br><span class="line">hexo g <span class="comment">#生成静态文件，即编译当前的网站</span></span><br><span class="line">hexo d <span class="comment">#提交部署</span></span><br></pre></td></tr></table></figure><hr><h2 id="Hexo模板配置"><a href="#Hexo模板配置" class="headerlink" title="Hexo模板配置"></a>Hexo模板配置</h2><p>以后再写，总的来说就是上面reference里面的那个</p>]]></content>
     
@@ -194,14 +216,14 @@
     
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
   <entry>
     <title>My-New-World</title>
-    <link href="https://TJhaitang.github.io/2021/10/20/My-New-World/"/>
-    <id>https://TJhaitang.github.io/2021/10/20/My-New-World/</id>
+    <link href="https://tjhaitang.github.io/2021/10/20/My-New-World/"/>
+    <id>https://tjhaitang.github.io/2021/10/20/My-New-World/</id>
     <published>2021-10-20T10:46:48.000Z</published>
     <updated>2021-10-21T13:10:38.996Z</updated>
     
@@ -216,7 +238,7 @@
     
     
     
-    <category term="普罗米修斯" scheme="https://TJhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
     
   </entry>
   
