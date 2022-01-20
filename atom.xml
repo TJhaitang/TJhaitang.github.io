@@ -6,7 +6,7 @@
   <link href="https://tjhaitang.github.io/atom.xml" rel="self"/>
   
   <link href="https://tjhaitang.github.io/"/>
-  <updated>2022-01-10T17:52:14.316Z</updated>
+  <updated>2022-01-20T16:37:33.753Z</updated>
   <id>https://tjhaitang.github.io/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>unity学习2</title>
+    <link href="https://tjhaitang.github.io/2022/01/20/unity%E5%AD%A6%E4%B9%A02/"/>
+    <id>https://tjhaitang.github.io/2022/01/20/unity%E5%AD%A6%E4%B9%A02/</id>
+    <published>2022-01-20T15:59:28.000Z</published>
+    <updated>2022-01-20T16:37:33.753Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自学习1写完以来9天过去了，这九天里面还算是做了一些事情。这里将学到的东西的感受记录一下。<br>因为明天也就是21号GGJ就开始了，所以有必要查缺补漏一下子这个样子。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol><li><a href="https://space.bilibili.com/335835274/channel/seriesdetail?sid=289371">Unity2D平台跳跃游戏开发教程</a>   </li><li><a href="https://www.runoob.com/csharp/csharp-tutorial.html">C#教程-菜鸟教程</a></li><li><a href="https://blog.csdn.net/cbaili/article/details/110157060">解决VSCode无法显示Unity代码提示的真正解决办法</a></li><li><a href="https://blog.csdn.net/qq_40306845/article/details/104725637">unity2D学习（12）角色发射子弹</a></li></ol><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>Win11家庭版<br>Redmibook15pro i5-11320H 无独显</p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ol><li>VScode无代码补全<blockquote><p>其实vs也没有。。。因为之前写其他语言都用vscode，对一些界面快捷键都熟悉了也不想改就继续vscode了。但没有代码补全属实是让我难过。最后在一波搜索之下通过下载补全插件、更新unity的外部编辑器、重新生成工程文件修好的。   </p></blockquote></li><li>C#脚本在我的G15上无法运行<blockquote><p>不知道为啥，既然小本子可以用就只用小本子了。   </p></blockquote></li><li>unity许可证无效<blockquote><p>梯子被强制退出了导致一些代理没有还原，重启大法解决</p></blockquote></li></ol><h2 id="一些概念的认知"><a href="#一些概念的认知" class="headerlink" title="一些概念的认知"></a>一些概念的认知</h2><ol><li>unity，或者说游戏引擎，其面向对象的特征是自然而然而又无可避免的，在使用这些游戏引擎进行游戏的开发时“面向对象”是需要谨记在心的。不然就会产生很多乱七八糟的逻辑关系（比如现在枪口打出的子弹其实是由人生成的）。   </li><li>一些概念十分常用：碰撞器、刚体、预制体、tilemap等等   </li><li>对象的public方法可以在别的.cs文件中通过GameObject.Find()方法找到对象，然后使用对象的GetComponent&lt;&gt;()方法获取到控制器，从而调用其中的public方法。从而实现小怪提供一个被杀死的方法，而子弹来杀死小怪。   </li><li>即使在代码中感觉结果是相同的，但在实际运行中可能效果天差地别。速度、稳定性，以及碰撞检测的不连续都会导致运行效果带来的意外。所以优化至关重要。   </li><li>电脑的计算能力真的很强。   </li></ol><h2 id="一些实践"><a href="#一些实践" class="headerlink" title="一些实践"></a>一些实践</h2><ol><li>写了一个简单的打砖块，只实现了反弹以及接小球的板子让小球方向改变，还没有做砖块毁灭的逻辑，但没必要了   </li><li>写了一个平台跳跃设计的游戏，比较简陋，完成了移动、跳跃、摄像机跟随、在tilemap上绘制的地图、可以被击杀的小怪、开枪发射子弹、子弹容量与补充、根据子弹容量改变玩家形态这些功能。算是一个尝试。还没有学习ui的内容以及场景切换的内容，不过应该不难所以摆了   </li></ol><h2 id="以上！"><a href="#以上！" class="headerlink" title="以上！"></a>以上！</h2><p>还有就是，GGJ结束之后下周去街巷中国一波，然后过年，回来之后就是学车、unity（虚幻4？blender？）、背单词、研究考研。好忙啊。<br>哦还有，寒假计划打完的游戏还没打几个呢，分别是   </p><blockquote><ol><li>荒野大镖客2</li><li>古墓丽影崛起</li><li>古墓丽影暗影</li><li>巫师三</li><li>赛博朋克2077</li><li>刺客信条·黑旗</li><li>控制<br>遥遥无期啊遥遥无期</li></ol></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;自学习1写完以来9天过去了，这九天里面还算是做了一些事情。这里将学到的东西的感受记录一下。&lt;br&gt;因为明天也就是21号GGJ就开始了，所以有</summary>
+      
+    
+    
+    
+    
+    <category term="普罗米修斯" scheme="https://tjhaitang.github.io/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>unity学习1</title>
     <link href="https://tjhaitang.github.io/2022/01/11/unity%E5%AD%A6%E4%B9%A01/"/>
     <id>https://tjhaitang.github.io/2022/01/11/unity%E5%AD%A6%E4%B9%A01/</id>
     <published>2022-01-10T16:53:33.000Z</published>
-    <updated>2022-01-10T17:52:14.316Z</updated>
+    <updated>2022-01-20T16:02:28.197Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么突然要学unity呢？这要追溯到很久很久以前，那是一个温暖的早晨，我在立德楼里面通宵准备期末考试。凌晨五点半的天还是黑的，眼前的书也看不明白了，只有七点的油条和八点的随机过程鼓动着我让我远离梦境的诱惑。百无聊赖之际，一些尘封的热情翻涌了起来，我就去发了一个学习做游戏招队友的帖子。<br>最终我双开了两个小队，两个小队殊途同归到了unity上。与我原先的虚幻四+某2d引擎不同，unity有优势也有劣势。然而结果在此，寒假的unity学习也只能轰轰烈烈的展开了。<br>这里记录我的学习收获叭。   </p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>1.<a href="https://www.w3cschool.cn/unity3d_jc/unity3d_jc-9dvl37yg.html">unity3D中文教程</a>   </p><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>win11家庭版<br>Redmibook15 pro增强版i5-11320H无独显</p><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="unity安装"><a href="#unity安装" class="headerlink" title="unity安装"></a>unity安装</h3><p>搜索引擎unity，在unity官网里选择喜欢的版本安装即可   </p><h3 id="unity激活"><a href="#unity激活" class="headerlink" title="unity激活"></a>unity激活</h3><p>在unity官网下载unityhub，注册登陆后选择激活许可证，创建免费的个人许可证即可使用unity   </p><h3 id="C-编辑器"><a href="#C-编辑器" class="headerlink" title="C#编辑器"></a>C#编辑器</h3><p>这里我目前选择的是vscode作为c#的编辑器，下载了visual studio但还没有开始使用，待unity学到一定程度再开始研究   </p><h2 id="一些了解"><a href="#一些了解" class="headerlink" title="一些了解"></a>一些了解</h2><ol><li><p>unity3d引擎是什么？</p><blockquote><p>unity3d引擎提供了预置的物体、属性、光照、摄像机等概念的界定，提供了C#方法库与项目代码的可视化界面。用户可以通过可视化界面进行项目的预览、调整甚至构建。   </p></blockquote></li><li><p>一些尝试</p><blockquote><p>尝试了创建物体，调整物体性质<br>尝试了为摄像机绑定c#脚本<br>尝试了为物体绑定脚本，创建了按钮</p></blockquote></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么突然要学unity呢？这要追溯到很久很久以前，那是一个温暖的早晨，我在立德楼里面通宵准备期末考试。凌晨五点半的天还是黑的，眼前的书也看不明白了，只有七点的油条和八点的随机过程鼓动着我让我远离梦境的诱惑。百无聊赖之际，一些尘封的热情翻涌了起来，我就去发了一个学习做游戏招队友的帖子。<br>最终我双开了两个小队，两个小队殊途同归到了unity上。与我原先的虚幻四+某2d引擎不同，unity有优势也有劣势。然而结果在此，寒假的unity学习也只能轰轰烈烈的展开了。<br>这里记录我的学习收获叭。   </p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol><li><a href="https://www.w3cschool.cn/unity3d_jc/unity3d_jc-9dvl37yg.html">unity3D中文教程</a>   </li></ol><h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>win11家庭版<br>Redmibook15 pro增强版i5-11320H无独显</p><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="unity安装"><a href="#unity安装" class="headerlink" title="unity安装"></a>unity安装</h3><p>搜索引擎unity，在unity官网里选择喜欢的版本安装即可   </p><h3 id="unity激活"><a href="#unity激活" class="headerlink" title="unity激活"></a>unity激活</h3><p>在unity官网下载unityhub，注册登陆后选择激活许可证，创建免费的个人许可证即可使用unity   </p><h3 id="C-编辑器"><a href="#C-编辑器" class="headerlink" title="C#编辑器"></a>C#编辑器</h3><p>这里我目前选择的是vscode作为c#的编辑器，下载了visual studio但还没有开始使用，待unity学到一定程度再开始研究   </p><h2 id="一些了解"><a href="#一些了解" class="headerlink" title="一些了解"></a>一些了解</h2><ol><li><p>unity3d引擎是什么？</p><blockquote><p>unity3d引擎提供了预置的物体、属性、光照、摄像机等概念的界定，提供了C#方法库与项目代码的可视化界面。用户可以通过可视化界面进行项目的预览、调整甚至构建。   </p></blockquote></li><li><p>一些尝试</p><blockquote><p>尝试了创建物体，调整物体性质<br>尝试了为摄像机绑定c#脚本<br>尝试了为物体绑定脚本，创建了按钮</p></blockquote></li></ol>]]></content>
     
     
       
