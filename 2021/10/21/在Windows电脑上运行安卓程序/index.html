@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>在Windows电脑上运行安卓程序 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间还打了把王者荣耀。用了之后感觉还是香啊，如果国内安卓pad生态再发展发展就好了。 Reference 乘风破浪，遇见最美Windows 11之新微软商店(Microsoft Store)生态 - 安卓(Android™)体验及开发兼容指南  操作环境Win"><meta property="og:type" content="blog"><meta property="og:title" content="在Windows电脑上运行安卓程序"><meta property="og:url" content="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="前言今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间还打了把王者荣耀。用了之后感觉还是香啊，如果国内安卓pad生态再发展发展就好了。 Reference 乘风破浪，遇见最美Windows 11之新微软商店(Microsoft Store)生态 - 安卓(Android™)体验及开发兼容指南  操作环境Win"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/xnh.png"><meta property="og:image" content="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/wsa.png"><meta property="article:published_time" content="2021-10-21T11:29:57.000Z"><meta property="article:modified_time" content="2023-07-29T16:36:59.793Z"><meta property="article:author" content="TJhaitang"><meta property="article:tag" content="普罗米修斯"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/xnh.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"},"headline":"在Windows电脑上运行安卓程序","image":["https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/xnh.png","https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/wsa.png"],"datePublished":"2021-10-21T11:29:57.000Z","dateModified":"2023-07-29T16:36:59.793Z","author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://tjhaitang.github.io/img/iicon.png"}},"description":"前言今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间还打了把王者荣耀。用了之后感觉还是香啊，如果国内安卓pad生态再发展发展就好了。 Reference 乘风破浪，遇见最美Windows 11之新微软商店(Microsoft Store)生态 - 安卓(Android™)体验及开发兼容指南  操作环境Win"}</script><link rel="canonical" href="https://tjhaitang.github.io/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-21T11:29:57.000Z" title="10/21/2021, 7:29:57 PM">2021-10-21</time>发表</span><span class="level-item"><time dateTime="2023-07-29T16:36:59.793Z" title="7/30/2023, 12:36:59 AM">2023-07-30</time>更新</span><span class="level-item">8 分钟读完 (大约1214个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">在Windows电脑上运行安卓程序</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今日惊闻WSA正式在Beta渠道推送了，本着有用没用先试了再说的的原则，在拿到电脑后便开始捣鼓。整体流程非常简单顺利，共计耗时一个小时，中间还打了把王者荣耀。<br>用了之后感觉还是香啊，如果国内安卓pad生态再发展发展就好了。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/taylorshi/p/15431615.html">乘风破浪，遇见最美Windows 11之新微软商店(Microsoft Store)生态 - 安卓(Android™)体验及开发兼容指南</a></li>
+</ol>
+<h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><p>Windows 11 家庭版 22000.282测试版Beta<br>戴尔G5 5511</p>
+<hr>
+<blockquote>
+<p>安装WSA可以搞windows测试版转美国地区然后在MS Store下载，<code>测试版</code> <code>转美国地区</code> <code>在MS Store下载</code>都有相关教程，我没有这么做。我选择的是将网友分享的WSA安装包直接安装。<br>这里我两个方向都会介绍。</p>
+</blockquote>
+<h2 id="你所必要的事情"><a href="#你所必要的事情" class="headerlink" title="你所必要的事情"></a>你所必要的事情</h2><ol>
+<li>电脑操作系统为Windows11 22000及以上</li>
+<li>电脑需要开启虚拟机平台<img src="/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/xnh.png" class="" title="虚拟化需要开启">
+如果未开启，需要找到 <code>设置</code>-&gt;<code>应用</code>-&gt;<code>可选功能</code>-&gt;<code>更多Windows功能</code> 勾选 <code>Hyper-V</code>和<code>虚拟机平台</code>。之后重启系统即可。</li>
+</ol>
+<h2 id="下载WSA安装包"><a href="#下载WSA安装包" class="headerlink" title="下载WSA安装包"></a>下载WSA安装包</h2><blockquote>
+<p>你可以不选择这个方案，不过我选择的是这个<br><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1CcC6W7jUjh-w9KTkqhv_NQ">百度网盘下载链接</a> 提取码：2sxh<br>下载后双击打开点击<code>Install</code>即可   </p>
+</blockquote>
+<h3 id="若提示无法安装"><a href="#若提示无法安装" class="headerlink" title="若提示无法安装"></a>若提示无法安装</h3><ul>
+<li>右键点击开始菜单，选择Windows终端(管理员)</li>
+<li>切换到安装包所在目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换盘符，例如切换到d盘</span></span><br><span class="line">d:</span><br><span class="line"><span class="comment"># 查看当前目录</span></span><br><span class="line"><span class="built_in">dir</span></span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;文件夹名&gt;</span><br></pre></td></tr></table></figure></li>
+<li>执行命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-appxpackage <span class="string">&quot;MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>待部署操作进程完毕后即可安装了</li>
+</ul>
+<h2 id="进入Windows内测版获取WSA"><a href="#进入Windows内测版获取WSA" class="headerlink" title="进入Windows内测版获取WSA"></a>进入Windows内测版获取WSA</h2><blockquote>
+<p>若不喜欢上面的方法或上面未成功可使用此方法</p>
+</blockquote>
+<ul>
+<li>获取Windows内测资格<br><code>设置</code>-&gt;<code>Windows更新</code>-&gt;<code>Windows预览体验计划</code><br>在选择内测渠道时选择Beta渠道即可</li>
+<li>切换地区为美国<br><code>设置</code>-&gt;<code>时间和语言</code>-&gt;<code>区域和语言</code></li>
+<li>重启电脑后，访问以下网站<br> <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/productId/9P3395VX91NR">https://www.microsoft.com/store/productId/9P3395VX91NR</a><br> 或也可以Win+r，输入<code>ms-windows-store://pdp/?productid=9P3395VX91NR</code>并运行</li>
+<li>点击获取</li>
+</ul>
+<h2 id="开启WSA的adb旁加载功能"><a href="#开启WSA的adb旁加载功能" class="headerlink" title="开启WSA的adb旁加载功能"></a>开启WSA的adb旁加载功能</h2><blockquote>
+<p>由于目前WSA下载应用需要使用亚马逊应用市场，然而一方面上面应用太少了，另一方面很多人会对注册亚马逊账号感到困扰，所以adb旁加载功能显得十分重要。<br>adb旁加载可以允许你安装你电脑上的.apk文件</p>
+</blockquote>
+<ul>
+<li><p>查看adb版本</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb version</span><br></pre></td></tr></table></figure></li>
+<li><p>若没有adb命令，则下载该压缩包，将解压后的东西全复制到<code>C://Windows</code>文件夹下就可以了<br> <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/15eTHKtkPIhoHHbbHNa03Hg">下载链接</a>提取码：gr3g</p>
+</li>
+<li><p>在开始菜单打开WSA(一个绿色图标的应用)，进入设置页面</p>
+ <img src="/2021/10/21/%E5%9C%A8Windows%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F/wsa.png" class="" title="设置页面"></li>
+<li><p>打开开发人员模式</p>
+</li>
+<li><p>点击第一行文件右边的小箭头，启动Android子系统</p>
+</li>
+<li><p>打开Windows Terminal输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb connect 127.0.0.1:58526</span><br><span class="line"><span class="comment"># 如果失败，可以在WSA设置中选择关闭Android子系统后重启WSA</span></span><br><span class="line"><span class="comment"># 执行以下命令以安装.apk程序</span></span><br><span class="line"><span class="comment"># 首先需要切换到安装包所在文件夹下</span></span><br><span class="line">adb install .\name.apk <span class="comment"># name.apk为文件名</span></span><br></pre></td></tr></table></figure></li>
+<li><p>之后就可以快乐的在你的电脑上使用安卓应用程序啦</p>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>虽然捣鼓流程不长，但最后的效果是很好的，体感上感觉程序的刷新率能达到90~120的水平。不过现在这个功能还比较新，问题还是很多的，比如肉眼可见的不稳定和部分窗口的适配糟糕。   </li>
+<li>尝试了几个程序，目前没有真正的享受到这个工具带来的便利。一开始安装这个是为了在电脑上装一个微信读书，因为web端的微信读书我属实是不喜欢，想要一个类似iPad端的样式。但让我吃惊的是，微信读书居然没有安卓的pad版本。</li>
+<li>可能这也是WSA的一个意义吧，突破Google Store的垄断，优化安卓平板生态。</li>
+<li>但另一方面，在国内web环境日渐炸裂的当下，WSA的出现可能会为这一现象火上浇油</li>
+<li>目前我还没有找到太多在电脑上好用的安卓应用，大家有什么想法可以卸载评论区里，虽然没有评论区。</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>在Windows电脑上运行安卓程序</p><p><a href="https://tjhaitang.github.io/2021/10/21/在Windows电脑上运行安卓程序/">https://tjhaitang.github.io/2021/10/21/在Windows电脑上运行安卓程序/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TJhaitang</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-10-21</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-07-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/">普罗米修斯</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://TJhaitang.github.io/" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/aliPay.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/WeChat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/10/21/Reference/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Reference</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/"><span class="level-item">Hexo与Github Pages配置</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.css"><script src="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "b5c3990e65f2bd55c3d3d18eda13558f",
+            repo: "commentRepo",
+            owner: "TJhaitang",
+            clientID: "13b02f01fb7788ddee7d",
+            clientSecret: "9a747b802c792f0cc62d1c96e4eb77c68bf21f19",
+            admin: ["TJhaitang"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/HPic.png" alt="藤椒海棠"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">藤椒海棠</p><p class="is-size-6 is-block">一小步</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/TJhaitang" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com/profile.php?id=100073476285499"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/TJhetan"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="http://gundam.tjhaitang.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">haitang</span></span><span class="level-right"><span class="level-item tag">gundam.tjhaitang.top</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-09T06:28:43.000Z">2024-12-09</time></p><p class="title"><a href="/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/">Redmibook14pro从零开始的archlinux安装与配置</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-03T07:38:24.000Z">2024-01-03</time></p><p class="title"><a href="/2024/01/03/A-robust-fusion-extraction%20procedure-with-summary-statistics-in-the-presence-of%20biased-sources/">A robust fusion-extraction procedure with summary statistics in the presence of biased sources</a></p><p class="categories"><a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-29T11:03:35.000Z">2023-12-29</time></p><p class="title"><a href="/2023/12/29/1229%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/">1229组会记录</a></p><p class="categories"><a href="/categories/%E7%BB%84%E4%BC%9A/">组会</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-27T06:26:41.000Z">2023-12-27</time></p><p class="title"><a href="/2023/12/27/Communication-Efficient-Distributed-Statistical-Inference/">Communication-Efficient Distributed Statistical Inference</a></p><p class="categories"><a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-25T13:01:10.000Z">2023-12-25</time></p><p class="title"><a href="/2023/12/25/%E8%BF%99%E9%87%8C%E5%B0%86%E4%BC%9A%E5%86%99%E4%BB%80%E4%B9%88/">这里将会写什么</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"><span class="level-start"><span class="level-item">数据库大作业</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"><span class="level-start"><span class="level-item">文献阅读</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BB%84%E4%BC%9A/"><span class="level-start"><span class="level-item">组会</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"><span class="tag">作业的奴隶</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%96%B0%E4%B8%96%E7%95%8C/"><span class="tag">可能是新世界</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"><span class="tag">普罗米修斯</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/"><span class="tag">联邦学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"><span class="tag">课堂大师</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B6%85%E7%BA%A7%E5%A4%A7%E6%9F%91%E6%A9%98/"><span class="tag">超级大柑橘</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"><span class="tag">迁移学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E5%9B%B0%E9%9A%BE/"><span class="tag">阅读难度：困难</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E7%AE%80%E5%8D%95/"><span class="tag">阅读难度：简单</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/"><span class="level-start"><span class="level-item">2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a><p class="is-size-7"><span>&copy; 2025 TJhaitang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

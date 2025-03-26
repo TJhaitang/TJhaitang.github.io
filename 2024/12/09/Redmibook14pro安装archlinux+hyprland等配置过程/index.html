@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Redmibook14pro从零开始的archlinux安装与配置 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言Reference archlinux简明指南 end-4&amp;#x2F;dots-hyprland chinese input for Electron sound driver fxitx5皮肤 配置设备休眠 grub-theme Xwayland高分屏 lazyvim lazyvim进一步配置   初步安装准备好电脑、系统U盘、有线网络环境（无线也可，有线相对方便）后，按照上述链接的步骤进行"><meta property="og:type" content="blog"><meta property="og:title" content="Redmibook14pro从零开始的archlinux安装与配置"><meta property="og:url" content="https://tjhaitang.github.io/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="前言Reference archlinux简明指南 end-4&amp;#x2F;dots-hyprland chinese input for Electron sound driver fxitx5皮肤 配置设备休眠 grub-theme Xwayland高分屏 lazyvim lazyvim进一步配置   初步安装准备好电脑、系统U盘、有线网络环境（无线也可，有线相对方便）后，按照上述链接的步骤进行"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://tjhaitang.github.io/img/og_image.png"><meta property="article:published_time" content="2024-12-09T06:28:43.000Z"><meta property="article:modified_time" content="2024-12-12T02:53:55.281Z"><meta property="article:author" content="TJhaitang"><meta property="article:tag" content="普罗米修斯"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://tjhaitang.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://tjhaitang.github.io/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/"},"headline":"Redmibook14pro从零开始的archlinux安装与配置","image":["https://tjhaitang.github.io/img/og_image.png"],"datePublished":"2024-12-09T06:28:43.000Z","dateModified":"2024-12-12T02:53:55.281Z","author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://tjhaitang.github.io/img/iicon.png"}},"description":"前言Reference archlinux简明指南 end-4&#x2F;dots-hyprland chinese input for Electron sound driver fxitx5皮肤 配置设备休眠 grub-theme Xwayland高分屏 lazyvim lazyvim进一步配置   初步安装准备好电脑、系统U盘、有线网络环境（无线也可，有线相对方便）后，按照上述链接的步骤进行"}</script><link rel="canonical" href="https://tjhaitang.github.io/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-09T06:28:43.000Z" title="12/9/2024, 2:28:43 PM">2024-12-09</time>发表</span><span class="level-item"><time dateTime="2024-12-12T02:53:55.281Z" title="12/12/2024, 10:53:55 AM">2024-12-12</time>更新</span><span class="level-item">12 分钟读完 (大约1781个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Redmibook14pro从零开始的archlinux安装与配置</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://arch.icekylin.online/guide/rookie/basic-install.html">archlinux简明指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://end-4.github.io/dots-hyprland-wiki/zh-cn/i-i/01setup/">end-4&#x2F;dots-hyprland</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/692564515">chinese input for Electron</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/DarkStalkr/Xiaomi_RedmiBookPro16_Audio_Fix">sound driver</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/maicss/p/15056420.html">fxitx5皮肤</a></li>
+<li><a target="_blank" rel="noopener" href="https://arch.icekylin.online/guide/advanced/optional-cfg-2">配置设备休眠</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/vinceliuice/grub2-themes">grub-theme</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/661883396">Xwayland高分屏</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.lazyvim.org/">lazyvim</a></li>
+<li><a target="_blank" rel="noopener" href="https://fanlumaster.github.io/2023/11/25/Lazyvim-configure-from-scratch/">lazyvim进一步配置</a></li>
+</ul>
+<hr>
+<h2 id="初步安装"><a href="#初步安装" class="headerlink" title="初步安装"></a>初步安装</h2><p>准备好电脑、系统U盘、有线网络环境（无线也可，有线相对方便）后，按照上述链接的步骤进行安装。本文从上述链接结束处继续记录过程。</p>
+<hr>
+<h2 id="调整pacman源"><a href="#调整pacman源" class="headerlink" title="调整pacman源"></a>调整pacman源</h2><ul>
+<li>增加archlinuxcn源</li>
+</ul>
+<p>使用vim打开<code>/etc/pacman.conf</code>文件，在文件末尾添加以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirrors.ustc.edu.cn/archlinuxcn/<span class="variable">$arch</span></span><br><span class="line">Server = https://repo.huaweicloud.com/archlinuxcn/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增加32位支持</li>
+</ul>
+<p>删除<code>/etc/pacman.d/mirrorlist</code>文件中的<code>[multilib]</code>部分的注释符号<code>#</code>，使其生效</p>
+<ul>
+<li>对keyring进行更新</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -Syy &amp;&amp; pacman -S archlinux-keyring archlinuxcn-keyring</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>上述链接过程结束时，电脑应仅有root用户，并处于无桌面环境的情况下，此时需要添加一个日常用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -G wheel -s /bin/bash haitang</span><br><span class="line">passwd haitang</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>vim</code>编辑<code>/etc/sudoers</code>文件，取消<code>%wheel ALL=(ALL) ALL</code>行的注释符号<code>#</code></p>
+<h2 id="功耗控制"><a href="#功耗控制" class="headerlink" title="功耗控制"></a>功耗控制</h2><h3 id="设置休眠行为"><a href="#设置休眠行为" class="headerlink" title="设置休眠行为"></a>设置休眠行为</h3><p>修改以下内容</p>
+<figure class="highlight bash"><figcaption><span>/etc/systemd/logind.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HandlePowerKey=hibernate</span><br><span class="line">HandleLidSwitchExternalPower=ignore</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><figcaption><span>/etc/mkinitcpio.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems resume fsck)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><figcaption><span>/etc/defalut/grub</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRUB_CMDLINE_LINUX_DEFAULT=<span class="string">&quot;+resume=UUID=xxx&quot;</span><span class="comment">#指在参数中加入该项</span></span><br></pre></td></tr></table></figure>
+
+<p>之后，执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">sudo mkinitcpio -P</span><br></pre></td></tr></table></figure>
+
+<h3 id="未完"><a href="#未完" class="headerlink" title="未完"></a>未完</h3><ul>
+<li>设置suspend超时则hibernate</li>
+<li>进一步的功耗控制</li>
+</ul>
+<h2 id="安装Gnome桌面"><a href="#安装Gnome桌面" class="headerlink" title="安装Gnome桌面"></a>安装Gnome桌面</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S gnome-extra</span><br></pre></td></tr></table></figure>
+
+<p>一路回车即可。安装完成后，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> --now gdm</span><br></pre></td></tr></table></figure>
+
+<p>即可启动Gdm，使用日常账户haitang登录即可。</p>
+<h2 id="安装必要软件"><a href="#安装必要软件" class="headerlink" title="安装必要软件"></a>安装必要软件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S wqy-microhei wqy-zenhei fcitx5-im fcitx5-chinese-addons firefox gnome-browser-connector power-profiles-daemon tailscale syncthing moonlight-qt texlive texlive-langchinese obsidian zotero plymouth tmux</span><br><span class="line">yay -S clash-verge-rev microsoft-edge-stable-bin ttf-ubuntu-nerd-font linuxqq wechat-bin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>firefox</code> 用于安装gnome插件</li>
+<li><code>power-profiles-daemon</code> 用于调整电源模式</li>
+<li>上述可能不全</li>
+</ul>
+<h2 id="配置开机自启动"><a href="#配置开机自启动" class="headerlink" title="配置开机自启动"></a>配置开机自启动</h2><ul>
+<li>systemctl部分</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> --now tailscaled</span><br><span class="line">systemctl <span class="built_in">enable</span> --now syncthing@haitang</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hyprland OR Gnome<ul>
+<li>clash-verge</li>
+<li>fcitx</li>
+</ul>
+</li>
+</ul>
+<h2 id="给fxitx换一个皮肤"><a href="#给fxitx换一个皮肤" class="headerlink" title="给fxitx换一个皮肤"></a>给fxitx换一个皮肤</h2><p>下载该<a target="_blank" rel="noopener" href="https://www.cnblogs.com/maicss/p/15056420.html">链接</a>中的文件，将其解压到<code>~/.local/share/fcitx5/themes</code>目录下，然后在<code>fcitx5配置</code>中选择该主题即可。</p>
+<h2 id="安装好用的gnome插件"><a href="#安装好用的gnome插件" class="headerlink" title="安装好用的gnome插件"></a>安装好用的gnome插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1460/vitals/">vitals</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/261/kimpanel/">kimpanel</a></li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/615/appindicator-support/">appindicator</a></li>
+</ul>
+<h2 id="添加声卡驱动"><a href="#添加声卡驱动" class="headerlink" title="添加声卡驱动"></a>添加声卡驱动</h2><p>根据上面的<a target="_blank" rel="noopener" href="https://github.com/DarkStalkr/Xiaomi_RedmiBookPro16_Audio_Fix">链接</a>成功播放了声音，但麦克风仍然不工作</p>
+<h2 id="安装Hyprland-end-4主题调整"><a href="#安装Hyprland-end-4主题调整" class="headerlink" title="安装Hyprland + end-4主题调整"></a>安装Hyprland + end-4主题调整</h2><p>首先感叹一下，Gnome是真的好看啊。<br>根据前面的<a target="_blank" rel="noopener" href="https://end-4.github.io/dots-hyprland-wiki/zh-cn/i-i/01setup/">链接</a>即可安装好Hyprland主题，然后再安装end-4主题。</p>
+<h3 id="换壁纸"><a href="#换壁纸" class="headerlink" title="换壁纸"></a>换壁纸</h3><figure class="highlight bash"><figcaption><span>~/.config/hypr/custom/exec.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># exec-once = swaybg -i /home/haitang/Pictures/wallpaper/f.jpg &amp;</span></span><br><span class="line"><span class="built_in">sleep</span> 1 &amp;&amp; exec-once = swww img <span class="string">&quot;/home/haitang/Pictures/wallpaper/f.jpg&quot;</span> &amp; <span class="comment">#不知道为啥不起作用</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Foot配置"><a href="#Foot配置" class="headerlink" title="Foot配置"></a>Foot配置</h3><p> 实际上上述安装脚本已经对foot和fish进行了大量配置，我只是修改了字体与透明度</p>
+<p>对<code>foot</code>配置文件的下述部分进行修改</p>
+<figure class="highlight ini"><figcaption><span>~/.config/foot/foot.ini</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">font</span>=UbuntuMo<span class="literal">no</span> Nerd Font:size=<span class="number">13</span></span><br><span class="line"><span class="section">[colors]</span></span><br><span class="line"><span class="attr">alpha</span>=<span class="number">0.85</span></span><br><span class="line"></span><br><span class="line"><span class="section">[key-bindings]</span></span><br><span class="line"><span class="attr">clipboard-copy</span>=Control+Shift+c</span><br><span class="line"><span class="attr">clipboard-paste</span>=Control+Shift+v</span><br><span class="line"><span class="comment"># primary-paste=Shift+Insert</span></span><br><span class="line"><span class="attr">search-start</span>=Control+Shift+f</span><br></pre></td></tr></table></figure>
+
+<p>end-4主题中的修改主题颜色行为将覆盖上述的透明度设置，因此我屏蔽了这一部分。修改<code>fish</code>配置文件，注释以下内容</p>
+<figure class="highlight py"><figcaption><span>~/.config/fish/config.fish</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#if test -f ~/.cache/ags/user/generated/terminal/sequences.txt</span></span><br><span class="line"><span class="comment">#    cat ~/.cache/ags/user/generated/terminal/sequences.txt</span></span><br><span class="line"><span class="comment">#end</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Fish配置"><a href="#Fish配置" class="headerlink" title="Fish配置"></a>Fish配置</h3><p>将默认shell换为fish</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/fish</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="darkmode"><a href="#darkmode" class="headerlink" title="darkmode"></a>darkmode</h3><p>其一，虽然我更加倾向于使用该主题的暗色版本，但<code>&gt;dark</code>命令会将系统色调也换成暗色，我不希望这样。其二，不知道为什么<code>&gt;dark</code>与<code>&gt;light</code>命令会出错，因此，我对下述文件进行了修改</p>
+<figure class="highlight javascript"><figcaption><span>~/.config/ags/modules/.miscutils/system.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">darkMode.<span class="title function_">connect</span>(<span class="string">&#x27;changed&#x27;</span>, <span class="function">(<span class="params">&#123; value &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> lightdark = value ? <span class="string">&quot;dark&quot;</span> : <span class="string">&quot;light&quot;</span>;</span><br><span class="line">    <span class="title function_">execAsync</span>([<span class="string">`bash`</span>, <span class="string">`-c`</span>, <span class="string">`mkdir -p <span class="subst">$&#123;GLib.get_user_state_dir()&#125;</span>/ags/user &amp;&amp; sed -i &quot;1s/.*/<span class="subst">$&#123;lightdark&#125;</span>/&quot;  <span class="subst">$&#123;GLib.get_user_state_dir()&#125;</span>/ags/user/colormode.txt`</span>])</span><br><span class="line">        .<span class="title function_">then</span>(<span class="title function_">execAsync</span>([<span class="string">&#x27;bash&#x27;</span>, <span class="string">&#x27;-c&#x27;</span>, <span class="string">`<span class="subst">$&#123;App.configDir&#125;</span>/scripts/color_generation/switchcolor.sh --pick`</span>,<span class="string">`&amp;`</span>]))</span><br><span class="line">        <span class="comment">// .then(execAsync([&#x27;bash&#x27;, &#x27;-c&#x27;, `command -v darkman &amp;&amp; darkman set $&#123;lightdark&#125;`])) // Optional darkman integration</span></span><br><span class="line">        .<span class="title function_">catch</span>(print);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><figcaption><span>~/.config/ags/scripts/color_generation/applycolor.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">apply_ags &amp;</span><br><span class="line">apply_hyprland &amp;</span><br><span class="line">apply_hyprlock &amp;</span><br><span class="line"><span class="comment"># apply_lightdark &amp;</span></span><br><span class="line"><span class="comment"># apply_gtk &amp;</span></span><br><span class="line">apply_fuzzel &amp;</span><br><span class="line"><span class="comment"># apply_term &amp;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="hyprlock调整"><a href="#hyprlock调整" class="headerlink" title="hyprlock调整"></a>hyprlock调整</h3><p>这部分懒得写了，就是适配了一下我的屏幕尺寸然后加了个毛玻璃效果</p>
+<h2 id="配置自动登陆"><a href="#配置自动登陆" class="headerlink" title="配置自动登陆"></a>配置自动登陆</h2><p>编辑<code>/etc/gdm/custom.conf</code>文件，修改以下内容</p>
+<figure class="highlight ini"><figcaption><span>/etc/gdm/custom.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[daemon]</span></span><br><span class="line"><span class="attr">AutomaticLoginEnable</span>=<span class="literal">True</span></span><br><span class="line"><span class="attr">AutomaticLogin</span>=haitang</span><br></pre></td></tr></table></figure>
+
+<h2 id="为grub增加主题"><a href="#为grub增加主题" class="headerlink" title="为grub增加主题"></a>为grub增加主题</h2><p>根据上述<a target="_blank" rel="noopener" href="https://github.com/vinceliuice/grub2-themes">链接</a>直接操作即可</p>
+<h2 id="vscode无法输入中文"><a href="#vscode无法输入中文" class="headerlink" title="vscode无法输入中文"></a>vscode无法输入中文</h2><ul>
+<li>尚未解决</li>
+<li>我怎么怀疑是Gnome的问题呢？</li>
+</ul>
+<h2 id="不清晰：Electron应用-Xwayland"><a href="#不清晰：Electron应用-Xwayland" class="headerlink" title="不清晰：Electron应用&#x2F;Xwayland"></a>不清晰：Electron应用&#x2F;Xwayland</h2><p>该问题设计的软件有五</p>
+<ul>
+<li>microsoft-edge-stable-bin</li>
+<li>google-chrome</li>
+<li>obsidian</li>
+<li>linuxqq</li>
+<li>qqmusic</li>
+</ul>
+<p>解决方法为修改相对应的在<code>/usr/share/applications</code>目录下的<code>.desktop</code>文件，在启动参数后加<code>--ozone-platform-hint=auto --enable-wayland-ime</code>即可。</p>
+<p>同时，一方面上述软件在更新时会覆盖<code>.desktop</code>文件，另一方面上述软件也不需要更新，因此可以对上述软件的更新进行屏蔽</p>
+<figure class="highlight bash"><figcaption><span>/etc/pacman.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IgnorePkg = microsoft-edge-stable-bin google-chrome obsidian linuxqq qqmusic</span><br></pre></td></tr></table></figure>
+
+<p>Xwayland配置见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/661883396">链接</a></p>
+<h2 id="plymouth"><a href="#plymouth" class="headerlink" title="plymouth"></a>plymouth</h2><p>上面的安装部分中已经安装了plymouth，下面只需要启动即可。修改下述文件</p>
+<figure class="highlight bash"><figcaption><span>/etc/default/grub</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRUB_CMDLINE_LINUX_DEFAULT=<span class="string">&quot;+splash&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>/etc/mkinitcpio.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HOOKS=(+plymouth)</span><br></pre></td></tr></table></figure>
+<p>之后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">sudo mkinitcpio -P</span><br></pre></td></tr></table></figure>
+<p>即可。默认主题就是arch-logo足够了，不再进行修改。</p>
+<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>系统默认不启动<code>sshd</code>服务，因此需要手动启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> --now sshd</span><br></pre></td></tr></table></figure>
+
+<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><p>为tmux增加鼠标支持</p>
+<figure class="highlight bash"><figcaption><span>~/.tmux.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> -g mouse on</span><br></pre></td></tr></table></figure>
+
+<h2 id="lazyVim"><a href="#lazyVim" class="headerlink" title="lazyVim"></a>lazyVim</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> .config/nvim</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/LazyVim/starter ~/.config/nvim</span><br><span class="line"><span class="built_in">rm</span> -rf .config/nvim/.git</span><br><span class="line">nvim</span><br></pre></td></tr></table></figure>
+
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>目前的绝大多数需求可以完全由<code>LazyVim</code>满足，参见<a target="_blank" rel="noopener" href="https://www.lazyvim.org/">链接</a></p>
+<ul>
+<li><p>背景透明</p>
+<figure class="highlight lua"><figcaption><span>~/.config/nvim/lua/plugins/colorscheme.lua</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 核心配置</span></span><br><span class="line"><span class="keyword">return</span>&#123;</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&quot;catppuccin/nvim&quot;</span>,</span><br><span class="line">    opts = &#123;</span><br><span class="line">      transparent_background = <span class="literal">true</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>latexmk使用xelatex<br>多番尝试都失败了，最终选择编辑如下文件</p>
+<figure class="highlight bash"><figcaption><span>~/.latexmkrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$pdflatex</span> = <span class="string">&#x27;xelatex %O %S&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="ToDo"><a href="#ToDo" class="headerlink" title="ToDo"></a>ToDo</h2><ul>
+<li>麦克风</li>
+<li>vscode无法使用中文输入法<ul>
+<li>暂时使用hyprland可解</li>
+</ul>
+</li>
+<li>kitty</li>
+<li>使用nautilus打开地址</li>
+<li>NPU驱动</li>
+<li>hyprland快捷键<ul>
+<li>打开设置</li>
+<li>电源管理<ul>
+<li>帧率、电源管理文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>lazyvim</li>
+<li>ags小组件</li>
+<li>功率控制：根据archlinux简明指南<ul>
+<li>这个简明指南是真的无敌</li>
+</ul>
+</li>
+<li>指纹</li>
+</ul>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>简单记录一下装windows时装的东西</p>
+<ul>
+<li>clash-verge-rev</li>
+<li>vscode</li>
+<li>obs-studio</li>
+<li>VC runtime</li>
+<li>.net</li>
+<li>米哈游启动器</li>
+<li>obsidian</li>
+<li>tailscale</li>
+<li>winbtrfs</li>
+<li>WPS</li>
+<li>7-zip</li>
+<li>zotero</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Redmibook14pro从零开始的archlinux安装与配置</p><p><a href="https://tjhaitang.github.io/2024/12/09/Redmibook14pro安装archlinux+hyprland等配置过程/">https://tjhaitang.github.io/2024/12/09/Redmibook14pro安装archlinux+hyprland等配置过程/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TJhaitang</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-12-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-12-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/">普罗米修斯</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://TJhaitang.github.io/" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/aliPay.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/WeChat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/01/03/A-robust-fusion-extraction%20procedure-with-summary-statistics-in-the-presence-of%20biased-sources/"><span class="level-item">A robust fusion-extraction procedure with summary statistics in the presence of biased sources</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.css"><script src="https://cdnjs.loli.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "cc56f99906bb95cf46c788c503a482a5",
+            repo: "commentRepo",
+            owner: "TJhaitang",
+            clientID: "13b02f01fb7788ddee7d",
+            clientSecret: "9a747b802c792f0cc62d1c96e4eb77c68bf21f19",
+            admin: ["TJhaitang"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/HPic.png" alt="藤椒海棠"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">藤椒海棠</p><p class="is-size-6 is-block">一小步</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/TJhaitang" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com/profile.php?id=100073476285499"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/TJhetan"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="http://gundam.tjhaitang.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">haitang</span></span><span class="level-right"><span class="level-item tag">gundam.tjhaitang.top</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-09T06:28:43.000Z">2024-12-09</time></p><p class="title"><a href="/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/">Redmibook14pro从零开始的archlinux安装与配置</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-03T07:38:24.000Z">2024-01-03</time></p><p class="title"><a href="/2024/01/03/A-robust-fusion-extraction%20procedure-with-summary-statistics-in-the-presence-of%20biased-sources/">A robust fusion-extraction procedure with summary statistics in the presence of biased sources</a></p><p class="categories"><a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-29T11:03:35.000Z">2023-12-29</time></p><p class="title"><a href="/2023/12/29/1229%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/">1229组会记录</a></p><p class="categories"><a href="/categories/%E7%BB%84%E4%BC%9A/">组会</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-27T06:26:41.000Z">2023-12-27</time></p><p class="title"><a href="/2023/12/27/Communication-Efficient-Distributed-Statistical-Inference/">Communication-Efficient Distributed Statistical Inference</a></p><p class="categories"><a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-25T13:01:10.000Z">2023-12-25</time></p><p class="title"><a href="/2023/12/25/%E8%BF%99%E9%87%8C%E5%B0%86%E4%BC%9A%E5%86%99%E4%BB%80%E4%B9%88/">这里将会写什么</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"><span class="level-start"><span class="level-item">数据库大作业</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"><span class="level-start"><span class="level-item">文献阅读</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BB%84%E4%BC%9A/"><span class="level-start"><span class="level-item">组会</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"><span class="tag">作业的奴隶</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%96%B0%E4%B8%96%E7%95%8C/"><span class="tag">可能是新世界</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"><span class="tag">普罗米修斯</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/"><span class="tag">联邦学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"><span class="tag">课堂大师</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B6%85%E7%BA%A7%E5%A4%A7%E6%9F%91%E6%A9%98/"><span class="tag">超级大柑橘</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"><span class="tag">迁移学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E5%9B%B0%E9%9A%BE/"><span class="tag">阅读难度：困难</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E7%AE%80%E5%8D%95/"><span class="tag">阅读难度：简单</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/"><span class="level-start"><span class="level-item">2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/"><span class="level-start"><span class="level-item">2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a><p class="is-size-7"><span>&copy; 2025 TJhaitang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
