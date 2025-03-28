@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tjhaitang.github.io/2025/03/28/LSH%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%93%88%E5%B8%8C/</loc>
+    
+    <lastmod>2025-03-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tjhaitang.github.io/2021/10/20/My-New-World/</loc>
     
     <lastmod>2025-03-28</lastmod>
@@ -226,6 +235,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://tjhaitang.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tjhaitang.github.io/tags/%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -244,6 +267,13 @@
   
   <url>
     <loc>https://tjhaitang.github.io/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tjhaitang.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
