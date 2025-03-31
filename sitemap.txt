@@ -1,3 +1,4 @@
+https://tjhaitang.github.io/2025/03/27/Transformer/
 https://tjhaitang.github.io/2025/03/28/KL%E6%95%A3%E5%BA%A6/
 https://tjhaitang.github.io/2025/03/28/LSH%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%93%88%E5%B8%8C/
 https://tjhaitang.github.io/2021/10/20/My-New-World/
@@ -28,6 +29,8 @@ https://tjhaitang.github.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/
 https://tjhaitang.github.io/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E5%9B%B0%E9%9A%BE/
 https://tjhaitang.github.io/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E7%AE%80%E5%8D%95/
 https://tjhaitang.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/
+https://tjhaitang.github.io/tags/Attention/
+https://tjhaitang.github.io/tags/%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84/
 https://tjhaitang.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/
 https://tjhaitang.github.io/tags/%E6%A8%A1%E5%9E%8B%E6%95%B0%E7%90%86/
 https://tjhaitang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/
