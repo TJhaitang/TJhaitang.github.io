@@ -32,7 +32,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">大模型学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-03-31T16:07:35.002Z" title="4/1/2025, 12:07:35 AM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">12 分钟读完 (大约1735个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">大模型学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-01T02:34:13.466Z" title="4/1/2025, 10:34:13 AM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">12 分钟读完 (大约1811个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。</li>
 <li>之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花费很多的时间去看。另一方面，Transformer的论文写的很简短，网上的解释质量也参差不齐，学起来十分痛苦。</li>
 <li>本次学习自认为把自己对Transformer的理解从20%提升到了70%。对于还没有理解的部分，我也会标注出来，并在不久后进行补充。</li>
@@ -155,8 +155,8 @@
 <li>Embedding<ul>
 <li>我们并不喜欢上面的数表示方法，数字间的大小关系并没有实际意义。数据输入模型时，将会从上面的数字表示转换为one-hot向量表示，即<code>1-&gt;[0,1,0,0,0,0,0,0]</code>，<code>2-&gt;[0,0,1,0,0,0,0,0]</code>(上述中文词表长度为8)。</li>
 <li><blockquote>
-<p>one-hot向量表示：（矩阵$X$的角标仅为辅助理解数据传递流程使用）</p>
-<script type="math/tex; mode=display">X_1= [[0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], ......, [1,0,0,0,0,0,0,0]] $$ $$X_1.shape=(6,8)=(token数目,词表长度)=(n,vocab_size)</script></blockquote>
+<p>one-hot向量表示：（矩阵$X$的角标仅为辅助理解数据传递流程使用）<br>$X_1= [[0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], ……, [1,0,0,0,0,0,0,0]] $<br>$X_1.shape=(6,8)=(token数目,词表长度)=(n,vocab_size)$</p>
+</blockquote>
 </li>
 <li>但显然这样的表示有两大问题： <ul>
 <li>没有体现词之间的关系，向量表示不含有词意信息</li>
@@ -165,22 +165,30 @@
 </li>
 <li>Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是<code>(vocab_size, embedding_dim)</code>，其中<code>embedding_dim</code>是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。</li>
 <li><blockquote>
-<p>Embedding 参数矩阵：$E_1.shape=(8,512)$</p>
-<script type="math/tex; mode=display">X_2=X_1E_1$$ $$X_2.shape=(6,512)=(token数目,embedding\_dim)=(n,d)</script></blockquote>
+<p>Embedding 参数矩阵：$E_1.shape=(8,512)$<br>$X_2=X_1E_1<script type="math/tex"> </script>X_2.shape=(6,512)=(token数目,embedding_dim)=(n,d)$</p>
+</blockquote>
 </li>
 <li>明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding_dim不会再大太多了</li>
 </ul>
 </li>
-<li>Positional Encoding<ul>
-<li>笔者在此处不加解释的给出下述两个公式：<script type="math/tex; mode=display">PE_{(pos,2i)}=sin(pos/10000^{2i/d})$$ $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d})$$ $$pos \in [0,1,2,...,n-1], 2i\in [0,2,...,d/2-1]</script></li>
+<li><p>Positional Encoding</p>
+<ul>
+<li>笔者在此处不加解释的给出下述两个公式：<br>$PE<em>{(pos,2i)}=sin(pos/10000^{2i/d})$<br>$PE</em>{(pos,2i+1)}=cos(pos/10000^{2i/d})$<br>$pos \in [0,1,2,…,n-1], 2i\in [0,2,…,d/2-1]$</li>
 <li><blockquote>
-<p>位置编码矩阵：$P.shape=(6,512)$</p>
-<script type="math/tex; mode=display">X_3=X_2E_1+P$$ $$X_3.shape=(6,512)=(token数目,embedding\_dim)=(n,d)</script></blockquote>
+<p>位置编码矩阵：$P.shape=(6,512)$<br>$X_3=X_2E_1+P<script type="math/tex"> </script>X_3.shape=(6,512)=(token数目,embedding_dim)=(n,d)$</p>
+</blockquote>
 </li>
 <li>Transformer的Attention结构并不能从文本中提取位置信息，因此需要通过位置编码来为文本增加位置信息。详细解释将在<a href="#位置编码">位置编码</a>章节进行</li>
 </ul>
 </li>
-<li></li>
+<li><p>Multi-Head Attention</p>
+<ul>
+<li>多头自注意力机制是Transformer的核心，也就是论文题目《Attention is All You Need》中的Attention。此处过程复杂、难以理解，笔者将在后续章节做详细解释，此处仅给出数据流动过程：</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Feed-forward network</li>
 </ul>
 <h3 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h3><hr>
 <h2 id="自注意力机制"><a href="#自注意力机制" class="headerlink" title="自注意力机制"></a>自注意力机制</h2><h2 id="多头注意力机制"><a href="#多头注意力机制" class="headerlink" title="多头注意力机制"></a>多头注意力机制</h2><h2 id="掩码"><a href="#掩码" class="headerlink" title="掩码"></a>掩码</h2><h2 id="解码器"><a href="#解码器" class="headerlink" title="解码器"></a>解码器</h2><h2 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h2><h2 id="层归一化"><a href="#层归一化" class="headerlink" title="层归一化"></a>层归一化</h2></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-28T05:02:26.000Z" title="3/28/2025, 1:02:26 PM">2025-03-28</time>发表</span><span class="level-item"><time dateTime="2025-03-28T14:36:42.904Z" title="3/28/2025, 10:36:42 PM">2025-03-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">14 分钟读完 (大约2146个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/03/28/KL%E6%95%A3%E5%BA%A6/">KL散度</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>又是一个知道了很多年但一直没有搞清晰的概念。今天突然看到了一个解释，突然就理解了，记录一下。</p>
