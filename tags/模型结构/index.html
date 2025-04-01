@@ -32,7 +32,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">模型结构</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-01T06:42:53.742Z" title="4/1/2025, 2:42:53 PM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">模型结构</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-01T06:52:27.997Z" title="4/1/2025, 2:52:27 PM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。</li>
 <li>之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花费很多的时间去看。另一方面，Transformer的论文写的很简短，网上的解释质量也参差不齐，学起来十分痛苦。</li>
 <li>本次学习自认为把自己对Transformer的理解从20%提升到了70%。对于还没有理解的部分，我也会标注出来，并在不久后进行补充。</li>
@@ -153,7 +153,8 @@
 <p>输入：$x_0=[1,2,3,4,0,0]$</p>
 </blockquote>
 <ul>
-<li>Embedding<ul>
+<li><p>Embedding</p>
+<ul>
 <li>我们并不喜欢上面的数表示方法，数字间的大小关系并没有实际意义。数据输入模型时，将会从上面的数字表示转换为one-hot向量表示，即<code>1-&gt;[0,1,0,0,0,0,0,0]</code>，<code>2-&gt;[0,0,1,0,0,0,0,0]</code>(上述中文词表长度为8)。</li>
 <li><blockquote>
 <p>one-hot向量表示：（矩阵$X$的角标仅为辅助理解数据传递流程使用）<br>$X_1= [[0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], ……, [1,0,0,0,0,0,0,0]] $<br>$X_1.shape=(6,8)=(token数目,词表长度)=(n,vocab_size)$</p>
@@ -164,7 +165,8 @@
 <li>向量维度过高：目前市面上的大模型(如deepseek等)词表一般在10W左右，one-hot向量的维度也就10W，无法直接进行计算</li>
 </ul>
 </li>
-<li>Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是<code>(vocab_size, embedding_dim)</code>，其中<code>embedding_dim</code>是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。</li>
+<li><p>Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是<code>(vocab_size, embedding_dim)</code>，其中<code>embedding_dim</code>是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。</p>
+</li>
 <li><blockquote>
 <p>Embedding 参数矩阵：$E<em>1.shape=(8,512)$<br>$X_2=X_1E_1<script type="math/tex"> </script>X_2.shape=(6,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
@@ -174,7 +176,11 @@
 </li>
 <li><p>Positional Encoding</p>
 <ul>
-<li>笔者在此处不加解释的给出下述两个公式：<br>$PE<em>{(pos,2i)}=sin(pos/10000^{2i/d</em>{model}})$<br>$PE<em>{(pos,2i+1)}=cos(pos/10000^{2i/d</em>{model}})$<br>$pos \in [0,1,2,…,n-1], 2i\in [0,2,…,d_{model}/2-1]$</li>
+<li><p>笔者在此处不加解释的给出下述两个公式：</p>
+<p>$PE<em>{(pos,2i)}=sin(pos/10000^{2i/d</em>{model}})$</p>
+<p>$PE<em>{(pos,2i+1)}=cos(pos/10000^{2i/d</em>{model}})$</p>
+<p>$pos \in [0,1,2,…,n-1], 2i\in [0,2,…,d_{model}/2-1]$</p>
+</li>
 <li><blockquote>
 <p>位置编码矩阵：$P.shape=(6,512)$ </p>
 <ul>
