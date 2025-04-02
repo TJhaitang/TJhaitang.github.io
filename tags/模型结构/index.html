@@ -32,7 +32,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">模型结构</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-01T06:52:27.997Z" title="4/1/2025, 2:52:27 PM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">模型结构</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-01T06:59:01.902Z" title="4/1/2025, 2:59:01 PM">2025-04-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。</li>
 <li>之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花费很多的时间去看。另一方面，Transformer的论文写的很简短，网上的解释质量也参差不齐，学起来十分痛苦。</li>
 <li>本次学习自认为把自己对Transformer的理解从20%提升到了70%。对于还没有理解的部分，我也会标注出来，并在不久后进行补充。</li>
@@ -155,12 +155,14 @@
 <ul>
 <li><p>Embedding</p>
 <ul>
-<li>我们并不喜欢上面的数表示方法，数字间的大小关系并没有实际意义。数据输入模型时，将会从上面的数字表示转换为one-hot向量表示，即<code>1-&gt;[0,1,0,0,0,0,0,0]</code>，<code>2-&gt;[0,0,1,0,0,0,0,0]</code>(上述中文词表长度为8)。</li>
+<li><p>我们并不喜欢上面的数表示方法，数字间的大小关系并没有实际意义。数据输入模型时，将会从上面的数字表示转换为one-hot向量表示，即<code>1-&gt;[0,1,0,0,0,0,0,0]</code>，<code>2-&gt;[0,0,1,0,0,0,0,0]</code>(上述中文词表长度为8)。</p>
+</li>
 <li><blockquote>
 <p>one-hot向量表示：（矩阵$X$的角标仅为辅助理解数据传递流程使用）<br>$X_1= [[0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], ……, [1,0,0,0,0,0,0,0]] $<br>$X_1.shape=(6,8)=(token数目,词表长度)=(n,vocab_size)$</p>
 </blockquote>
 </li>
-<li>但显然这样的表示有两大问题： <ul>
+<li><p>但显然这样的表示有两大问题： </p>
+<ul>
 <li>没有体现词之间的关系，向量表示不含有词意信息</li>
 <li>向量维度过高：目前市面上的大模型(如deepseek等)词表一般在10W左右，one-hot向量的维度也就10W，无法直接进行计算</li>
 </ul>
@@ -171,7 +173,8 @@
 <p>Embedding 参数矩阵：$E<em>1.shape=(8,512)$<br>$X_2=X_1E_1<script type="math/tex"> </script>X_2.shape=(6,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
-<li>明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding_dim不会再大太多了</li>
+<li><p>明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding_dim不会再大太多了</p>
+</li>
 </ul>
 </li>
 <li><p>Positional Encoding</p>
@@ -194,7 +197,8 @@
 </li>
 <li><p>Multi-Head Attention</p>
 <ul>
-<li>多头自注意力机制是Transformer的核心，也就是论文题目《Attention is All You Need》中的Attention。此处过程复杂、难以理解，笔者将在后续章节做详细解释，此处仅给出数据流动过程：</li>
+<li><p>多头自注意力机制是Transformer的核心，也就是论文题目《Attention is All You Need》中的Attention。此处过程复杂、难以理解，笔者将在后续章节做详细解释，此处仅给出数据流动过程：</p>
+</li>
 <li><blockquote>
 <p>单层多头自注意力机制：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 <ol>
@@ -210,7 +214,8 @@
 </ol>
 </blockquote>
 </li>
-<li>上述过程涉及了以下内容，皆会在后续章节进行详细解释<ul>
+<li><p>上述过程涉及了以下内容，皆会在后续章节进行详细解释</p>
+<ul>
 <li><a href="#自注意力机制">自注意力机制(d)</a></li>
 <li><a href="#多头注意力机制">多头注意力机制(a)</a></li>
 <li><a href="#掩码">掩码(Mask)(d)</a></li>
@@ -223,7 +228,8 @@
 </li>
 <li><p>Feed-forward network</p>
 <ul>
-<li>该层的作用是将多头自注意力层输出的词向量数据进行一些变化，输出一个具有更加丰富词义的词向量数据。该层包含两个线性变换和一个ReLU激活函数。该层的输入是多头自注意力层的输出，输出是一个新的词向量数据。</li>
+<li><p>该层的作用是将多头自注意力层输出的词向量数据进行一些变化，输出一个具有更加丰富词义的词向量数据。该层包含两个线性变换和一个ReLU激活函数。该层的输入是多头自注意力层的输出，输出是一个新的词向量数据。</p>
+</li>
 <li><blockquote>
 <p>Feed-forward network：$W<em>1,W_2,b_1,b_2$，$W_1.shape=(d</em>{model},d<em>{ff})$，$W_2.shape=(d</em>{ff},d<em>{model})$，$b_1.shape=(d</em>{ff})$，$b<em>2.shape=(d</em>{model})$</p>
 <p>$X_7=ReLU(X_6W_1+b_1)$<br>$X_8=X_7W_2+b_2$<br>output: $X_9=LayerNorm(X_8+X_6)$</p>
@@ -231,7 +237,8 @@
 </li>
 </ul>
 </li>
-<li>一个多头自注意力层和一个前馈网络层组成了一个Encoder层。Transformer的Encoder部分由多个Encoder层堆叠而成，通常设置为6层。每一层的输入是上一层的输出，第一层的输入是Embedding层的输出。记数据在Encoder层循环N次之后的输出为$X_E$，此时：<ul>
+<li><p>一个多头自注意力层和一个前馈网络层组成了一个Encoder层。Transformer的Encoder部分由多个Encoder层堆叠而成，通常设置为6层。每一层的输入是上一层的输出，第一层的输入是Embedding层的输出。记数据在Encoder层循环N次之后的输出为$X_E$，此时：</p>
+<ul>
 <li>$X<em>E.shape=(6,512)=(n,d</em>{model})$</li>
 </ul>
 </li>
@@ -259,24 +266,24 @@
 </ul>
 <blockquote>
 <p>输入：$x_D=[6,0,0,0,0,0,0]$ 模型还未开始翻译，将第一个位置置为[START]，其他位置置为[PAD]。模型第一步将预测’[START]’的下一个词。<br>转化为one-hot向量表示:$X_D.shape=(7,9)=(token数目,词表长度)=(n,vocab_size)$</p>
+</blockquote>
 <ul>
-<li>Embedding与Positional Encoding<ul>
-<li>与Encoder部分相同，模型将输入的one-hot向量表示转换为低维稠密向量表示，并添加位置编码。</li>
+<li><p>Embedding与Positional Encoding</p>
+<ul>
+<li><p>与Encoder部分相同，模型将输入的one-hot向量表示转换为低维稠密向量表示，并添加位置编码。</p>
+</li>
 <li><blockquote>
 <p>Embedding 参数矩阵：$E<em>2.shape=(9,512)$<br>位置编码矩阵：$P_D.shape=(7,512)$<br>$X_2=X_DE_2+P_D$<br>$X_2.shape=(7,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li>Masked Multi-Head Attention<ul>
-<li>该层与Encoder部分的多头自注意力层几乎一致，唯一的区别在于mask的形状不同，读者仅需要注意这一点即可，具体形式将在<a href="#掩码">掩码</a>章节进行详细描述。</li>
+<li><p>Masked Multi-Head Attention</p>
+<ul>
+<li><p>该层与Encoder部分的多头自注意力层几乎一致，唯一的区别在于mask的形状不同，读者仅需要注意这一点即可，具体形式将在<a href="#掩码">掩码</a>章节进行详细描述。</p>
+</li>
 <li><blockquote>
 <p>Masked Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
 <ol>
 <li>$Q= X_2W_Q$， $K= X_2W_K$， $V= X_2W_V$</li>
 <li>$Q,K,V.view(-1,n<em>{heads},d</em>{[Q,K,V]})$</li>
@@ -288,16 +295,16 @@
 <li>$X<em>5.shape=(7,512)=(n,d</em>{model})$</li>
 <li>output: $X_6=LayerNorm(X_5+X_2)$</li>
 </ol>
-<ul>
-<li>Encoder-Decoder Multi-Head Attention<ul>
-<li>与前面不同的是，本步不再是自注意力层，输入的QKV不再是相同的矩阵，而是Q来自Decoder，K和V为Encoder的输出$X_E$。这一步的作用是将Decoder的当前信息与Encoder所分析的文本信息进行结合，将双语信息进行联系。</li>
-<li><blockquote>
-<p>Encoder-Decoder Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 </blockquote>
 </li>
 </ul>
 </li>
-</ul>
+<li><p>Encoder-Decoder Multi-Head Attention</p>
+<ul>
+<li><p>与前面不同的是，本步不再是自注意力层，输入的QKV不再是相同的矩阵，而是Q来自Decoder，K和V为Encoder的输出$X_E$。这一步的作用是将Decoder的当前信息与Encoder所分析的文本信息进行结合，将双语信息进行联系。</p>
+</li>
+<li><blockquote>
+<p>Encoder-Decoder Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 <ol>
 <li>$Q= X_6W_Q$， $K= X_EW_K$， $V= X_EW_V$</li>
 <li>$Q,K,V.view(-1,n<em>{heads},d</em>{[Q,K,V]})$</li>
@@ -310,10 +317,13 @@
 <li>output: $X_9=LayerNorm(X_8+X_6)$</li>
 </ol>
 </blockquote>
-<ul>
+</li>
+</ul>
+</li>
 <li><p>Feed-forward network</p>
 <ul>
-<li>与Encoder一致</li>
+<li><p>与Encoder一致</p>
+</li>
 <li><blockquote>
 <p>Feed-forward network：$W<em>1,W_2,b_1,b_2$，$W_1.shape=(d</em>{model},d<em>{ff})$，$W_2.shape=(d</em>{ff},d<em>{model})$，$b_1.shape=(d</em>{ff})$，$b<em>2.shape=(d</em>{model})$</p>
 <p>$X<em>{10}=ReLU(X_9W_1+b_1)$<br>$X</em>{11}=X<em>{10}W_2+b_2$<br>output: $X</em>{12}=LayerNorm(X_{11}+X_9)$</p>
@@ -329,8 +339,10 @@
 </li>
 </ul>
 </li>
-<li>Projection<ul>
-<li>该层的作用是将Decoder的输出$X<em>O$转换为模型的预测结果$X</em>{pred}$。该层包含一个线性变换和一个softmax激活函数。该层的输入是Decoder的输出，输出是一个新的词向量数据。</li>
+<li><p>Projection</p>
+<ul>
+<li><p>该层的作用是将Decoder的输出$X<em>O$转换为模型的预测结果$X</em>{pred}$。该层包含一个线性变换和一个softmax激活函数。该层的输入是Decoder的输出，输出是一个新的词向量数据。</p>
+</li>
 <li><blockquote>
 <p>Projection：$W<em>P,b_P$，$W_P.shape=(d</em>{model},vocab_size)$，$b_P.shape=(vocab_size)$</p>
 <p>$X<em>{pred}=Softmax(X_OW_P+b_P)$<br>$X</em>{pred}.shape=(7,vocab_size)=(n,vocab_size)$</p>
@@ -338,8 +350,10 @@
 </li>
 </ul>
 </li>
-<li>Prediction<ul>
-<li>该层的作用是将模型的预测结果$X<em>{pred}$转换为模型的最终输出$X</em>{out}$。该层包含一个argmax操作。该层的输入是模型的预测结果，输出是一个新的词向量数据。至此，整个模型的数据流动流程就结束了，模型完成了一次预测。</li>
+<li><p>Prediction</p>
+<ul>
+<li><p>该层的作用是将模型的预测结果$X<em>{pred}$转换为模型的最终输出$X</em>{out}$。该层包含一个argmax操作。该层的输入是模型的预测结果，输出是一个新的词向量数据。至此，整个模型的数据流动流程就结束了，模型完成了一次预测。</p>
+</li>
 <li><blockquote>
 <p>Prediction：$X<em>{out}=argmax(X</em>{pred})$<br>$X_{out}.shape=(7)$</p>
 </blockquote>
