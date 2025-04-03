@@ -1,156 +1,718 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: 模型数理 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="test cryyy"><meta property="og:type" content="blog"><meta property="og:title" content="藤椒海棠"><meta property="og:url" content="https://tjhaitang.github.io/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="test cryyy"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://tjhaitang.github.io/img/og_image.png"><meta property="article:author" content="TJhaitang"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://tjhaitang.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://TJhaitang.github.io"},"headline":"藤椒海棠","image":["https://tjhaitang.github.io/img/og_image.png"],"author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://tjhaitang.github.io/img/iicon.png"}},"description":"test cryyy"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>标签：模型数理 - 藤椒海棠</title>
+
+  
+    <meta name="description" content="test cryyy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="藤椒海棠">
+<meta property="og:url" content="https://tjhaitang.github.io/tags/%E6%A8%A1%E5%9E%8B%E6%95%B0%E7%90%86/index.html">
+<meta property="og:site_name" content="藤椒海棠">
+<meta property="og:description" content="test cryyy">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJhaitang">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+
+  
+
+  
+
+  
+<!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!-- hexo injector head_end end --></head>
+<body>
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">藤椒海棠</div><div class="sub cap">一小步！</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"><span class="title">Transformer:我所知道的一切</span></a><a class="item title" href="/2025/03/28/KL%E6%95%A3%E5%BA%A6/"><span class="title">KL散度</span></a><a class="item title" href="/2025/03/28/LSH%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%93%88%E5%B8%8C/"><span class="title">LSH局部敏感哈希</span></a><a class="item title" href="/2021/10/20/My-New-World/"><span class="title">My-New-World</span></a><a class="item title" href="/2023/12/25/%E8%BF%99%E9%87%8C%E5%B0%86%E4%BC%9A%E5%86%99%E4%BB%80%E4%B9%88/"><span class="title">这里将会写什么</span></a><a class="item title" href="/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/"><span class="title">Redmibook14pro从零开始的archlinux安装与配置</span></a><a class="item title" href="/2023/12/27/Communication-Efficient-Distributed-Statistical-Inference/"><span class="title">Communication-Efficient Distributed Statistical Inference</span></a><a class="item title" href="/2024/01/03/A-robust-fusion-extraction%20procedure-with-summary-statistics-in-the-presence-of%20biased-sources/"><span class="title">A robust fusion-extraction procedure with summary statistics in the presence of biased sources</span></a><a class="item title" href="/2023/12/29/1229%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/"><span class="title">1229组会记录</span></a><a class="item title" href="/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/"><span class="title">Hexo与Github Pages配置</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">藤椒海棠</div><div class="sub cap">一小步！</div></a></div></header>
+
+ 
+
+
+
+
+<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a class="active" href="/tags/">标签：模型数理</a><a href="/archives/">归档</a></nav></div>
+<div class="post-list post"><a class="post-card post" href="/2025/03/28/KL%E6%95%A3%E5%BA%A6/">
+<article class="md-text"><h2 class="post-title">KL散度</h2><div class="excerpt"><p>前言又是一个知道了很多年但一直没有搞清晰的概念。今天突然看到了一个解释，突然就理解了，记录一下。
+Reference
+大语言模型相关知识
+KL散度-知乎
+
+
+从信息论开始熵香农！信息论！这里直接给出对“熵”的定义：
+H=-\sum_{i=1}^{n}...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2025-03-28T05:02:26.000Z">2025-03-28</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>大模型学习</span></span></div></article>
+</a></div>
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">TJhaitang</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
       }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">模型数理</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-28T05:02:26.000Z" title="3/28/2025, 1:02:26 PM">2025-03-28</time>发表</span><span class="level-item"><time dateTime="2025-03-28T14:36:42.904Z" title="3/28/2025, 10:36:42 PM">2025-03-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">14 分钟读完 (大约2146个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/03/28/KL%E6%95%A3%E5%BA%A6/">KL散度</a></p><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>又是一个知道了很多年但一直没有搞清晰的概念。今天突然看到了一个解释，突然就理解了，记录一下。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://wdndev.github.io/llm_interview_note/#/01.%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/1.%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/1.%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B">大语言模型相关知识</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/100676922">KL散度-知乎</a></li>
-</ol>
-<hr>
-<h2 id="从信息论开始"><a href="#从信息论开始" class="headerlink" title="从信息论开始"></a>从信息论开始</h2><h3 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h3><p>香农！信息论！这里直接给出对“熵”的定义：</p>
-<script type="math/tex; mode=display">H=-\sum_{i=1}^{n}p(x_i)log(p(x_i))</script><p>上式的求和符号也可以换作积分符号。其只是用以体现”期望“这一概念。也就是说，我们也可以这样定义：</p>
-<script type="math/tex; mode=display">H=E[log(\frac{1}{p(x)})]</script><p>接下来，本文将<strong>多花一些篇幅</strong>来对上述式子进行理解与解释，这也是大多讲解KL散度的文章中所忽略的，但笔者认为这一点在理解KL散度上至关重要。</p>
-<h3 id="非常简单的例子"><a href="#非常简单的例子" class="headerlink" title="非常简单的例子"></a>非常简单的例子</h3><p>我们将$x_i$看作一个个体，$\mathbf{x}$看作由个体元素组成的整体集合，$p(x_i)$看作个体在整体中的占比，也就是概率。如，在正态分布中，上文中的$x_i$为一个取自实数集$\mathbb{R}$的实数，$\mathbf{x}$为实数集合$\mathbb{R}$，$p(x_i)=\frac{1}{\sqrt{2\pi}\sigma}exp(-(x_i-\mu)^2/2\sigma^2)$，即为正态分布的概率密度函数。虽然这里我们举了一个连续性随机变量的例子，但在接下来的说明中，我们将以一个狭义的多的例子来说明，并通过一步步的延拓，来说明KL散度的定义。</p>
-<p>上面将熵定义为了一个随机变量$log(\frac{1}{p(x)})$的期望，人们通常将其解释为“编码信息所需要的最小比特数”，为什么？考虑随机变量A=“不断掷一枚硬币直到掷出正面，或者投到K次的投掷次数”，当我们取$K=3$时，我们可以很容易的得到A的概率分布，即</p>
-<p>$p(A=1)=\frac{1}{2},p(A=2)=\frac{1}{4},p(A=3)=\frac{1}{4}$</p>
-<p>接下来，我们希望对所有的事件进行二进制编码，同时保证任意一个编码不是另一个编码的前缀，即不应该一个事件被编码为“0110”，另一个事件被编码为“0110101”。这一规则使得：假设我们对上述三个事件分别编码为<code>011</code>、<code>0101</code>、<code>10</code>，那么对于一个长串<code>100101011100101</code>，我们总可以从头开始解码，如果遇到从头开始的一个字串对应了某一事件的编码，那么该字串一定对应于该事件——因为一个事件的编码不会是另一个事件的前缀。对于上述长串，我们有且仅有一种解码方式就是<code>10 0101 011 10 0101</code>。</p>
-<p>在遵守上述规则的情况下，我们总可以设计一种编码，使得对于上面案例中的任意正整数K，每个事件与其编码是一一对应的，对相关内容了解的同学可能会想到哈夫曼树，实际上哈夫曼树就是一种接近信息密度极限的最优编码方式。接下来，我们希望如果对于上述随机事件，其对应的编码长度的<strong>期望</strong>最短。换句话说，如果我们希望用二进制编码来记录大量的随机事件的观测，也就是实验结果，我们希望总的记录长度最短。这样的编码规则是什么样的呢？</p>
-<p>先说结论，对于上述问题，最优的编码方案$l(x)$满足如下条件：</p>
-<script type="math/tex; mode=display">|l(x)|=-log(p(x))</script><p>$|\cdot|$为编码的长度，最优编码长度的期望为：</p>
-<script type="math/tex; mode=display">E[|l(x)|]=E[-log(p(x))]=H</script><p>先不管为什么这就是最优方案，先感叹一下“原来如此”吧！此处不再对其最优性进行证明，有兴趣的同学可以参考对哈夫曼树的最优性证明：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25847123/article/details/48995411">哈夫曼树最优性证明-CSDN</a></p>
-<h3 id="延拓！"><a href="#延拓！" class="headerlink" title="延拓！"></a>延拓！</h3><ul>
-<li>上述案例中，我们仅考虑了$K=5$的情况，上述过程自然是对任意正整数$K$成立的，即对于任意正整数$K$，我们都可以找到一个最优的编码方案，使得其满足$|l(x)|=-log(p(x))$，且$E[|l(x)|]=H$。</li>
-<li>我们首先将上述过程中的$K$推广至无穷</li>
-<li>然后将不再考虑上述事件，将其推广至任意事件，其对应概率服从任意概率分布</li>
-<li>最后我们将上一步的可数个事件推广至连续事件。至此，我们得到了熵的定义与解释。</li>
-</ul>
-<p>笔者并没有深究上述推广中的数理逻辑，但笔者认为上述推广是合理且直观，此处不再深挖，感兴趣的朋友了解一下Kraft不等式。</p>
-<h3 id="直观理解"><a href="#直观理解" class="headerlink" title="直观理解"></a>直观理解</h3><ul>
-<li><p>如果一个总体的熵大，意味着平均需要更多的比特来描述该总体中的事件。换句话说，该总体中的事件分布较为分散，不确定性高。</p>
-</li>
-<li><p>反之，如果熵小，意味着平均需要的编码比特数较少，事件分布较为集中，不确定性低。</p>
-</li>
-</ul>
-<h2 id="KL散度"><a href="#KL散度" class="headerlink" title="KL散度"></a>KL散度</h2><p>经过了上面对熵的定义与解释，想必你已经理解了$log(\frac{1}{p(x)})$所蕴含的深层次含义。接下来我们将面临一个新的问题：如果我们不知道真实分布$p(x)$，那我们该怎样进行最优编码呢？一个直观的思路是：我们使用一个代理的分布$q(x)$来估计$p(x)$，并使用代理分布$q(x)$来进行编码。我们该如何衡量这种代理编码行为的质量呢？又一个直观的思路是使用代理编码的期望长度相较最优编码的期望长度的差值来衡量这种编码行为的质量。也就是：</p>
-<script type="math/tex; mode=display">E_{x\sim p}[log(\frac{1}{q(x)})] - E_{x\sim p}[log(\frac{1}{p(x)})]=\sum_{x\sim p}p(x)log(\frac{p(x)}{q(x)})=D_{KL}(p||q)</script><p>上式中的$D_{KL}(p||q)$即为KL散度。至此，我们已经完整的得到了KL散度的定义与解释。</p>
-<h3 id="直观解释"><a href="#直观解释" class="headerlink" title="直观解释"></a>直观解释</h3><p>KL散度可以理解为：</p>
-<ul>
-<li><p>当真实分布是P时，用Q分布来编码P所需的额外比特数。</p>
-</li>
-<li><p>或者说，用Q来近似P时损失的信息量。</p>
-</li>
-</ul>
-<h3 id="重要性质"><a href="#重要性质" class="headerlink" title="重要性质"></a>重要性质</h3><ol>
-<li>非负性：$D_{KL}(p||q)\geq 0$，当且仅当 $p=q$ 时取等号。</li>
-<li>不对称性： $D<em>{KL}(p||q)\neq D</em>{KL}(q||p)$</li>
-<li>不满足三角不等式</li>
-</ol>
-<h3 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h3><p>交叉熵定义为：</p>
-<script type="math/tex; mode=display">H(p,q) = -\sum_{x}p(x)log(q(x)) = H(p) + D_{KL}(p||q)</script><p>在机器学习中，由于$H(p)$是常数，所以我们通常只关心$D_{KL}(p||q)$，即交叉熵的第二项，最小化交叉熵等价于最小化KL散度。</p>
-<h2 id="KL散度非负性的证明"><a href="#KL散度非负性的证明" class="headerlink" title="KL散度非负性的证明"></a>KL散度非负性的证明</h2><h3 id="方法一：利用Jensen不等式"><a href="#方法一：利用Jensen不等式" class="headerlink" title="方法一：利用Jensen不等式"></a>方法一：利用Jensen不等式</h3><p><strong>Jensen不等式</strong>：对于凸函数φ，有：</p>
-<script type="math/tex; mode=display">
-φ(E[X]) \leq E[φ(X)]</script><p><strong>证明过程</strong>：</p>
-<ol>
-<li>令φ(x) = -log(x)，这是凸函数</li>
-<li>将KL散度改写为期望形式：<script type="math/tex; mode=display">
-D_{KL}(P||Q) = E_P\left[\log\frac{p(x)}{q(x)}\right] = E_P\left[-\log\frac{q(x)}{p(x)}\right]</script></li>
-<li>应用Jensen不等式：<script type="math/tex; mode=display">
-D_{KL}(P||Q) = E_P[-\log X] \geq -\log E_P[X] = -\log\left(\sum_x p(x)\frac{q(x)}{p(x)}\right) = -\log 1 = 0</script></li>
-<li>当且仅当对所有x有p(x)=q(x)时等号成立</li>
-</ol>
-<h3 id="方法二：利用信息不等式"><a href="#方法二：利用信息不等式" class="headerlink" title="方法二：利用信息不等式"></a>方法二：利用信息不等式</h3><p>定义信息差：</p>
-<script type="math/tex; mode=display">
-I(p:q) = \sum_x p(x)\log\frac{p(x)}{q(x)} \geq 0</script><p><strong>证明要点</strong>：</p>
-<ol>
-<li>使用不等式ln x ≤ x-1（当x&gt;0）</li>
-<li>令y = q(x)/p(x)，则有：<script type="math/tex; mode=display">
-\log\frac{p(x)}{q(x)} = -\log y \geq 1-y</script></li>
-<li>因此：<script type="math/tex; mode=display">
-\sum_x p(x)\log\frac{p(x)}{q(x)} \geq \sum_x p(x)(1-\frac{q(x)}{p(x)}) = \sum_x (p(x)-q(x)) = 0</script></li>
-</ol>
-</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/HPic.png" alt="藤椒海棠"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">藤椒海棠</p><p class="is-size-6 is-block">一小步</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">20</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/TJhaitang" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com/profile.php?id=100073476285499"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/TJhetan"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="http://gundam.tjhaitang.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">haitang</span></span><span class="level-right"><span class="level-item tag">gundam.tjhaitang.top</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-03-31T16:02:12.000Z">2025-04-01</time></p><p class="title"><a href="/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/">Transformer:我所知道的一切</a></p><p class="categories"><a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-03-28T05:02:26.000Z">2025-03-28</time></p><p class="title"><a href="/2025/03/28/KL%E6%95%A3%E5%BA%A6/">KL散度</a></p><p class="categories"><a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-03-28T04:02:57.000Z">2025-03-28</time></p><p class="title"><a href="/2025/03/28/LSH%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%93%88%E5%B8%8C/">LSH局部敏感哈希</a></p><p class="categories"><a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-09T06:28:43.000Z">2024-12-09</time></p><p class="title"><a href="/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/">Redmibook14pro从零开始的archlinux安装与配置</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-03T07:38:24.000Z">2024-01-03</time></p><p class="title"><a href="/2024/01/03/A-robust-fusion-extraction%20procedure-with-summary-statistics-in-the-presence-of%20biased-sources/">A robust fusion-extraction procedure with summary statistics in the presence of biased sources</a></p><p class="categories"><a href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">文献阅读</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">大模型学习</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E4%BD%9C%E4%B8%9A/"><span class="level-start"><span class="level-item">数据库大作业</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"><span class="level-start"><span class="level-item">文献阅读</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BB%84%E4%BC%9A/"><span class="level-start"><span class="level-item">组会</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Attention/"><span class="tag">Attention</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BD%9C%E4%B8%9A%E7%9A%84%E5%A5%B4%E9%9A%B6/"><span class="tag">作业的奴隶</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%96%B0%E4%B8%96%E7%95%8C/"><span class="tag">可能是新世界</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/"><span class="tag">数据去重</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"><span class="tag">数据处理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/"><span class="tag">普罗米修斯</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A8%A1%E5%9E%8B%E6%95%B0%E7%90%86/"><span class="tag">模型数理</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84/"><span class="tag">模型结构</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/"><span class="tag">联邦学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BE%E5%A0%82%E5%A4%A7%E5%B8%88/"><span class="tag">课堂大师</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B6%85%E7%BA%A7%E5%A4%A7%E6%9F%91%E6%A9%98/"><span class="tag">超级大柑橘</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"><span class="tag">迁移学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E5%9B%B0%E9%9A%BE/"><span class="tag">阅读难度：困难</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%85%E8%AF%BB%E9%9A%BE%E5%BA%A6%EF%BC%9A%E7%AE%80%E5%8D%95/"><span class="tag">阅读难度：简单</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2025/04/"><span class="level-start"><span class="level-item">四月 2025</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2025/03/"><span class="level-start"><span class="level-item">三月 2025</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/12/"><span class="level-start"><span class="level-item">十二月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/01/"><span class="level-start"><span class="level-item">一月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/12/"><span class="level-start"><span class="level-item">十二月 2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/08/"><span class="level-start"><span class="level-item">八月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a><p class="is-size-7"><span>&copy; 2025 TJhaitang</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
       });
-    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      svg: {
-        fontCache: 'global'
-      },
-      chtml: {
-        matchFontHeight: false
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
       }
-    };</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function (response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function (data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function (error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
