@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tjhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2025-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tjhaitang.github.io/2024/12/09/Redmibook14pro%E5%AE%89%E8%A3%85archlinux+hyprland%E7%AD%89%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/</loc>
     
     <lastmod>2025-04-07</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://tjhaitang.github.io/2023/12/29/1229%E7%BB%84%E4%BC%9A%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2024-01-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tjhaitang.github.io/2021/10/20/hexo%E4%B8%8Egithub-Pages%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2023-12-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
