@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Transformer:我所知道的一切 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"><meta property="og:type" content="blog"><meta property="og:title" content="Transformer:我所知道的一切"><meta property="og:url" content="https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"><meta property="article:published_time" content="2025-03-31T16:02:12.000Z"><meta property="article:modified_time" content="2025-04-07T03:20:24.281Z"><meta property="article:author" content="TJhaitang"><meta property="article:tag" content="Attention"><meta property="article:tag" content="模型结构"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"},"headline":"Transformer:我所知道的一切","image":["https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"],"datePublished":"2025-03-31T16:02:12.000Z","dateModified":"2025-04-07T03:20:24.281Z","author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://tjhaitang.github.io/img/iicon.png"}},"description":"前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"}</script><link rel="canonical" href="https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Transformer:我所知道的一切 - 藤椒海棠</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="藤椒海棠"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="藤椒海棠"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"><meta property="og:type" content="blog"><meta property="og:title" content="Transformer:我所知道的一切"><meta property="og:url" content="https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"><meta property="og:site_name" content="藤椒海棠"><meta property="og:description" content="前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"><meta property="article:published_time" content="2025-03-31T16:02:12.000Z"><meta property="article:modified_time" content="2025-04-07T03:48:54.959Z"><meta property="article:author" content="TJhaitang"><meta property="article:tag" content="Attention"><meta property="article:tag" content="模型结构"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"},"headline":"Transformer:我所知道的一切","image":["https://nlp.seas.harvard.edu/images/the-annotated-transformer_14_0.png"],"datePublished":"2025-03-31T16:02:12.000Z","dateModified":"2025-04-07T03:48:54.959Z","author":{"@type":"Person","name":"TJhaitang"},"publisher":{"@type":"Organization","name":"藤椒海棠","logo":{"@type":"ImageObject","url":"https://tjhaitang.github.io/img/iicon.png"}},"description":"前言 从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。 之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花"}</script><link rel="canonical" href="https://tjhaitang.github.io/2025/04/01/Transformer-%E6%88%91%E6%89%80%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E5%88%87/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 <script>
   (function () {
@@ -32,7 +32,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="藤椒海棠" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-07T03:20:24.281Z" title="4/7/2025, 11:20:24 AM">2025-04-07</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Transformer:我所知道的一切</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/iicon.png" alt="藤椒海棠" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/TJhaitang"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-03-31T16:02:12.000Z" title="4/1/2025, 12:02:12 AM">2025-04-01</time>发表</span><span class="level-item"><time dateTime="2025-04-07T03:48:54.959Z" title="4/7/2025, 11:48:54 AM">2025-04-07</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0/">大模型学习</a></span><span class="level-item">24 分钟读完 (大约3653个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Transformer:我所知道的一切</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>从那节“数据科学实践”开始，自己曾多次尝试理解Transformer的原理。但这么多年过去了，对其仍然只是大概知道是个什么东西，理解完全称不上深入。但是现在计划往大模型方向转型，Transformer是一个绕不开的概念，于是痛定思痛，决定好好学习一下Transformer的原理。</li>
 <li>之前对Transformer的理解太浅薄了，以为之只是一个类似于AlexNet这样的很好理解的模型，每次都没有花费很多的时间去看。另一方面，Transformer的论文写的很简短，网上的解释质量也参差不齐，学起来十分痛苦。</li>
 <li>本次学习自认为把自己对Transformer的理解从20%提升到了70%。对于还没有理解的部分，我也会标注出来，并在不久后进行补充。</li>
@@ -170,7 +170,7 @@
 <li><p>Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是<code>(vocab_size, embedding_dim)</code>，其中<code>embedding_dim</code>是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。</p>
 </li>
 <li><blockquote>
-<p>Embedding 参数矩阵：$E_1.shape=(8,512)$<br>$X_2=X_1E_1<script type="math/tex"> </script>X_2.shape=(6,512)=(token数目,embedding_dim)=(n,d_model)$</p>
+<p>Embedding 参数矩阵：$E<em>1.shape=(8,512)$<br>$X_2=X_1E_1$ $X_2.shape=(6,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
 <li><p>明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding_dim不会再大太多了</p>
@@ -180,16 +180,16 @@
 <li><p>Positional Encoding</p>
 <ul>
 <li><p>笔者在此处不加解释的给出下述两个公式：</p>
-<p>$PE(pos,2i)=sin(pos/10000^{2i/d_model})$</p>
-<p>$PE(pos,2i+1)=cos(pos/10000^{2i/d_model})$</p>
-<p>$pos \in [0,1,2,…,n-1], 2i\in [0,2,…,d_model/2-1]$</p>
+<p>$PE<em>{(pos,2i)}=sin(pos/10000^{2i/d</em>{model}})$</p>
+<p>$PE<em>{(pos,2i+1)}=cos(pos/10000^{2i/d</em>{model}})$</p>
+<p>$pos \in [0,1,2,…,n-1], 2i\in [0,2,…,d_{model}/2-1]$</p>
 </li>
 <li><blockquote>
 <p>位置编码矩阵：$P.shape=(6,512)$ </p>
 <ul>
 <li>使用$P$而非$PE$表示该矩阵以避免歧义，并非参数矩阵而是由上述公式计算得出</li>
 </ul>
-<p>$X_3=X_2E_1+P<script type="math/tex"> </script>X_3.shape=(6,512)=(token数目,embedding_dim)=(n,d_model)$</p>
+<p>$X<em>3=X_2E_1+P$<br>$X_3.shape=(6,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
 <li>Transformer的Attention结构并不能从文本中提取位置信息，因此需要通过位置编码来为文本增加位置信息。详细解释将在<a href="#位置编码">位置编码</a>章节进行</li>
@@ -200,16 +200,16 @@
 <li><p>多头自注意力机制是Transformer的核心，也就是论文题目《Attention is All You Need》中的Attention。此处过程复杂、难以理解，笔者将在后续章节做详细解释，此处仅给出数据流动过程：</p>
 </li>
 <li><blockquote>
-<p>单层多头自注意力机制：$W<em>Q,W_K,W_V,W_M$，$W\</em>[Q,K,V].shape=(d_model,d_[Q,K,V]<em>n_heads)$，$W_M.shape=(d_V</em>n_heads,d_model)$</p>
+<p>单层多头自注意力机制：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 <ol>
 <li>$Q= X_3W_Q$， $K= X_3W_K$， $V= X_3W_V$</li>
-<li>$Q,K,V.view(-1,n_heads,d_[Q,K,V])$</li>
-<li>$Q,K,V.shape=(6,n_heads,d_[Q,K,V])$</li>
-<li>$X_4=Softmax(\frac{QK^T}{\sqrt{d_model}}\odot Mask)V$</li>
-<li>$X_4.shape=(6,n_heads,d_V)$</li>
-<li>$X_4.view(-1,d_model)$</li>
+<li>$Q,K,V.view(-1,n<em>{heads},d</em>{[Q,K,V]})$</li>
+<li>$Q,K,V.shape=(6,n<em>{heads},d</em>{[Q,K,V]})$</li>
+<li>$X<em>4=Softmax(\frac{QK^T}{\sqrt{d</em>{model}}}\odot Mask)V$</li>
+<li>$X<em>4.shape=(6,n</em>{heads},d_V)$</li>
+<li>$X<em>4.view(-1,d</em>{model})$</li>
 <li>$X_5= X_4W_M$</li>
-<li>$X_5.shape=(6,512)=(n,d_model)$</li>
+<li>$X<em>5.shape=(6,512)=(n,d</em>{model})$</li>
 <li>output: $X_6=LayerNorm(X_5+X_3)$</li>
 </ol>
 </blockquote>
@@ -231,7 +231,7 @@
 <li><p>该层的作用是将多头自注意力层输出的词向量数据进行一些变化，输出一个具有更加丰富词义的词向量数据。该层包含两个线性变换和一个ReLU激活函数。该层的输入是多头自注意力层的输出，输出是一个新的词向量数据。</p>
 </li>
 <li><blockquote>
-<p>Feed-forward network：$W_1,W_2,b_1,b_2$，$W_1.shape=(d_model,d_ff)$，$W_2.shape=(d_ff,d_model)$，$b_1.shape=(d_ff)$，$b_2.shape=(d_model)$</p>
+<p>Feed-forward network：$W<em>1,W_2,b_1,b_2$，$W_1.shape=(d</em>{model},d<em>{ff})$，$W_2.shape=(d</em>{ff},d<em>{model})$，$b_1.shape=(d</em>{ff})$，$b<em>2.shape=(d</em>{model})$</p>
 <p>$X_7=ReLU(X_6W_1+b_1)$<br>$X_8=X_7W_2+b_2$<br>output: $X_9=LayerNorm(X_8+X_6)$</p>
 </blockquote>
 </li>
@@ -239,7 +239,7 @@
 </li>
 <li><p>一个多头自注意力层和一个前馈网络层组成了一个Encoder层。Transformer的Encoder部分由多个Encoder层堆叠而成，通常设置为6层。每一层的输入是上一层的输出，第一层的输入是Embedding层的输出。记数据在Encoder层循环N次之后的输出为$X_E$，此时：</p>
 <ul>
-<li>$X_E.shape=(6,512)=(n,d_model)$</li>
+<li>$X<em>E.shape=(6,512)=(n,d</em>{model})$</li>
 </ul>
 </li>
 </ul>
@@ -273,7 +273,7 @@
 <li><p>与Encoder部分相同，模型将输入的one-hot向量表示转换为低维稠密向量表示，并添加位置编码。</p>
 </li>
 <li><blockquote>
-<p>Embedding 参数矩阵：$E_2.shape=(9,512)$<br>位置编码矩阵：$P_D.shape=(7,512)$<br>$X_2=X_DE_2+P_D$<br>$X_2.shape=(7,512)=(token数目,embedding_dim)=(n,d_model)$</p>
+<p>Embedding 参数矩阵：$E<em>2.shape=(9,512)$<br>位置编码矩阵：$P_D.shape=(7,512)$<br>$X_2=X_DE_2+P_D$<br>$X_2.shape=(7,512)=(token数目,embedding_dim)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
 </ul>
@@ -283,16 +283,16 @@
 <li><p>该层与Encoder部分的多头自注意力层几乎一致，唯一的区别在于mask的形状不同，读者仅需要注意这一点即可，具体形式将在<a href="#掩码">掩码</a>章节进行详细描述。</p>
 </li>
 <li><blockquote>
-<p>Masked Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W\</em>[Q,K,V].shape=(d_model,d_[Q,K,V]<em>n_heads)$，$W_M.shape=(d_V</em>n_heads,d_model)$</p>
+<p>Masked Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 <ol>
 <li>$Q= X_2W_Q$， $K= X_2W_K$， $V= X_2W_V$</li>
-<li>$Q,K,V.view(-1,n_heads,d_[Q,K,V])$</li>
-<li>$Q,K,V.shape=(7,n_heads,d_[Q,K,V])$</li>
-<li>$X_4=Softmax(\frac{QK^T}{\sqrt{d_model}}\odot Mask)V$</li>
-<li>$X_4.shape=(7,n_heads,d_V)$</li>
-<li>$X_4.view(-1,d_model)$</li>
+<li>$Q,K,V.view(-1,n<em>{heads},d</em>{[Q,K,V]})$</li>
+<li>$Q,K,V.shape=(7,n<em>{heads},d</em>{[Q,K,V]})$</li>
+<li>$X<em>4=Softmax(\frac{QK^T}{\sqrt{d</em>{model}}}\odot Mask)V$</li>
+<li>$X<em>4.shape=(7,n</em>{heads},d_V)$</li>
+<li>$X<em>4.view(-1,d</em>{model})$</li>
 <li>$X_5= X_4W_M$</li>
-<li>$X_5.shape=(7,512)=(n,d_model)$</li>
+<li>$X<em>5.shape=(7,512)=(n,d</em>{model})$</li>
 <li>output: $X_6=LayerNorm(X_5+X_2)$</li>
 </ol>
 </blockquote>
@@ -304,16 +304,16 @@
 <li><p>与前面不同的是，本步不再是自注意力层，输入的QKV不再是相同的矩阵，而是Q来自Decoder，K和V为Encoder的输出$X_E$。这一步的作用是将Decoder的当前信息与Encoder所分析的文本信息进行结合，将双语信息进行联系。</p>
 </li>
 <li><blockquote>
-<p>Encoder-Decoder Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W\</em>[Q,K,V].shape=(d_model,d_[Q,K,V]<em>n_heads)$，$W_M.shape=(d_V</em>n_heads,d_model)$</p>
+<p>Encoder-Decoder Multi-Head Attention：$W<em>Q,W_K,W_V,W_M$，$W</em>{[Q,K,V]}.shape=(d<em>{model},d</em>{[Q,K,V]}<em>n_{heads})$，$W_M.shape=(d_V</em>n<em>{heads},d</em>{model})$</p>
 <ol>
 <li>$Q= X_6W_Q$， $K= X_EW_K$， $V= X_EW_V$</li>
-<li>$Q,K,V.view(-1,n_heads,d_[Q,K,V])$</li>
-<li>$Q.shape=(7,n_heads,d<em>Q)$；   $\quad K,V.shape=(6,n_heads,d\</em>[K,V])$</li>
-<li>$X_7=Softmax(\frac{QK^T}{\sqrt{d_model}}\odot Mask)V$</li>
-<li>$X_7.shape=(7,n_heads,d_V)$</li>
-<li>$X_7.view(-1,d_model)$</li>
+<li>$Q,K,V.view(-1,n<em>{heads},d</em>{[Q,K,V]})$</li>
+<li>$Q.shape=(7,n<em>{heads},d_Q)$；   $\quad K,V.shape=(6,n</em>{heads},d_{[K,V]})$</li>
+<li>$X<em>7=Softmax(\frac{QK^T}{\sqrt{d</em>{model}}}\odot Mask)V$</li>
+<li>$X<em>7.shape=(7,n</em>{heads},d_V)$</li>
+<li>$X<em>7.view(-1,d</em>{model})$</li>
 <li>$X_8= X_7W_M$</li>
-<li>$X_8.shape=(7,512)=(n,d_model)$</li>
+<li>$X<em>8.shape=(7,512)=(n,d</em>{model})$</li>
 <li>output: $X_9=LayerNorm(X_8+X_6)$</li>
 </ol>
 </blockquote>
@@ -325,8 +325,8 @@
 <li><p>与Encoder一致</p>
 </li>
 <li><blockquote>
-<p>Feed-forward network：$W_1,W_2,b_1,b_2$，$W_1.shape=(d_model,d_ff)$，$W_2.shape=(d_ff,d_model)$，$b_1.shape=(d_ff)$，$b_2.shape=(d_model)$</p>
-<p>$X_10=ReLU(X<em>9W_1+b_1)$<br>$X\</em>{11}=X_10 W<em>2+b_2$<br>output: $X\</em>{12}=LayerNorm(X_11+X_9)$</p>
+<p>Feed-forward network：$W<em>1,W_2,b_1,b_2$，$W_1.shape=(d</em>{model},d<em>{ff})$，$W_2.shape=(d</em>{ff},d<em>{model})$，$b_1.shape=(d</em>{ff})$，$b<em>2.shape=(d</em>{model})$</p>
+<p>$X<em>{10}=ReLU(X_9W_1+b_1)$<br>$X</em>{11}=X<em>{10}W_2+b_2$<br>output: $X</em>{12}=LayerNorm(X_{11}+X_9)$</p>
 </blockquote>
 </li>
 </ul>
@@ -334,28 +334,28 @@
 <li><p>如最上面的图所示，数据将在上述三层中循环N次，N通常设置为6。每一层的输入是上一层的输出。记数据在Decoder层循环N次之后的输出为$X_O$，此时：</p>
 <ul>
 <li><blockquote>
-<p>$X_O.shape=(7,512)=(n,d_model)$</p>
+<p>$X<em>O.shape=(7,512)=(n,d</em>{model})$</p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>Projection</p>
 <ul>
-<li><p>该层的作用是将Decoder的输出$X_O$转换为模型的预测结果$X_pred$。该层包含一个线性变换和一个softmax激活函数。该层的输入是Decoder的输出，输出是一个新的词向量数据。</p>
+<li><p>该层的作用是将Decoder的输出$X<em>O$转换为模型的预测结果$X</em>{pred}$。该层包含一个线性变换和一个softmax激活函数。该层的输入是Decoder的输出，输出是一个新的词向量数据。</p>
 </li>
 <li><blockquote>
-<p>Projection：$W_P,b_P$，$W_P.shape=(d_model,vocab_size)$，$b_P.shape=(vocab_size)$</p>
-<p>$X_pred=Softmax(X_OW_P+b_P)$<br>$X_pred.shape=(7,vocab_size)=(n,vocab_size)$</p>
+<p>Projection：$W<em>P,b_P$，$W_P.shape=(d</em>{model},vocab_size)$，$b_P.shape=(vocab_size)$</p>
+<p>$X<em>{pred}=Softmax(X_OW_P+b_P)$<br>$X</em>{pred}.shape=(7,vocab_size)=(n,vocab_size)$</p>
 </blockquote>
 </li>
 </ul>
 </li>
 <li><p>Prediction</p>
 <ul>
-<li><p>该层的作用是将模型的预测结果$X_pred$转换为模型的最终输出$X_out$。该层包含一个argmax操作。该层的输入是模型的预测结果，输出是一个新的词向量数据。至此，整个模型的数据流动流程就结束了，模型完成了一次预测。</p>
+<li><p>该层的作用是将模型的预测结果$X<em>{pred}$转换为模型的最终输出$X</em>{out}$。该层包含一个argmax操作。该层的输入是模型的预测结果，输出是一个新的词向量数据。至此，整个模型的数据流动流程就结束了，模型完成了一次预测。</p>
 </li>
 <li><blockquote>
-<p>Prediction：$X_out=argmax(X_pred)$<br>$X_out.shape=(7)$</p>
+<p>Prediction：$X<em>{out}=argmax(X</em>{pred})$<br>$X_{out}.shape=(7)$</p>
 </blockquote>
 </li>
 </ul>
