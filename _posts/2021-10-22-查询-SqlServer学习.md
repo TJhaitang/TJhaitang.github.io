@@ -144,7 +144,7 @@ SELECT Student.Sno,Sname,Ssex,Sage,Sdept,Cno,Grade
 FROM Student FULL JOIN SC ON
     (Student.Sno=SC.Sno); -- 外连接
 ```
-{% asset_img 左外连接.png 左外连接 %}
+![左外连接](images/查询-SqlServer学习/左外连接.png)  
 - 多表连接
 两个以上的表进行连接
 ```sql

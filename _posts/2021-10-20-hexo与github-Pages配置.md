@@ -63,7 +63,7 @@ hexo server
 ## github Pages配置
 ssh连接github的教程有很多，这里就不赘余了
 1. 在自己的github里创建名为 **<用户名>.github.io**的仓库(可以使用其他名称如hello.io，但这样做的好处是可以直接使用https://<用户名>.github.io访问此网站)   
-{% asset_img screenshot.png 仓库实例 %}
+![仓库实例](images/hexo与github-Pages配置/screenshot.png)
 ***
 ## 配置hexo/_config.yml
 1. 站点信息设置

@@ -44,7 +44,7 @@ extension=pdo_sqlsrv_74_ts_x64
 ?>
 ```
 保存退出，通过localhost访问此文件，下拉菜单应该看到这样的页面
-{% asset_img 1.png sql驱动显示 %}
+![sql驱动显示](images/php配置sqlserver驱动/1.png)
 这样应该就成功了
 
 - 连接sqserver
