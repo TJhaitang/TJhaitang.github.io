@@ -8,7 +8,7 @@ tags:  '课堂大师'
 [这里](http://10.43.12.25:81/ruc/数据库)  *需要连接ruc校园网*
 ***
 # 查询
-![数据查询](3-1ppt) 
+![数据查询](https://raw.githubusercontent.com/TJhaitang/TJhaitang.github.io/refs/heads/master/_posts/3-1ppt) 
 
 |关键词|功能|
 |:--:|:--:|
@@ -144,7 +144,7 @@ SELECT Student.Sno,Sname,Ssex,Sage,Sdept,Cno,Grade
 FROM Student FULL JOIN SC ON
     (Student.Sno=SC.Sno); -- 外连接
 ```
-![左外连接](images/查询-SqlServer学习/左外连接.png)  
+![左外连接](https://raw.githubusercontent.com/TJhaitang/TJhaitang.github.io/refs/heads/master/_posts/images/查询-SqlServer学习/左外连接.png)  
 - 多表连接
 两个以上的表进行连接
 ```sql

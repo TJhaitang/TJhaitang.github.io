@@ -154,7 +154,6 @@ systemctl enable --now syncthing@haitang
 ### 换壁纸
 
 ```bash ~/.config/hypr/custom/exec.conf
-# exec-once = swaybg -i /home/haitang/Pictures/wallpaper/f.jpg &
 sleep 1 && exec-once = swww img "/home/haitang/Pictures/wallpaper/f.jpg" & #不知道为啥不起作用
 ```
 
