@@ -47,6 +47,7 @@ date: 2025-04-01 00:02:12
 |[START]|开始token，用于标记文本的开始。|5|
 |[END]|结束token，用于标记文本的结束。|6|
 |[UNK]|未知token，用于替换不在词表中的单词。|7|
+
 - 除此之外，还有一些其他的特殊token，他们常用于满足特定的模型需求，此处不做赘述。至此，我们建立了一个长度为8的中文词表，相对应的，我们可以建立一个英文词表如下：
   
 |token|数字表示|
@@ -74,17 +75,17 @@ date: 2025-04-01 00:02:12
   
   - > one-hot向量表示：（矩阵$X$的角标仅为辅助理解数据传递流程使用）
     > $X_1= [[0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], ......, [1,0,0,0,0,0,0,0]] $ 
-    > $X_1.shape=(6,8)=(token数目,词表长度)=(n,vocab\_size)$
+    > $X_1.shape=(6,8)=(token数目,词表长度)=(n,\text{vocab\_size})$
 
   - 但显然这样的表示有两大问题： 
     - 没有体现词之间的关系，向量表示不含有词意信息
     - 向量维度过高：目前市面上的大模型(如deepseek等)词表一般在10W左右，one-hot向量的维度也就10W，无法直接进行计算
-  - Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是`(vocab\_size, embedding\_dim)`，其中`embedding\_dim`是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。
+  - Embedding层的作用就是将one-hot向量转换为低维稠密向量表示。该层维护一个矩阵，矩阵的大小是`(vocab_size, embedding_dim)`，其中`embedding_dim`是一个超参数，通常设置为512。Embedding层的作用就是将one-hot向量乘以这个矩阵，得到低维稠密向量表示，称之为词向量。
   
   - > Embedding 参数矩阵：$E_1.shape=(8,512)$
-    > $X_2=X_1E_1$ $X_2.shape=(6,512)=(token数目,embedding\_dim)=(n,d_{model})$
+    > $X_2=X_1E_1$ $X_2.shape=(6,512)=(token数目,\text{embedding\_dim})=(n,d_{model})$
 
-  - 明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding\_dim不会再大太多了
+  - 明明说是转化为低维稠密向量但为什么维度变高了？因为我们此处仅为距离，设计的词表大小非常小，实际应用中词表大小要大得多的多，但embedding_dim不会再大太多了
 - Positional Encoding
   - 笔者在此处不加解释的给出下述两个公式：
 
@@ -98,7 +99,7 @@ date: 2025-04-01 00:02:12
     > - 使用$P$而非$PE$表示该矩阵以避免歧义，并非参数矩阵而是由上述公式计算得出
     >
     > $X_3=X_2E_1+P$
-    > $X_3.shape=(6,512)=(token数目,embedding\_dim)=(n,d_{model})$
+    > $X_3.shape=(6,512)=(token数目,\text{embedding\_dim})=(n,d_{model})$
   - Transformer的Attention结构并不能从文本中提取位置信息，因此需要通过位置编码来为文本增加位置信息。详细解释将在[位置编码](#位置编码)章节进行
 
 - Multi-Head Attention
@@ -142,7 +143,7 @@ date: 2025-04-01 00:02:12
 - 在对Decoder进行描述之前，我们先描述一下Decoder层的输入与输出是什么。
   - 输入：
     - Encoder的输出$X_E$，形状为$(6,512)$
-    - 模型的当前翻译结果$X_D$，形状为$(7,512)$，7为我们前面设置的模型输出长度，512为embedding\_dim。
+    - 模型的当前翻译结果$X_D$，形状为$(7,512)$，7为我们前面设置的模型输出长度，512为embedding_dim。
   - 输出：
     - 模型对输入结果的所有词的“下一个词”预测结果$X_O$，形状为$(7,512)$
   - 模型将根据encoder的输出，并行地**依据每个词的前序信息**预测整个输入文本7个词的全部“下一个词”，如：
@@ -152,7 +153,7 @@ date: 2025-04-01 00:02:12
   - 对于上例中的模型输出，我们只取"apple"作为模型的预测结果，并拼接到输入的"i like to eat"后面，得到"i like to eat apple"。这是因为只有这个词是对“当前翻译结果的下一个词”的预测结果，其他的输出我们并不需要。接下来我们进入数据流动过程
 
 > 输入：$x_D=[6,0,0,0,0,0,0]$ 模型还未开始翻译，将第一个位置置为[START]，其他位置置为[PAD]。模型第一步将预测'[START]'的下一个词。
-> 转化为one-hot向量表示:$X_D.shape=(7,9)=(token数目,词表长度)=(n,vocab\_size)$
+> 转化为one-hot向量表示:$X_D.shape=(7,9)=(token数目,词表长度)=(n,\text{vocab\_size})$
 
 - Embedding与Positional Encoding
   - 与Encoder部分相同，模型将输入的one-hot向量表示转换为低维稠密向量表示，并添加位置编码。
@@ -160,7 +161,7 @@ date: 2025-04-01 00:02:12
   - > Embedding 参数矩阵：$E_2.shape=(9,512)$
     > 位置编码矩阵：$P_D.shape=(7,512)$ 
     > $X_2=X_DE_2+P_D$
-    > $X_2.shape=(7,512)=(token数目,embedding\_dim)=(n,d_{model})$
+    > $X_2.shape=(7,512)=(token数目,\text{embedding\_dim})=(n,d_{model})$
 
 - Masked Multi-Head Attention
   - 该层与Encoder部分的多头自注意力层几乎一致，唯一的区别在于mask的形状不同，读者仅需要注意这一点即可，具体形式将在[掩码](#掩码)章节进行详细描述。
@@ -208,10 +209,10 @@ date: 2025-04-01 00:02:12
 - Projection
   - 该层的作用是将Decoder的输出$X_O$转换为模型的预测结果$X_{pred}$。该层包含一个线性变换和一个softmax激活函数。该层的输入是Decoder的输出，输出是一个新的词向量数据。
   
-  - > Projection：$W_P,b_P$，$W_P.shape=(d_{model},vocab\_size)$，$b_P.shape=(vocab\_size)$
+  - > Projection：$W_P,b_P$，$W_P.shape=(d_{model},\text{vocab\_size})$，$b_P.shape=(\text{vocab\_size})$
     >
     > $X_{pred}=Softmax(X_OW_P+b_P)$
-    > $X_{pred}.shape=(7,vocab\_size)=(n,vocab\_size)$
+    > $X_{pred}.shape=(7,\text{vocab\_size})=(n,\text{vocab\_size})$
 
 - Prediction
   - 该层的作用是将模型的预测结果$X_{pred}$转换为模型的最终输出$X_{out}$。该层包含一个argmax操作。该层的输入是模型的预测结果，输出是一个新的词向量数据。至此，整个模型的数据流动流程就结束了，模型完成了一次预测。
